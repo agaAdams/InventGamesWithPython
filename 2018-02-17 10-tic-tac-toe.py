@@ -1,4 +1,3 @@
-@@ -0,0 +1,222 @@
 #[Anforderungen](x-devonthink-item://3C3FBF5A-48CA-4101-9DF9-9E3AE0861861)
 #[Flowchart](x-devonthink-item://1D34B7AF-D45F-4D6A-A6AF-896BBC5FF640)
 #
@@ -92,40 +91,108 @@ def playerMove(role, fields, board):
 
   return currentFields
 
-def aiMove(role, fields, board):
+def aiMove(airole, fields, board):
   '''
-  - checks for occupied fields
-  - tries to set the center or an adjecent field with aiRole
-  - sets random free field with aiRole
-  - updates and returns dictionary of play fields
+  - tries to close own or player occupied corner or side lines
+  - sets corner field
+  - sets middle
+  - sets side field
+  - prints gameboard and returns updated dictionary of fields
   '''
-  aiRole = role
-  currentFields = fields
-  fieldSet = False
-  aiField = 0
+  corners = [1,3,7,9]
+  sides = [2,4,6,8]
 
-  if not currentFields.get(5):
-    aiField = 5
-    fieldSet = True
-  else:
-    for character in currentFields:
-      if currentFields[character] == aiRole:
-        if not currentFields.get(character+1):
-          aiField = character+1
-          fieldSet = True
-        elif not currentFields.get(character-1):
-          aiField = character-1
-          fieldSet = True
-      while not fieldSet:
-        aiField = random.randint(1, 9)
-        if aiField not in currentFields:
-          fieldSet = True
-  currentFields[aiField] = aiRole
+  for c in corners: #closes corner lines
+    if c in fields:
+      if 5 not in fields:
+        fields[5] = airole
+      if fields.get(c) == fields.get(5):
+        if c == 1 and 9 not in fields:
+          fields[9] = airole
+        elif c == 9 and 1 not in fields:
+          fields[1] = airole
+        elif c == 7 and 3 not in fields:
+          fields[3] = airole
+        else:
+          fields[7] = airole
+      print("The computer's move is ", c)
+      print(showGameboard(fields, board))
+      return fields
 
-  print("The computer's move is ", aiField)
-  print(showGameboard(currentFields, board))
+  for s in sides: #closes side lines
+    if s in fields:
+      if 5 not in fields:
+        fields[5] = aiRole
+      if fields.get(s) == fields.get(5):
+        if c == 2 and 8 not in fields:
+          fields[8] = airole
+        elif c == 8 and 2 not in fields:
+          fields[2] = airole
+        elif c == 4 and 6 not in fields:
+          fields[6] = airole
+        else:
+          fields[4] = airole
+      print("The computer's move is ", s)
+      print(showGameboard(fields, board))
+      return fields
 
-  return currentFields
+  for c in corners: #sets a corner field
+    if c not in fields:
+      fields[c] = airole
+      print("The computer's move is ", c)
+      print(showGameboard(fields, board))
+      return fields
+
+  if 5 not in fields:
+    fields[5] = aiRole
+    print("The computer's move is ", 5)
+    print(showGameboard(fields, board))
+    return fields
+
+  for s in sides: #sets a side field
+    if s not in fields:
+      fields[s] = airole
+      print("The computer's move is ", s)
+      print(showGameboard(fields, board))
+      return fields
+
+
+
+# if currentFields.get(f) == currentFields.get(f + 3) and currentFields.get(f) == currentFields.get(f + 6)
+# def aiMove_alt(role, fields, board):
+#   '''
+#   - checks for occupied fields
+#   - tries to set the center or an adjecent field with aiRole
+#   - sets random free field with aiRole
+#   - updates and returns dictionary of play fields
+#   '''
+#   aiRole = role
+#   currentFields = fields
+#   fieldSet = False
+#   aiField = 0
+
+#   if not currentFields.get(5):
+#     aiField = 5
+#     fieldSet = True
+#   else:
+#     for character in currentFields:
+#       if currentFields[character] == aiRole:
+#         if not currentFields.get(character+1):
+#           aiField = character+1
+#           fieldSet = True
+#         elif not currentFields.get(character-1):
+#           aiField = character-1
+#           fieldSet = True
+#       while not fieldSet:
+#         aiField = random.randint(1, 9)
+#         if aiField not in currentFields:
+#           fieldSet = True
+#   currentFields[aiField] = aiRole
+
+#   print("The computer's move is ", aiField)
+#   print(showGameboard(currentFields, board))
+
+#   return currentFields
 
 def checkWin(fields, role, board):
   '''
