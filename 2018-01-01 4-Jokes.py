@@ -1,0 +1,13 @@
+# This is programm tells jokes to the user
+print("What do you get when you cross a snowman with a vampire?")
+input()
+print("Frostbite!\n")
+print("What do dentists call an astronaut's cavity?")
+input()
+print("A black hole!\n")
+print("Knock knock.")
+input()
+print("Who's there?")
+input()
+print("Interrupting cow.", end="")
+print("Interrupting cow wh-MOO!")
