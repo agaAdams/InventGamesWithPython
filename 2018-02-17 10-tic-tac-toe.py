@@ -12,6 +12,7 @@ EMPTY_GAMEBOARD = '''
 -+-+-
 1|2|3
 '''
+WIN_SETS = { 1: [1,2,3], 2: [2,5,8], 3: [3,6,9], 4: [4,5,6], 5: [7,8,9], 6: [1,4,7], 7: [3,5,7], 8: [1,5,9] }
 
 ########## Functions ##########
 def welcomeMessage():
@@ -30,9 +31,9 @@ def welcomeMessage():
     playerChoice = input()
 
   if playerChoice == 'x':
-    ai = 'o'
+    ai = 'O'
   else:
-    ai = 'x'
+    ai = 'X'
 
   print("You are ", playerChoice.upper())
 
@@ -89,7 +90,7 @@ def playerMove(role, fields, board):
 
   return fields, board
 
-def aiMove(airole, fields, board):
+def aiMove(airole, fields, board, winSets):
   '''
   - tries to close own or player occupied corner or side lines
   - sets corner field
@@ -99,7 +100,6 @@ def aiMove(airole, fields, board):
   '''
   corners = [1,3,7,9]
   sides = [2,4,6,8]
-  winSets = { 1: [1,2,3], 2: [2,5,8], 3: [3,6,9], 4: [4,5,6], 5: [7,8,9], 6: [1,4,7], 7: [3,5,7], 8: [1,5,9] }
 
   for set in winSets: #checks for open lines and closes them
     x = 0
@@ -142,42 +142,44 @@ def aiSet(field, fields, role, board):
   board = showGameboard(fields, board)
   return board
 
-def checkWin(fields, role, board):
+def checkWin(fields, playerRole, board, winSets):
   '''
   - check if win conditions are met
-  - ends game round in such case
+  - ends game round in such case by returning False for gameRound
   '''
 
-  currentFields = fields
-  gRound = True
-  emptyField = 0
-
-  for f in currentFields:
-    if currentFields.get(f) == currentFields.get(f + 3) and currentFields.get(f) == currentFields.get(f + 6):
-      gRound = False
-    elif currentFields.get(f) == currentFields.get(f + 4) and currentFields.get(f) == currentFields.get(f + 8):
-      gRound = False
-    elif f == 3:
-      if currentFields.get(f) == currentFields.get(f + 2) and currentFields.get(f) == currentFields.get(f + 4):
-        gRound = False
-    elif f == 1 or f == 4 or f == 7:
-      if currentFields.get(f) == currentFields.get(f + 1) and currentFields.get(f) == currentFields.get(f + 2):
-        gRound = False
-
-  if gRound == False:
-      if currentFields[f] == role:
+  for set in winSets: #checks for win lines
+    x = 0
+    o = 0
+    for number in winSets[set]:
+      if number in fields:
+        if fields[number] == 'x':
+          x += 1
+        if fields[number] == 'o':
+          o += 1
+    if x == 3:
+      if playerRole == 'x':
         print("You have won!")
       else:
         print("The computer has won.")
-  else:
-    for character in board:
-      if character.isdigit():
-        emptyField += 1
-    if emptyField == 0:
-      print("There are no more moves left. You have a tie.")
-      gRound = False
+      return False
+    if o == 3:
+      if playerRole == 'o':
+        print("You have won!")
+      else:
+        print("The computer has won.")
+      return False
 
-  return gRound
+  emptyField = 0
+
+  for character in board: #checks for tie
+    if character.isdigit():
+      emptyField += 1
+  if emptyField == 0:
+    print("There are no more moves left. You have a tie.")
+    return False
+
+  return True
 
 def gameChoice():
   '''
@@ -222,10 +224,10 @@ while gameState == True:
       turnState = 'ai'
     else:
       ## make ai move
-      playFields, gameBoard = aiMove(aiRole, playFields, gameBoard)
+      playFields, gameBoard = aiMove(aiRole, playFields, gameBoard, WIN_SETS)
       turnState = 'player'
 
-    gameRound = checkWin(playFields, playerRole, gameBoard)
+    gameRound = checkWin(playFields, playerRole, gameBoard, WIN_SETS)
     #check for win, if win set gameround to false
 
   # ?does the player want to play again?

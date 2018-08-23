@@ -4,16 +4,32 @@
 		"selected_items":
 		[
 			[
+				"pl",
+				"playerRole〔argument〕"
+			],
+			[
+				"playe",
+				"playerRole〔argument〕"
+			],
+			[
+				"play",
+				"playerRole〔argument〕"
+			],
+			[
+				"win",
+				"winSets"
+			],
+			[
+				"cu",
+				"currentGameBoard〔variable〕"
+			],
+			[
 				"game",
 				"gameBoard〔variable〕"
 			],
 			[
 				"pla",
 				"playerRole〔variable〕"
-			],
-			[
-				"cu",
-				"currentFields〔variable〕"
 			],
 			[
 				"fields",
@@ -40,20 +56,12 @@
 				"else〔keyword〕"
 			],
 			[
-				"pl",
-				"playFields〔variable〕"
-			],
-			[
 				"fre",
 				"freieFelder〔variable〕"
 			],
 			[
 				"tur",
 				"turnState〔variable〕"
-			],
-			[
-				"play",
-				"playFields〔variable〕"
 			],
 			[
 				"check",
@@ -506,14 +514,6 @@
 			[
 				"source",
 				"source_path"
-			],
-			[
-				"avail",
-				"available"
-			],
-			[
-				"last_bus",
-				"last_bus_stop_path"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "2018-02-17 10-tic-tac-toe.py",
 			"settings":
 			{
-				"buffer_size": 5648,
+				"buffer_size": 5888,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -776,13 +776,13 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/agata/Documents/dev/InventGamesWithPython"
+		"/Users/agata/Documents/GitHub/InventGamesWithPython"
 	],
 	"file_history":
 	[
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Desktop/test.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
@@ -911,7 +911,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -925,6 +925,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"currentFields",
+			"checkWin",
+			"return fields",
+			"aiSet",
+			"currentFields",
+			"corner",
 			"gameBoard",
 			"playerRole",
 			"gameRound",
@@ -979,7 +985,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5648,
+						"buffer_size": 5888,
 						"regions":
 						{
 							"bookmarks":
@@ -988,24 +994,23 @@
 								"icon": "bookmark",
 								"regions":
 								[
+									[
+										3916,
+										3916
+									],
+									[
+										4060,
+										4060
+									]
 								],
 								"scope": "bookmarks"
-							},
-							"mark":
-							{
-								"flags": 144,
-								"icon": "Packages/Theme - Default/common/dot.png",
-								"regions":
-								[
-								],
-								"scope": "mark"
 							}
 						},
 						"selection":
 						[
 							[
-								5096,
-								5096
+								4714,
+								4714
 							]
 						],
 						"settings":
@@ -1033,15 +1038,15 @@
 							"origPos":
 							[
 								0.0,
-								5527.0
+								5017.0
 							],
 							"syncScroll": false,
-							"syntax": "Packages/Python/Python.sublime-syntax",
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5017.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1052,7 +1057,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 36.0
+		"height": 38.0
 	},
 	"input":
 	{
@@ -1105,7 +1110,7 @@
 	"project": "2017-12-30 InventGamesWithPython.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
