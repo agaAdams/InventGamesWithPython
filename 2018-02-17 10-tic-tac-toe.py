@@ -53,6 +53,7 @@ def showGameboard(fields, board):
         currentGameBoard = currentGameBoard[:index] + currentFields[int(character)] + currentGameBoard[index + 1:]
     index += 1
 
+  print(currentGameBoard)
   return currentGameBoard
 
 def firstDraw():
@@ -87,7 +88,7 @@ def playerMove(role, fields, board):
     fieldChoice = input()
 
   currentFields[int(fieldChoice)] = playerRole
-  print(showGameboard(currentFields, board))
+  showGameboard(currentFields, board)
 
   return currentFields
 
@@ -101,98 +102,40 @@ def aiMove(airole, fields, board):
   '''
   corners = [1,3,7,9]
   sides = [2,4,6,8]
+  winSets = { 1: [1,2,3], 2: [2,5,8], 3: [3,6,9], 4: [4,5,6], 5: [7,8,9], 6: [1,4,7], 7: [3,5,7], 8: [1,5,9] }
 
-  for c in corners: #closes corner lines
-    if c in fields:
-      if 5 not in fields:
-        fields[5] = airole
-      if fields.get(c) == fields.get(5):
-        if c == 1 and 9 not in fields:
-          fields[9] = airole
-        elif c == 9 and 1 not in fields:
-          fields[1] = airole
-        elif c == 7 and 3 not in fields:
-          fields[3] = airole
-        else:
-          fields[7] = airole
-      print("The computer's move is ", c)
-      print(showGameboard(fields, board))
+  for set in winSets: #checks for open lines and closes them
+    x = 0
+    o = 0
+    for number in winSets[set]:
+      if number in fields:
+        if fields[number] == 'x':
+          x += 1
+        if fields[number] == 'o':
+          o += 1
+    if x > 1 or o > 1:
+      for number in winSets[set]:
+        if number not in fields:
+          aiSet(number, fields, airole, board)
+          return fields
+
+  for corner in corners: #checks for free corner fields and sets
+    if corner not in fields:
+      aiSet(corner, fields, airole, board)
       return fields
 
-  for s in sides: #closes side lines
-    if s in fields:
-      if 5 not in fields:
-        fields[5] = aiRole
-      if fields.get(s) == fields.get(5):
-        if c == 2 and 8 not in fields:
-          fields[8] = airole
-        elif c == 8 and 2 not in fields:
-          fields[2] = airole
-        elif c == 4 and 6 not in fields:
-          fields[6] = airole
-        else:
-          fields[4] = airole
-      print("The computer's move is ", s)
-      print(showGameboard(fields, board))
-      return fields
-
-  for c in corners: #sets a corner field
-    if c not in fields:
-      fields[c] = airole
-      print("The computer's move is ", c)
-      print(showGameboard(fields, board))
-      return fields
-
-  if 5 not in fields:
-    fields[5] = aiRole
-    print("The computer's move is ", 5)
-    print(showGameboard(fields, board))
+  if 5 not in fields: #checks for free middle and sets
+    aiSet(number, fields, airole, board)
     return fields
 
-  for s in sides: #sets a side field
-    if s not in fields:
-      fields[s] = airole
-      print("The computer's move is ", s)
-      print(showGameboard(fields, board))
-      return fields
+  for side in sides: #checks for free sides and sets
+    if side not in fields:
+      aiSet(side, fields, airole, board)
 
-
-
-# if currentFields.get(f) == currentFields.get(f + 3) and currentFields.get(f) == currentFields.get(f + 6)
-# def aiMove_alt(role, fields, board):
-#   '''
-#   - checks for occupied fields
-#   - tries to set the center or an adjecent field with aiRole
-#   - sets random free field with aiRole
-#   - updates and returns dictionary of play fields
-#   '''
-#   aiRole = role
-#   currentFields = fields
-#   fieldSet = False
-#   aiField = 0
-
-#   if not currentFields.get(5):
-#     aiField = 5
-#     fieldSet = True
-#   else:
-#     for character in currentFields:
-#       if currentFields[character] == aiRole:
-#         if not currentFields.get(character+1):
-#           aiField = character+1
-#           fieldSet = True
-#         elif not currentFields.get(character-1):
-#           aiField = character-1
-#           fieldSet = True
-#       while not fieldSet:
-#         aiField = random.randint(1, 9)
-#         if aiField not in currentFields:
-#           fieldSet = True
-#   currentFields[aiField] = aiRole
-
-#   print("The computer's move is ", aiField)
-#   print(showGameboard(currentFields, board))
-
-#   return currentFields
+def aiSet(field, fields, role, board):
+  fields[field] = role
+  print("The computer chooses ", field)
+  showGameboard(fields, board)
 
 def checkWin(fields, role, board):
   '''
@@ -261,7 +204,7 @@ while gameState == True:
 
   playerRole, aiRole = welcomeMessage()
   gameBoard = showGameboard(playFields, gameBoard)
-  print(gameBoard)
+  # print(gameBoard)
 
   #randomize who starts, print the info
   turnState = firstDraw()
