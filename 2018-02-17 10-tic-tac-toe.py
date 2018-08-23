@@ -12,7 +12,7 @@ EMPTY_GAMEBOARD = '''
 -+-+-
 1|2|3
 '''
-WIN_SETS = { 1: [1,2,3], 2: [2,5,8], 3: [3,6,9], 4: [4,5,6], 5: [7,8,9], 6: [1,4,7], 7: [3,5,7], 8: [1,5,9] }
+WIN_SETS = [ [1,2,3], [2,5,8], [3,6,9], [4,5,6], [7,8,9], [1,4,7], [3,5,7], [1,5,9] ]
 
 ########## Functions ##########
 def welcomeMessage():
@@ -31,9 +31,9 @@ def welcomeMessage():
     playerChoice = input()
 
   if playerChoice == 'x':
-    ai = 'O'
+    ai = 'o'
   else:
-    ai = 'X'
+    ai = 'x'
 
   print("You are ", playerChoice.upper())
 
@@ -104,14 +104,14 @@ def aiMove(airole, fields, board, winSets):
   for set in winSets: #checks for open lines and closes them
     x = 0
     o = 0
-    for number in winSets[set]:
+    for number in set:
       if number in fields:
         if fields[number] == 'x':
           x += 1
         if fields[number] == 'o':
           o += 1
     if x > 1 or o > 1:
-      for number in winSets[set]:
+      for number in set:
         if number not in fields:
           board = aiSet(number, fields, airole, board)
           return fields, board
@@ -151,7 +151,7 @@ def checkWin(fields, playerRole, board, winSets):
   for set in winSets: #checks for win lines
     x = 0
     o = 0
-    for number in winSets[set]:
+    for number in set:
       if number in fields:
         if fields[number] == 'x':
           x += 1
