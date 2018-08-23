@@ -41,20 +41,19 @@ def welcomeMessage():
 def showGameboard(fields, board):
   '''
   - update gameboard
-  - returns updated gameboard
+  - print updated gameboard
+  - return updated gameboard
   '''
   index = 0
-  currentFields = fields
-  currentGameBoard = board
 
-  for character in currentGameBoard:
+  for character in board:
     if character.isdigit():
-      if currentFields.get(int(character)):
-        currentGameBoard = currentGameBoard[:index] + currentFields[int(character)] + currentGameBoard[index + 1:]
+      if fields.get(int(character)):
+        board = board[:index] + fields[int(character)] + board[index + 1:]
     index += 1
 
-  print(currentGameBoard)
-  return currentGameBoard
+  print(board)
+  return board
 
 def firstDraw():
   '''
@@ -77,20 +76,18 @@ def playerMove(role, fields, board):
   '''
   - validates player input (only numbers 1-9)
   - validates player input (only free fields)
-  - updates and returns dictionary of play fields
+  - updates and returns dictionary of play fields and gameboard
   '''
-  playerRole = role
-  currentFields = fields
   fieldChoice = ''
 
-  while not fieldChoice.isdigit() or int(fieldChoice) in currentFields:
+  while not fieldChoice.isdigit() or int(fieldChoice) in fields:
     print("What's your next move? (Numbers 1-9 only. No occupied fields!)")
     fieldChoice = input()
 
-  currentFields[int(fieldChoice)] = playerRole
-  showGameboard(currentFields, board)
+  fields[int(fieldChoice)] = role
+  board = showGameboard(fields, board)
 
-  return currentFields
+  return fields, board
 
 def aiMove(airole, fields, board):
   '''
@@ -98,7 +95,7 @@ def aiMove(airole, fields, board):
   - sets corner field
   - sets middle
   - sets side field
-  - prints gameboard and returns updated dictionary of fields
+  - prints gameboard and returns updated dictionary of fields and game board
   '''
   corners = [1,3,7,9]
   sides = [2,4,6,8]
@@ -116,26 +113,34 @@ def aiMove(airole, fields, board):
     if x > 1 or o > 1:
       for number in winSets[set]:
         if number not in fields:
-          aiSet(number, fields, airole, board)
-          return fields
+          board = aiSet(number, fields, airole, board)
+          return fields, board
 
   for corner in corners: #checks for free corner fields and sets
     if corner not in fields:
-      aiSet(corner, fields, airole, board)
-      return fields
+      board = aiSet(corner, fields, airole, board)
+      return fields, board
 
   if 5 not in fields: #checks for free middle and sets
-    aiSet(number, fields, airole, board)
-    return fields
+    board = aiSet(number, fields, airole, board)
+    return fields, board
 
   for side in sides: #checks for free sides and sets
     if side not in fields:
-      aiSet(side, fields, airole, board)
+      board = aiSet(side, fields, airole, board)
+      return fields, board
 
 def aiSet(field, fields, role, board):
+  '''
+  - sets chosen field as play field for the ai
+  - prints choice
+  - shows game board
+  - returns updated game board
+  '''
   fields[field] = role
   print("The computer chooses ", field)
-  showGameboard(fields, board)
+  board = showGameboard(fields, board)
+  return board
 
 def checkWin(fields, role, board):
   '''
@@ -193,7 +198,7 @@ def gameChoice():
   return state
 
 ########## Game Loop ##########
-gameState = True
+gameState = True #true as long as the player wants to have another go
 
 while gameState == True:
   ###### Game Globals ######
@@ -203,8 +208,7 @@ while gameState == True:
   gameBoard = EMPTY_GAMEBOARD #set a new and clean game board
 
   playerRole, aiRole = welcomeMessage()
-  gameBoard = showGameboard(playFields, gameBoard)
-  # print(gameBoard)
+  showGameboard(playFields, gameBoard)
 
   #randomize who starts, print the info
   turnState = firstDraw()
@@ -213,21 +217,16 @@ while gameState == True:
   while gameRound == True:
     #check whose turn it is
     if turnState == 'player': #if player
-      ## ask for move
-      ## validate input
-      playFields = playerMove(playerRole, playFields, gameBoard)
+      ## ask player for move
+      playFields, gameBoard = playerMove(playerRole, playFields, gameBoard)
       turnState = 'ai'
     else:
-      #if ai
-      ## make move
-      playFields = aiMove(aiRole, playFields, gameBoard)
+      ## make ai move
+      playFields, gameBoard = aiMove(aiRole, playFields, gameBoard)
       turnState = 'player'
 
     gameRound = checkWin(playFields, playerRole, gameBoard)
     #check for win, if win set gameround to false
-
-  # set turnState to ''
-  turnState = ''
 
   # ?does the player want to play again?
   gameState = gameChoice()
