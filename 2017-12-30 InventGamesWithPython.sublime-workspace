@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"rol",
+				"roles"
+			],
+			[
 				"pl",
 				"playerRole〔argument〕"
 			],
@@ -510,21 +514,16 @@
 			[
 				"destin",
 				"destination_path"
-			],
-			[
-				"source",
-				"source_path"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "2018-02-17 10-tic-tac-toe.py",
+			"file": "2018-08-24 11.py",
 			"settings":
 			{
-				"buffer_size": 5837,
-				"encoding": "UTF-8",
+				"buffer_size": 935,
 				"line_ending": "Unix"
 			}
 		}
@@ -780,6 +779,8 @@
 	],
 	"file_history":
 	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/README.md",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
@@ -905,9 +906,7 @@
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_11.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_8.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_7.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_6.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_5.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_4.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_6.md"
 	],
 	"find":
 	{
@@ -982,64 +981,28 @@
 			[
 				{
 					"buffer": 0,
-					"file": "2018-02-17 10-tic-tac-toe.py",
+					"file": "2018-08-24 11.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5837,
+						"buffer_size": 935,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-									[
-										3865,
-										3865
-									],
-									[
-										4009,
-										4009
-									]
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								2377,
-								2377
+								42,
+								42
 							]
 						],
 						"settings":
 						{
-							"SL.13.region_keys":
-							[
-							],
-							"SL.25.region_keys":
-							[
-							],
-							"SL.27.region_keys":
-							[
-							],
-							"SL.56.region_keys":
-							[
-							],
-							"SL.76.region_keys":
-							[
-							],
-							"SL.90.region_keys":
-							[
-							],
-							"auto_complete": false,
-							"history_list_is_closing": true,
+							"open_with_edit": true,
 							"origPos":
 							[
 								0.0,
-								2425.0
+								0.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1047,7 +1010,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2425.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1669,7 +1632,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 227.0,
+	"side_bar_width": 358.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

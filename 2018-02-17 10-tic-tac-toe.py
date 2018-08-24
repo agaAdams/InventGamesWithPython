@@ -144,18 +144,15 @@ def checkWin(fields, playerRole, board, winSets):
   - check if win conditions are met or the game ends in a tie
   - ends game round in such case
   '''
+  emptyField = 0
 
   for set in winSets: #checks for win lines
-    # x = 0
-    # o = 0
     roles = {'x': 0, 'o': 0}
     for number in set:
       if number in fields:
         if fields[number] == 'x':
-          # x += 1
           roles['x'] += 1
         if fields[number] == 'o':
-          # o += 1
           roles['o'] += 1
       for key in roles:
         if roles[key] == 3:
@@ -164,8 +161,6 @@ def checkWin(fields, playerRole, board, winSets):
           else:
             print("The computer has won.")
           return False
-
-  emptyField = 0
 
   for character in board: #checks for a tie
     if character.isdigit():
