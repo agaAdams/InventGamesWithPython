@@ -45,13 +45,10 @@ def showGameboard(fields, board):
   - print updated gameboard
   - return updated gameboard
   '''
-  index = 0
-
   for character in board:
     if character.isdigit():
       if fields.get(int(character)):
-        board = board[:index] + fields[int(character)] + board[index + 1:]
-    index += 1
+        board = board[:board.index(character)] + fields[int(character)] + board[board.index(character) + 1:]
 
   print(board)
   return board
