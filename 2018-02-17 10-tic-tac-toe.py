@@ -144,35 +144,33 @@ def aiSet(field, fields, role, board):
 
 def checkWin(fields, playerRole, board, winSets):
   '''
-  - check if win conditions are met
-  - ends game round in such case by returning False for gameRound
+  - check if win conditions are met or the game ends in a tie
+  - ends game round in such case
   '''
 
   for set in winSets: #checks for win lines
-    x = 0
-    o = 0
+    # x = 0
+    # o = 0
+    roles = {'x': 0, 'o': 0}
     for number in set:
       if number in fields:
         if fields[number] == 'x':
-          x += 1
+          # x += 1
+          roles['x'] += 1
         if fields[number] == 'o':
-          o += 1
-    if x == 3:
-      if playerRole == 'x':
-        print("You have won!")
-      else:
-        print("The computer has won.")
-      return False
-    if o == 3:
-      if playerRole == 'o':
-        print("You have won!")
-      else:
-        print("The computer has won.")
-      return False
+          # o += 1
+          roles['o'] += 1
+      for key in roles:
+        if roles[key] == 3:
+          if playerRole == key:
+            print("You have won!")
+          else:
+            print("The computer has won.")
+          return False
 
   emptyField = 0
 
-  for character in board: #checks for tie
+  for character in board: #checks for a tie
     if character.isdigit():
       emptyField += 1
   if emptyField == 0:

@@ -523,7 +523,7 @@
 			"file": "2018-02-17 10-tic-tac-toe.py",
 			"settings":
 			{
-				"buffer_size": 5888,
+				"buffer_size": 5837,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -925,6 +925,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"WIN_SETS",
 			"currentFields",
 			"checkWin",
 			"return fields",
@@ -985,7 +986,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5888,
+						"buffer_size": 5837,
 						"regions":
 						{
 							"bookmarks":
@@ -995,12 +996,12 @@
 								"regions":
 								[
 									[
-										3916,
-										3916
+										3865,
+										3865
 									],
 									[
-										4060,
-										4060
+										4009,
+										4009
 									]
 								],
 								"scope": "bookmarks"
@@ -1009,8 +1010,8 @@
 						"selection":
 						[
 							[
-								4714,
-								4714
+								2377,
+								2377
 							]
 						],
 						"settings":
@@ -1038,7 +1039,7 @@
 							"origPos":
 							[
 								0.0,
-								5017.0
+								2425.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1046,7 +1047,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5017.0,
+						"translation.y": 2425.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
