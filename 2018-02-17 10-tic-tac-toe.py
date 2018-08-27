@@ -113,6 +113,7 @@ def aiMove(airole, fields, board, winSets):
           board = aiSet(number, fields, airole, board)
           return fields, board
 
+  random.shuffle(corners)
   for corner in corners: #checks for free corner fields and sets
     if corner not in fields:
       board = aiSet(corner, fields, airole, board)
@@ -122,6 +123,7 @@ def aiMove(airole, fields, board, winSets):
     board = aiSet(number, fields, airole, board)
     return fields, board
 
+  random.shuffle(sides)
   for side in sides: #checks for free sides and sets
     if side not in fields:
       board = aiSet(side, fields, airole, board)

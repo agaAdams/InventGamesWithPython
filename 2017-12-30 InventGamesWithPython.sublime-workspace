@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cor",
+				"corners〔variable〕"
+			],
+			[
 				"rol",
 				"roles"
 			],
@@ -510,23 +514,11 @@
 			[
 				"paths",
 				"paths_on_route"
-			],
-			[
-				"destin",
-				"destination_path"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "InventWithPython_resources/20161122120228 tictactoe.py",
-			"settings":
-			{
-				"buffer_size": 5832,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -779,8 +771,9 @@
 	],
 	"file_history":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-08-24 11.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-08-24 11.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/README.md",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
@@ -905,8 +898,7 @@
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_3.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_12.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_11.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_8.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_7.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_8.md"
 	],
 	"find":
 	{
@@ -976,89 +968,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "InventWithPython_resources/20161122120228 tictactoe.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5832,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4598,
-								4598
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"origPos":
-							[
-								0.0,
-								3945.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3945.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "InventWithPython_resources/20161122120228 tictactoe.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5832,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1906,
-								1906
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"origPos":
-							[
-								0.0,
-								3945.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1065.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1079,18 +990,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.435479736328,
 			1.0
 		],
 		"rows":
@@ -1681,7 +1585,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 358.0,
 	"status_bar_visible": true,
 	"template_settings":
