@@ -4,16 +4,36 @@
 		"selected_items":
 		[
 			[
+				"game",
+				"gameRound"
+			],
+			[
+				"gam",
+				"gameRound"
+			],
+			[
+				"ga",
+				"gameRound"
+			],
+			[
+				"rando",
+				"randomNumber"
+			],
+			[
+				"pl",
+				"playerGuess"
+			],
+			[
+				"ran",
+				"randomNumber"
+			],
+			[
 				"cor",
 				"corners〔variable〕"
 			],
 			[
 				"rol",
 				"roles"
-			],
-			[
-				"pl",
-				"playerRole〔argument〕"
 			],
 			[
 				"playe",
@@ -30,10 +50,6 @@
 			[
 				"cu",
 				"currentGameBoard〔variable〕"
-			],
-			[
-				"game",
-				"gameBoard〔variable〕"
 			],
 			[
 				"pla",
@@ -84,20 +100,12 @@
 				"randomBet〔variable〕"
 			],
 			[
-				"rando",
-				"random.randint"
-			],
-			[
 				"nu",
 				"nummer〔variable〕"
 			],
 			[
 				"iss",
 				"isspace\tfunction"
-			],
-			[
-				"ga",
-				"gameBoard〔variable〕"
 			],
 			[
 				"sho",
@@ -262,14 +270,6 @@
 			[
 				"pr",
 				"print"
-			],
-			[
-				"ran",
-				"random.randint\t(coinFlips.py)"
-			],
-			[
-				"gam",
-				"gameChoice〔function〕"
 			],
 			[
 				"cav",
@@ -519,6 +519,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "2018-08-24 11 bagels.py",
+			"settings":
+			{
+				"buffer_size": 1690,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -968,8 +977,46 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "2018-08-24 11 bagels.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								153,
+								153
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1585,7 +1632,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 358.0,
 	"status_bar_visible": true,
 	"template_settings":
