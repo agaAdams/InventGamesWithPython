@@ -5,7 +5,47 @@
 		[
 			[
 				"game",
-				"gameRound"
+				"gameState〔variable〕"
+			],
+			[
+				"ran",
+				"randomNumber〔variable〕"
+			],
+			[
+				"rando",
+				"randomNumber〔argument〕"
+			],
+			[
+				"digit",
+				"digitList"
+			],
+			[
+				"pl",
+				"playerInput〔variable〕"
+			],
+			[
+				"pla",
+				"playerInput〔variable〕"
+			],
+			[
+				"gue",
+				"guessedNumber〔variable〕"
+			],
+			[
+				"gu",
+				"guessedNumber〔variable〕"
+			],
+			[
+				"di",
+				"digit"
+			],
+			[
+				"rand",
+				"random3Digits"
+			],
+			[
+				"ra",
+				"random"
 			],
 			[
 				"gam",
@@ -14,18 +54,6 @@
 			[
 				"ga",
 				"gameRound"
-			],
-			[
-				"rando",
-				"randomNumber"
-			],
-			[
-				"pl",
-				"playerGuess"
-			],
-			[
-				"ran",
-				"randomNumber"
 			],
 			[
 				"cor",
@@ -50,10 +78,6 @@
 			[
 				"cu",
 				"currentGameBoard〔variable〕"
-			],
-			[
-				"pla",
-				"playerRole〔variable〕"
 			],
 			[
 				"fields",
@@ -94,10 +118,6 @@
 			[
 				"while",
 				"while\tWhile Loop"
-			],
-			[
-				"rand",
-				"randomBet〔variable〕"
 			],
 			[
 				"nu",
@@ -192,10 +212,6 @@
 				"guessedLetter"
 			],
 			[
-				"gue",
-				"guessedLetter"
-			],
-			[
 				"g",
 				"guessedLetter"
 			],
@@ -258,10 +274,6 @@
 			[
 				"va",
 				"validatePlayerInput"
-			],
-			[
-				"gu",
-				"guessedLetters〔variable〕"
 			],
 			[
 				"HA",
@@ -502,28 +514,16 @@
 			[
 				"depar",
 				"departure_time"
-			],
-			[
-				"regi",
-				"registration_number"
-			],
-			[
-				"boarding",
-				"boarding_bus_stop_id"
-			],
-			[
-				"paths",
-				"paths_on_route"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "2018-08-24 11 bagels.py",
+			"file": "11 bagels 2018-08-24.py",
 			"settings":
 			{
-				"buffer_size": 1690,
+				"buffer_size": 2791,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -780,15 +780,15 @@
 	],
 	"file_history":
 	[
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-08-24 11.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/README.md",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
 		"/Users/agata/Desktop/test.py",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/Users/agata/GTD/werkstatt-todolist.txt",
@@ -911,7 +911,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -925,6 +925,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"playerGuess",
+			"string",
+			"fieldChoice",
 			"WIN_SETS",
 			"currentFields",
 			"checkWin",
@@ -982,19 +985,28 @@
 			[
 				{
 					"buffer": 0,
-					"file": "2018-08-24 11 bagels.py",
+					"file": "11 bagels 2018-08-24.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1690,
+						"buffer_size": 2791,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
 						},
 						"selection":
 						[
 							[
-								153,
-								153
+								1710,
+								1710
 							]
 						],
 						"settings":
@@ -1003,7 +1015,7 @@
 							"origPos":
 							[
 								0.0,
-								0.0
+								1130.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1011,7 +1023,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1130.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
