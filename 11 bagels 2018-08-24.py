@@ -1,6 +1,4 @@
-#This is a game template for python games
-
-#game description
+#The Bagels Deduction Game, Chpt#11
 import random
 
 ########## Constants ##########
@@ -57,7 +55,7 @@ def playerGuess(round):
         playerInput = ''
 
   guessedNumber = digitList
-  
+
   return guessedNumber
 
 def checkWin(randomNumber, guess):
