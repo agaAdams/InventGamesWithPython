@@ -4,16 +4,64 @@
 		"selected_items":
 		[
 			[
+				"ga",
+				"gameState"
+			],
+			[
+				"game",
+				"gameState〔variable〕"
+			],
+			[
+				"ran",
+				"randomNumber〔variable〕"
+			],
+			[
+				"rando",
+				"randomNumber〔argument〕"
+			],
+			[
+				"digit",
+				"digitList"
+			],
+			[
+				"pl",
+				"playerInput〔variable〕"
+			],
+			[
+				"pla",
+				"playerInput〔variable〕"
+			],
+			[
+				"gue",
+				"guessedNumber〔variable〕"
+			],
+			[
+				"gu",
+				"guessedNumber〔variable〕"
+			],
+			[
+				"di",
+				"digit"
+			],
+			[
+				"rand",
+				"random3Digits"
+			],
+			[
+				"ra",
+				"random"
+			],
+			[
+				"gam",
+				"gameRound"
+			],
+			[
 				"cor",
 				"corners〔variable〕"
 			],
 			[
 				"rol",
 				"roles"
-			],
-			[
-				"pl",
-				"playerRole〔argument〕"
 			],
 			[
 				"playe",
@@ -30,14 +78,6 @@
 			[
 				"cu",
 				"currentGameBoard〔variable〕"
-			],
-			[
-				"game",
-				"gameBoard〔variable〕"
-			],
-			[
-				"pla",
-				"playerRole〔variable〕"
 			],
 			[
 				"fields",
@@ -80,24 +120,12 @@
 				"while\tWhile Loop"
 			],
 			[
-				"rand",
-				"randomBet〔variable〕"
-			],
-			[
-				"rando",
-				"random.randint"
-			],
-			[
 				"nu",
 				"nummer〔variable〕"
 			],
 			[
 				"iss",
 				"isspace\tfunction"
-			],
-			[
-				"ga",
-				"gameBoard〔variable〕"
 			],
 			[
 				"sho",
@@ -184,10 +212,6 @@
 				"guessedLetter"
 			],
 			[
-				"gue",
-				"guessedLetter"
-			],
-			[
 				"g",
 				"guessedLetter"
 			],
@@ -252,24 +276,12 @@
 				"validatePlayerInput"
 			],
 			[
-				"gu",
-				"guessedLetters〔variable〕"
-			],
-			[
 				"HA",
 				"HANGMAN_PICS〔variable〕"
 			],
 			[
 				"pr",
 				"print"
-			],
-			[
-				"ran",
-				"random.randint\t(coinFlips.py)"
-			],
-			[
-				"gam",
-				"gameChoice〔function〕"
 			],
 			[
 				"cav",
@@ -502,23 +514,20 @@
 			[
 				"depar",
 				"departure_time"
-			],
-			[
-				"regi",
-				"registration_number"
-			],
-			[
-				"boarding",
-				"boarding_bus_stop_id"
-			],
-			[
-				"paths",
-				"paths_on_route"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "11 bagels 2018-08-24.py",
+			"settings":
+			{
+				"buffer_size": 2791,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -771,15 +780,16 @@
 	],
 	"file_history":
 	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
+		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-08-24 11.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/README.md",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
-		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
 		"/Users/agata/Desktop/test.py",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/Users/agata/GTD/werkstatt-todolist.txt",
@@ -897,8 +907,7 @@
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_13.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_3.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_12.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_11.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_8.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_11.md"
 	],
 	"find":
 	{
@@ -916,6 +925,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"playerGuess",
+			"string",
+			"fieldChoice",
 			"WIN_SETS",
 			"currentFields",
 			"checkWin",
@@ -968,8 +980,55 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "11 bagels 2018-08-24.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2791,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								2223,
+								2223
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"origPos":
+							[
+								0.0,
+								2088.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1711.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1585,7 +1644,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 358.0,
 	"status_bar_visible": true,
 	"template_settings":
