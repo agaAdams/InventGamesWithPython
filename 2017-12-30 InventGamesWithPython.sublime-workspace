@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ga",
+				"gameState"
+			],
+			[
 				"game",
 				"gameState〔variable〕"
 			],
@@ -49,10 +53,6 @@
 			],
 			[
 				"gam",
-				"gameRound"
-			],
-			[
-				"ga",
 				"gameRound"
 			],
 			[
@@ -780,6 +780,8 @@
 	],
 	"file_history":
 	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
+		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
@@ -787,7 +789,6 @@
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-08-24 11.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/README.md",
 		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
-		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
 		"/Users/agata/Desktop/test.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
@@ -906,12 +907,11 @@
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_13.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_3.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_12.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_11.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_8.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_11.md"
 	],
 	"find":
 	{
-		"height": 49.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -1005,8 +1005,8 @@
 						"selection":
 						[
 							[
-								1710,
-								1710
+								2223,
+								2223
 							]
 						],
 						"settings":
@@ -1015,7 +1015,7 @@
 							"origPos":
 							[
 								0.0,
-								1130.0
+								2088.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1023,7 +1023,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1130.0,
+						"translation.y": 1711.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

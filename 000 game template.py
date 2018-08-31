@@ -13,16 +13,16 @@ def gameChoice():
   - sets the gameState accordingly
   '''
 
-  global gameState
   gameChoice = ''
 
   while gameChoice != 'y' and gameChoice != 'n':
       print("Do you want to play again? (y/n)")
       gameChoice = input()
 
-  if gameChoice == 'n':
-      gameState = False
+  if gameChoice == 'y':
+      return True
 
+  return False
 
 ########## Game Loop ##########
 gameState = True
@@ -38,4 +38,4 @@ while gameState == True:
     # remains true for every round of the game
 
   # ?does the player want to play again?
-  gameChoice()
+  gameState = gameChoice()

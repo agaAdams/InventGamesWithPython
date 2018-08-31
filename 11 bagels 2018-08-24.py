@@ -6,7 +6,7 @@ import random
 ########## Constants ##########
 
 ########## Functions ##########
-def randomNumber():
+def getRandomNumber():
   '''
   - make a random number of three digits
   - no repeating digits
@@ -15,7 +15,7 @@ def randomNumber():
   random3Digits = []
   
   while len(random3Digits) != 3:
-    digit = random.randint(0,9)
+    digit = str(random.randint(0,9))
     if digit not in random3Digits:
       random3Digits.append(str(digit))
 
@@ -38,27 +38,26 @@ def printIntro():
 def playerGuess(round):
   '''
   - ask player to guess
-  - validate player input
-  - only digits 0-9
-  - only 3 digits long
-  - no repeating digits
-  - return guessed number
+  - validates player input
+    - only digits 0-9
+    - only 3 digits long
+    - no repeating digits
+  - returns guessed number
   '''
   guessedNumber = []
-
   playerInput = ''
 
   while not playerInput.isdigit() or len(playerInput) != 3:
     print("Guess #", round)
-    print("Please enter a 3-digit number. No repeating digits.")
     playerInput = input()
-    for x in range(len(playerInput)):
-      # digitList = list(playerInput)
-      if list(playerInput).count(list(playerInput)[x]) > 1:
-        playerInput = ''
-        break
+    digitList = list(playerInput)
 
-  guessedNumber = list(playerInput)
+    for digit in digitList:
+      if digitList.count(digit) > 1:
+        playerInput = ''
+
+  guessedNumber = digitList
+  
   return guessedNumber
 
 def checkWin(randomNumber, guess):
@@ -73,6 +72,35 @@ def checkClues(randomNumber, guess):
   - check guess for clues
   - print clues
   '''
+  clues = []
+  cluesLine = ''
+
+  if len(checkBagels(randomNumber, guess)) == 0:
+    cluesLine = 'Bagels'
+  else:
+    for number in guess:
+      if number == randomNumber[guess.index(number)]:
+        clues.append('Fermi ')
+      elif number in randomNumber:
+        clues.append('Pico ')
+    clues.sort()
+    for item in clues:
+      cluesLine = cluesLine + item
+
+  return cluesLine
+
+def checkBagels(randomNumber, guess):
+  '''
+  - checks if any digits in the guessed number are in the random number
+  - returns list of correct guessed numbers
+  '''
+  bagels = []
+
+  for number in guess:
+    if number in randomNumber:
+      bagels.append(number)
+
+  return bagels
 
 def gameChoice():
   '''
@@ -80,7 +108,6 @@ def gameChoice():
   - accepts only "y" or "n"
   - sets the gameState accordingly
   '''
-
   gameChoice = ''
 
   while gameChoice != 'y' and gameChoice != 'n':
@@ -98,21 +125,22 @@ gameState = True
 
 while gameState == True:
   ###### Globals ########
-  x = 1
-  randomNumber = randomNumber()
-  print(randomNumber)
+  gameRound = 1
+  winState = False
+  randomNumber = getRandomNumber()
   printIntro()
 
   ########## Round Loop #########
-  for x in range(1,11):
-    guess = playerGuess(x)
+  while gameRound != 11 and winState == False:
+    gameRound += 1
+    guess = playerGuess(gameRound)
 
     if randomNumber != guess:
-      checkClues(randomNumber, guess)
+      print(checkClues(randomNumber, guess))
     else:
-      break
+      winState = True
 
-  if x == 11:
+  if gameRound == 11:
     print("Sorry, you guessed ten times. The secret number was ", randomNumber)
   else:
     print("You got it!")
