@@ -78,12 +78,11 @@ def checkClues(randomNumber, guess):
   else:
     for number in guess:
       if number == randomNumber[guess.index(number)]:
-        clues.append('Fermi ')
+        clues.append('Fermi')
       elif number in randomNumber:
-        clues.append('Pico ')
+        clues.append('Pico')
     clues.sort()
-    for item in clues:
-      cluesLine = cluesLine + item
+    cluesLine = ' '.join(clues)
 
   return cluesLine
 
@@ -130,13 +129,13 @@ while gameState == True:
 
   ########## Round Loop #########
   while gameRound != 11 and winState == False:
-    gameRound += 1
     guess = playerGuess(gameRound)
 
     if randomNumber != guess:
       print(checkClues(randomNumber, guess))
     else:
       winState = True
+    gameRound += 1
 
   if gameRound == 11:
     print("Sorry, you guessed ten times. The secret number was ", randomNumber)

@@ -4,16 +4,40 @@
 		"selected_items":
 		[
 			[
-				"ga",
-				"gameState"
+				"pri",
+				"printClues〔function〕"
+			],
+			[
+				"clue",
+				"cluesLine"
+			],
+			[
+				"cl",
+				"clues〔variable〕"
+			],
+			[
+				"rand",
+				"randomNumber〔variable〕"
 			],
 			[
 				"game",
-				"gameState〔variable〕"
+				"gameRound〔variable〕"
+			],
+			[
+				"e",
+				"elif"
+			],
+			[
+				"che",
+				"checkBagels〔function〕"
 			],
 			[
 				"ran",
-				"randomNumber〔variable〕"
+				"randomNumber〔argument〕"
+			],
+			[
+				"ga",
+				"gameState"
 			],
 			[
 				"rando",
@@ -42,10 +66,6 @@
 			[
 				"di",
 				"digit"
-			],
-			[
-				"rand",
-				"random3Digits"
 			],
 			[
 				"ra",
@@ -252,10 +272,6 @@
 				"matches"
 			],
 			[
-				"e",
-				"else"
-			],
-			[
 				"lis",
 				"list2"
 			],
@@ -334,10 +350,6 @@
 			[
 				"cub",
 				"cubes"
-			],
-			[
-				"pri",
-				"print〔function〕"
 			],
 			[
 				"pi",
@@ -502,29 +514,16 @@
 			[
 				"prev",
 				"previous_path"
-			],
-			[
-				"crossed",
-				"crossed_bus_stop"
-			],
-			[
-				"current",
-				"current_bus"
-			],
-			[
-				"depar",
-				"departure_time"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "11 bagels 2018-08-24.py",
+			"file": "000 game template.py",
 			"settings":
 			{
-				"buffer_size": 2791,
-				"encoding": "UTF-8",
+				"buffer_size": 937,
 				"line_ending": "Unix"
 			}
 		}
@@ -780,11 +779,13 @@
 	],
 	"file_history":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-08-24 11.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/README.md",
@@ -905,13 +906,11 @@
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/README.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_9.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_13.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_3.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_12.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_11.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_3.md"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -925,6 +924,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"shuffle",
+			"check",
+			"x",
+			"gameRound",
+			"x",
+			"playerGuess",
+			"zahl",
+			"randomNumber()",
 			"playerGuess",
 			"string",
 			"fieldChoice",
@@ -985,37 +992,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "11 bagels 2018-08-24.py",
-					"semi_transient": false,
+					"file": "000 game template.py",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2791,
+						"buffer_size": 937,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								2223,
-								2223
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"origPos":
 							[
 								0.0,
-								2088.0
+								0.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1023,7 +1020,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1711.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1096,6 +1093,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"11",
+				"11 bagels 2018-08-24.py"
+			],
 			[
 				"p3",
 				"RoguelikeTutorial/p3_RLT_v02.py"
@@ -1603,10 +1604,6 @@
 			[
 				"capturepaym",
 				"app/workers/capture_payment_worker.rb"
-			],
-			[
-				"paymentcon",
-				"app/controllers/api/v1/payments_controller.rb"
 			]
 		],
 		"width": 0.0
