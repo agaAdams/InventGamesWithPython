@@ -4,8 +4,84 @@
 		"selected_items":
 		[
 			[
+				"che",
+				"chestList〔argument〕"
+			],
+			[
+				"ne",
+				"newChest〔variable〕"
+			],
+			[
+				"B",
+				"BOARD_HEIGHT"
+			],
+			[
+				"Tr",
+				"True〔variable〕"
+			],
+			[
+				"win",
+				"winState〔variable〕"
+			],
+			[
+				"BO",
+				"BOARD_WIDTH〔variable〕"
+			],
+			[
+				"son",
+				"sonarList〔variable〕"
+			],
+			[
+				"place",
+				"placeSonar"
+			],
+			[
+				"bo",
+				"boardHeight"
+			],
+			[
+				"boar",
+				"boardWidth"
+			],
+			[
+				"sonar",
+				"sonarList"
+			],
+			[
+				"c",
+				"chestList"
+			],
+			[
+				"b",
+				"boardWidth"
+			],
+			[
 				"pri",
-				"printClues〔function〕"
+				"printBoard"
+			],
+			[
+				"ch",
+				"chestList〔variable〕"
+			],
+			[
+				"chests",
+				"chestList"
+			],
+			[
+				"crea",
+				"createChests"
+			],
+			[
+				"in",
+				"instructions"
+			],
+			[
+				"sh",
+				"showInstructions〔function〕"
+			],
+			[
+				"inst",
+				"instructionsChoice"
 			],
 			[
 				"clue",
@@ -26,10 +102,6 @@
 			[
 				"e",
 				"elif"
-			],
-			[
-				"che",
-				"checkBagels〔function〕"
 			],
 			[
 				"ran",
@@ -90,10 +162,6 @@
 			[
 				"play",
 				"playerRole〔argument〕"
-			],
-			[
-				"win",
-				"winSets"
 			],
 			[
 				"cu",
@@ -220,10 +288,6 @@
 				"wordList〔variable〕"
 			],
 			[
-				"sh",
-				"showGameBoard"
-			],
-			[
 				"whi",
 				"whichList〔argument〕"
 			],
@@ -238,10 +302,6 @@
 			[
 				"def",
 				"def〔keyword〕"
-			],
-			[
-				"in",
-				"input〔function〕"
 			],
 			[
 				"listen",
@@ -400,10 +460,6 @@
 				"block_sight"
 			],
 			[
-				"c",
-				"color〔variable〕"
-			],
-			[
 				"dr",
 				"draw_char"
 			],
@@ -458,72 +514,17 @@
 			[
 				"console_is",
 				"console_is_fullscreen〔function〕"
-			],
-			[
-				"Key_en",
-				"KEY_ENTER〔variable〕"
-			],
-			[
-				"ke",
-				"key"
-			],
-			[
-				"option",
-				"option"
-			],
-			[
-				"referral",
-				"referral_code"
-			],
-			[
-				"FREE",
-				"FREE_BOOKINGS_FOR_RECIPIENT"
-			],
-			[
-				"free_bookin",
-				"free_bookings_remaining"
-			],
-			[
-				"free_booking",
-				"free_bookings_credit_used"
-			],
-			[
-				"free_bookings",
-				"free_bookings_remaining"
-			],
-			[
-				"bus",
-				"bus_registration_number"
-			],
-			[
-				"last",
-				"last_bus_stop_departure_time"
-			],
-			[
-				"alighting",
-				"alighting_bus_stop_id"
-			],
-			[
-				"board",
-				"boarding_bus_stop_id"
-			],
-			[
-				"boarding_bus",
-				"boarding_bus_stop_name"
-			],
-			[
-				"prev",
-				"previous_path"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "000 game template.py",
+			"file": "12 sonar 180910.py",
 			"settings":
 			{
-				"buffer_size": 937,
+				"buffer_size": 6054,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -775,15 +776,16 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython"
+		"/Users/agata/Documents/GitHub/InventGamesWithPython",
+		"/Users/agata/Documents/dev/Invent Your Own Computer Games with Python, 3rd Edition - source code/src"
 	],
 	"file_history":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
@@ -910,7 +912,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -924,6 +926,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"boardHeight",
+			"boardWidth",
+			"chest",
+			"randint",
+			"createChests",
+			"gameRound",
 			"shuffle",
 			"check",
 			"x",
@@ -992,23 +1000,38 @@
 			[
 				{
 					"buffer": 0,
-					"file": "000 game template.py",
-					"semi_transient": true,
+					"file": "12 sonar 180910.py",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 937,
+						"buffer_size": 6054,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										2440,
+										2440
+									]
+								],
+								"scope": "bookmarks"
+							}
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								289,
+								289
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
+							"open_with_edit": true,
 							"origPos":
 							[
 								0.0,
