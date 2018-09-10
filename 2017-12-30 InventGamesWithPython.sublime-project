@@ -12,6 +12,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/agata/Documents/dev/Invent Your Own Computer Games with Python, 3rd Edition - source code/src"
 		}
 	]
 }
