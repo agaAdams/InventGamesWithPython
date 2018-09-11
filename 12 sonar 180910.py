@@ -10,13 +10,26 @@ BOARD_WIDTH = 60
 BOARD_HEIGHT = 15
 
 ########### Classes ###########
-class Chest:
-     """ chest class, represents treasure chest with x and y coordinates"""
-     global BOARD_WIDTH
-     global BOARD_HEIGHT
-     def __init__(self):
-       self.x = random.randint(0, BOARD_WIDTH)
-       self.y = random.randint(0, BOARD_HEIGHT)
+class Chest(object):
+  """ chest class, represents treasure chest with x and y coordinates"""
+  global BOARD_WIDTH
+  global BOARD_HEIGHT
+  def __init__(self):
+    self.x = random.randint(0, BOARD_WIDTH)
+    self.y = random.randint(0, BOARD_HEIGHT)
+  def __eq__(self, other):
+    return self.x == other.x and self.y == other.y
+
+class Sonar(object):
+  """docstring for Sonar"""
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+
+  def calculateDistance():
+    '''calculate distance to nearest chest'''
+    self.distance = 0
+    
    
 ########## Functions ##########
 def printIntro():
@@ -90,15 +103,11 @@ def placeChests(width, height, chests, chestList):
   - creates chest object
   - checks no two chests on same place
   - adds chest object to chestList, until as many chests as set in CHESTS
-  - updates chest list
   '''
   while len(chestList) != chests: #is chest list full?
     newChest = Chest() #create chest object
-    if len(chestList) == 0:
+    if newChest not in chestList:
       chestList.append(newChest)
-    for c in range(len(chestList)): #check already created chest objects in chest list
-      if newChest != c: #if there is not already another chest with same coordinates
-        chestList.append(newChest) # add chest object to chestList
         
 def printBoard(width, height, chestList, sonarList):
   '''
@@ -112,8 +121,11 @@ def printBoard(width, height, chestList, sonarList):
       - else print random character: ~ or `
   - print game board 
   '''
+  baseLine = (*range(10))
+  baseLine *= width/10
+  print(baseLine)
 
-def placeSonar(width, height, sonarList, chestList, gameRound):
+def placeSonar(width, height, sonarList, chestList, sonars):
   '''
   - asks player to place sonar:
   You have X sonar devices left. X treasure chests remaining. Where do you want to drop the next sonar device? (0-59 0-14) (or type quit)
@@ -159,12 +171,12 @@ while gameState == True:
 
   printIntro() #print game intro and game instructions
   placeChests(BOARD_WIDTH, BOARD_HEIGHT, CHESTS, chestList) # create chests, add to chests list
-  printBoard(BOARD_WIDTH, boardHeight, chestList, sonarList) #Spielbrett mit aktualisierten Sonar-zahlen drucken
+  printBoard(BOARD_WIDTH, BOARD_HEIGHT, chestList, sonarList) #Spielbrett mit aktualisierten Sonar-zahlen drucken
 
   ########## Round Loop #########
   while len(sonarList) != SONARS and winState == False:
-    placeSonar(BOARD_WIDTH, BOARD_HEIGHT, sonarList, chestList, gameRound) #Spieler fragen, wo sein sonar hin soll; eingabe validieren
-    printBoard(BOARD_WIDTH, boardHeight, chestList, sonarList) #Spielbrett mit aktualisierten Sonar-zahlen drucken
+    placeSonar(BOARD_WIDTH, BOARD_HEIGHT, sonarList, chestList, SONARS) #Spieler fragen, wo sein sonar hin soll; eingabe validieren
+    printBoard(BOARD_WIDTH, BOARD_HEIGHT, chestList, sonarList) #Spielbrett mit aktualisierten Sonar-zahlen drucken
     if len(chestList) == 0:
       winState = True # alle kisten gefunden?
 

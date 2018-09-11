@@ -5,7 +5,7 @@
 		[
 			[
 				"che",
-				"chestList〔argument〕"
+				"chestList.append"
 			],
 			[
 				"ne",
@@ -523,7 +523,7 @@
 			"file": "12 sonar 180910.py",
 			"settings":
 			{
-				"buffer_size": 6054,
+				"buffer_size": 6138,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -776,11 +776,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython",
-		"/Users/agata/Documents/dev/Invent Your Own Computer Games with Python, 3rd Edition - source code/src"
+		"/Users/agata/Documents/GitHub/InventGamesWithPython"
 	],
 	"file_history":
 	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/tester.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/12 sonar 180910.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
@@ -906,9 +907,7 @@
 		"/Volumes/KOBOeReader/.adds/koreader/defaults.lua",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_15.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/README.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_9.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_13.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_3.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_9.md"
 	],
 	"find":
 	{
@@ -926,6 +925,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gameRound",
 			"boardHeight",
 			"boardWidth",
 			"chest",
@@ -1004,7 +1004,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6054,
+						"buffer_size": 6138,
 						"regions":
 						{
 							"bookmarks":
@@ -1014,8 +1014,8 @@
 								"regions":
 								[
 									[
-										2440,
-										2440
+										3093,
+										3093
 									]
 								],
 								"scope": "bookmarks"
@@ -1024,18 +1024,17 @@
 						"selection":
 						[
 							[
-								289,
-								289
+								3217,
+								3217
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"open_with_edit": true,
 							"origPos":
 							[
 								0.0,
-								0.0
+								964.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1043,7 +1042,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 935.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
