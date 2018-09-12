@@ -4,7 +4,7 @@
 import random
 
 ########## Constants ##########
-SONARS = 16
+SONARS = 3
 CHESTS = 3
 BOARD_WIDTH = 60
 BOARD_HEIGHT = 15
@@ -25,6 +25,7 @@ class Sonar(object):
   def __init__(self, x, y):
     self.x = x
     self.y = y
+    self.distance = random.randint(0,9)
 
   def calculateDistance():
     '''calculate distance to nearest chest'''
@@ -121,8 +122,9 @@ def printBoard(width, height, chestList, sonarList):
       - else print random character: ~ or `
   - print game board 
   '''
-  firstLine = ''
+  firstLine = ' '
   secondLine = ''
+  felder = ['~', '`']
   board = []
 
   for x in range(1,int(width/10)+1):
@@ -134,6 +136,16 @@ def printBoard(width, height, chestList, sonarList):
     secondLine += str(x)
   secondLine *= int(width/10)
   print(secondLine)
+
+  for zeile in range(height): #zeilen
+    print(zeile, end='')
+    for field in range(len(secondLine)-2): #felder in zeilen/spalten
+      for sonar in sonarList:
+        if sonar.x == field and sonar.y == zeile:
+          print(sonar.distance, end='')
+        else:
+          print(random.choice(felder), end='')
+    print(zeile)
 
 def placeSonar(width, height, sonarList, chestList, sonars):
   '''
@@ -177,7 +189,7 @@ while gameState == True:
   ###### Globals ########
   winState = False
   chestList = [] #list of chest objects
-  sonarList = [] #list of sonar objects
+  sonarList = [Sonar(5,9), Sonar(23,6), Sonar(42,2)] #list of sonar objects
 
   printIntro() #print game intro and game instructions
   placeChests(BOARD_WIDTH, BOARD_HEIGHT, CHESTS, chestList) # create chests, add to chests list

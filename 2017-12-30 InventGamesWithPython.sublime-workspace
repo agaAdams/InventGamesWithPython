@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"dis",
+				"distance"
+			],
+			[
+				"sona",
+				"sonarList〔argument〕"
+			],
+			[
+				"sec",
+				"secondLine〔variable〕"
+			],
+			[
 				"first",
 				"firstLine〔variable〕"
 			],
@@ -348,10 +360,6 @@
 				"list1"
 			],
 			[
-				"sec",
-				"secretWord〔variable〕"
-			],
-			[
 				"re",
 				"return"
 			],
@@ -506,14 +514,6 @@
 			[
 				"ex",
 				"exit_game"
-			],
-			[
-				"K",
-				"KEY_CHAR〔variable〕"
-			],
-			[
-				"exit",
-				"exit〔variable〕"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "12 sonar 180910.py",
 			"settings":
 			{
-				"buffer_size": 6323,
+				"buffer_size": 6752,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -925,6 +925,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"y",
+			"x",
 			"horBorder",
 			"gameRound",
 			"boardHeight",
@@ -1005,7 +1007,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6323,
+						"buffer_size": 6752,
 						"regions":
 						{
 							"bookmarks":
@@ -1014,10 +1016,6 @@
 								"icon": "bookmark",
 								"regions":
 								[
-									[
-										3093,
-										3093
-									]
 								],
 								"scope": "bookmarks"
 							}
@@ -1025,8 +1023,8 @@
 						"selection":
 						[
 							[
-								3684,
-								3684
+								3132,
+								3132
 							]
 						],
 						"settings":
@@ -1035,7 +1033,7 @@
 							"origPos":
 							[
 								0.0,
-								2723.0
+								1672.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1043,7 +1041,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2723.0,
+						"translation.y": 1672.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
