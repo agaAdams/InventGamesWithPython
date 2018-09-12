@@ -121,9 +121,19 @@ def printBoard(width, height, chestList, sonarList):
       - else print random character: ~ or `
   - print game board 
   '''
-  baseLine = (*range(10))
-  baseLine *= width/10
-  print(baseLine)
+  firstLine = ''
+  secondLine = ''
+  board = []
+
+  for x in range(1,int(width/10)+1):
+    firstLine += str(x)
+    firstLine += ' ' * 9
+  print(firstLine)
+
+  for x in range(10):
+    secondLine += str(x)
+  secondLine *= int(width/10)
+  print(secondLine)
 
 def placeSonar(width, height, sonarList, chestList, sonars):
   '''
