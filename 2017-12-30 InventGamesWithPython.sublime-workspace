@@ -4,8 +4,56 @@
 		"selected_items":
 		[
 			[
+				"son",
+				"sonar.distance"
+			],
+			[
+				"dist",
+				"distanceY〔variable〕"
+			],
+			[
 				"dis",
-				"distance"
+				"distanceY〔variable〕"
+			],
+			[
+				"di",
+				"distanceX〔variable〕"
+			],
+			[
+				"che",
+				"chest〔variable〕"
+			],
+			[
+				"rem",
+				"removes"
+			],
+			[
+				"new",
+				"newSonar〔variable〕"
+			],
+			[
+				"d",
+				"calculateDistance〔function〕"
+			],
+			[
+				"cal",
+				"calculateChestDistance〔function〕"
+			],
+			[
+				"play",
+				"playerInput"
+			],
+			[
+				"sonar",
+				"sonarsLeft"
+			],
+			[
+				"valid",
+				"validPlace〔variable〕"
+			],
+			[
+				"chest",
+				"chestList〔argument〕"
 			],
 			[
 				"sona",
@@ -22,10 +70,6 @@
 			[
 				"ho",
 				"horBorder〔variable〕"
-			],
-			[
-				"che",
-				"chestList.append"
 			],
 			[
 				"ne",
@@ -48,10 +92,6 @@
 				"BOARD_WIDTH〔variable〕"
 			],
 			[
-				"son",
-				"sonarList〔variable〕"
-			],
-			[
 				"place",
 				"placeSonar"
 			],
@@ -62,10 +102,6 @@
 			[
 				"boar",
 				"boardWidth"
-			],
-			[
-				"sonar",
-				"sonarList"
 			],
 			[
 				"c",
@@ -156,10 +192,6 @@
 				"guessedNumber〔variable〕"
 			],
 			[
-				"di",
-				"digit"
-			],
-			[
 				"ra",
 				"random"
 			],
@@ -177,10 +209,6 @@
 			],
 			[
 				"playe",
-				"playerRole〔argument〕"
-			],
-			[
-				"play",
 				"playerRole〔argument〕"
 			],
 			[
@@ -412,10 +440,6 @@
 				"favorite_languages〔variable〕"
 			],
 			[
-				"new",
-				"new_users〔variable〕"
-			],
-			[
 				"admin",
 				"admin"
 			],
@@ -490,30 +514,6 @@
 			[
 				"o",
 				"objects"
-			],
-			[
-				"ob",
-				"object"
-			],
-			[
-				"obje",
-				"objects"
-			],
-			[
-				"bk",
-				"BKGND_NONE〔variable〕"
-			],
-			[
-				"cha",
-				"char"
-			],
-			[
-				"S",
-				"SCREEN_HEIGHT"
-			],
-			[
-				"ex",
-				"exit_game"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "12 sonar 180910.py",
 			"settings":
 			{
-				"buffer_size": 6752,
+				"buffer_size": 8236,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -925,6 +925,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"field",
+			"y_coord",
+			"line",
 			"y",
 			"x",
 			"horBorder",
@@ -1007,7 +1010,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6752,
+						"buffer_size": 8236,
 						"regions":
 						{
 							"bookmarks":
@@ -1023,8 +1026,8 @@
 						"selection":
 						[
 							[
-								3132,
-								3132
+								7473,
+								7473
 							]
 						],
 						"settings":
@@ -1033,7 +1036,7 @@
 							"origPos":
 							[
 								0.0,
-								1672.0
+								2610.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1041,7 +1044,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1672.0,
+						"translation.y": 2610.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
