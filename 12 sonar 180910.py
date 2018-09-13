@@ -7,7 +7,7 @@ import random
 SONARS = 3
 CHESTS = 3
 BOARD_WIDTH = 60
-BOARD_HEIGHT = 15
+BOARD_HEIGHT = 16
 
 ########### Classes ###########
 class Chest(object):
@@ -122,30 +122,35 @@ def printBoard(width, height, chestList, sonarList):
       - else print random character: ~ or `
   - print game board 
   '''
-  firstLine = ' '
+  firstLine = ' ' * 10
   secondLine = ''
   felder = ['~', '`']
   board = []
 
-  for x in range(1,int(width/10)+1):
+  for x in range(1,int(width/10)):
     firstLine += str(x)
     firstLine += ' ' * 9
-  print(firstLine)
+  print('  ' + firstLine)
 
   for x in range(10):
     secondLine += str(x)
   secondLine *= int(width/10)
-  print(secondLine)
+  print('  ' + secondLine)
 
-  for zeile in range(height): #zeilen
-    print(zeile, end='')
-    for field in range(len(secondLine)-2): #felder in zeilen/spalten
-      for sonar in sonarList:
-        if sonar.x == field and sonar.y == zeile:
-          print(sonar.distance, end='')
-        else:
-          print(random.choice(felder), end='')
-    print(zeile)
+  for y_coordinate in range(height): #zeilen
+    if y_coordinate < 10:
+      print(' ', end='')
+    print(y_coordinate, end='')
+    for x_coordinate in range(width): #felder in zeilen/spalten
+  #     for sonar in sonarList:
+  #       if sonar.x == x_coordinate and sonar.y == y_coordinate:
+  #         print(sonar.distance, end='')
+  #       else:
+      print(random.choice(felder), end='')
+    print(y_coordinate)
+
+  print('  ' + secondLine)
+  print('  ' + firstLine)
 
 def placeSonar(width, height, sonarList, chestList, sonars):
   '''
