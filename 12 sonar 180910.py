@@ -114,19 +114,17 @@ def printBoard(width, height, chestList, sonarList):
   '''
   - prints game board with distances of chests from sonar devices
   - prints borders
-  - creates board object
-    - list of lists x/y
-    - for every field
-      - if field corresponds to sonar
-        - print distance of sonar
-      - else print random character: ~ or `
-  - print game board 
+  - for every board field
+    - if field corresponds to sonar
+      - print distance of sonar
+    - else print random character: ~ or `
   '''
   firstLine = ' ' * 10
   secondLine = ''
   felder = ['~', '`']
-  board = []
+  sonarPlaced = False
 
+  #print top border 
   for x in range(1,int(width/10)):
     firstLine += str(x)
     firstLine += ' ' * 9
@@ -137,18 +135,22 @@ def printBoard(width, height, chestList, sonarList):
   secondLine *= int(width/10)
   print('  ' + secondLine)
 
-  for y_coordinate in range(height): #zeilen
+  #print board
+  for y_coordinate in range(height): #lines
     if y_coordinate < 10:
       print(' ', end='')
-    print(y_coordinate, end='')
-    for x_coordinate in range(width): #felder in zeilen/spalten
-  #     for sonar in sonarList:
-  #       if sonar.x == x_coordinate and sonar.y == y_coordinate:
-  #         print(sonar.distance, end='')
-  #       else:
-      print(random.choice(felder), end='')
-    print(y_coordinate)
+    print(y_coordinate, end='') #print left border
+    for x_coordinate in range(width): #rows
+      for sonar in sonarList:
+        if sonar.x == x_coordinate and sonar.y == y_coordinate:
+          print(sonar.distance, end='') #print sonar distance
+          sonarPlaced = True
+      if sonarPlaced == False:
+        print(random.choice(felder), end='') #print random character
+      sonarPlaced = False
+    print(y_coordinate) #print right border
 
+  #print bottom border
   print('  ' + secondLine)
   print('  ' + firstLine)
 
@@ -194,7 +196,7 @@ while gameState == True:
   ###### Globals ########
   winState = False
   chestList = [] #list of chest objects
-  sonarList = [Sonar(5,9), Sonar(23,6), Sonar(42,2)] #list of sonar objects
+  sonarList = [Sonar(0,0), Sonar(23,6), Sonar(2,2)] #list of sonar objects
 
   printIntro() #print game intro and game instructions
   placeChests(BOARD_WIDTH, BOARD_HEIGHT, CHESTS, chestList) # create chests, add to chests list
@@ -218,4 +220,4 @@ while gameState == True:
       print() #objekt x, objekt y
 
   # ?does the player want to play again?
-  gameState = gameChoice()
+  # gameState = gameChoice()
