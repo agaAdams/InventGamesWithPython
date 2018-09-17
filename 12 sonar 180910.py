@@ -2,26 +2,32 @@
 
 #game description
 import random
+import re
 
 ########## Constants ##########
-SONARS = 3
+SONARS = 16
 CHESTS = 3
 BOARD_WIDTH = 60
 BOARD_HEIGHT = 16
 
 ########### Classes ###########
 class Chest(object):
-  """ chest class, represents treasure chest with x and y coordinates"""
-  global BOARD_WIDTH
-  global BOARD_HEIGHT
-  def __init__(self):
-    self.x = random.randint(0, BOARD_WIDTH)
-    self.y = random.randint(0, BOARD_HEIGHT)
+  """
+  - chest class, represents treasure chest with x and y coordinates
+  - takes board width and height as arguments
+  """
+  def __init__(self, width, height):
+    self.x = random.randint(0, width)
+    self.y = random.randint(0, height)
   def __eq__(self, other):
+    ''' equality comparison: compares x and y coordinates '''
     return self.x == other.x and self.y == other.y
 
 class Sonar(object):
-  """docstring for Sonar"""
+  """
+  - sonar class, represents sonar object with x and y coordinates and distance to chests
+  - takes x and y coordinates as arguments
+  """
   def __init__(self, x, y):
     self.x = x
     self.y = y
@@ -45,7 +51,7 @@ class Sonar(object):
         self.distance = chestDistance
    
 ########## Functions ##########
-def printIntro():
+def printIntro(chests):
   '''
   - prints game intro and instructions
   '''
@@ -56,13 +62,13 @@ def printIntro():
   instructionsChoice = input()
   
   if instructionsChoice == 'y':
-    showInstructions()
+    showInstructions(chests)
 
-def showInstructions():
+def showInstructions(chests):
   print('''
     Instructions:
     You are the captain of the Simon, a treasure-hunting ship. Your current mission
-    is to find the three sunken treasure chests that are lurking in the part of the
+    is to find the %s sunken treasure chests that are lurking in the part of the
     ocean you are in and collect them.
 
     To play, enter the coordinates of the point in the ocean you wish to drop a
@@ -80,8 +86,9 @@ def showInstructions():
         4 22222 4
         4       4
         444444444
+
     Press enter to continue...
-    ''')
+    ''' % (chests))
   input()
 
   print('''
@@ -106,6 +113,7 @@ def showInstructions():
 
     When you collect a chest, all sonar devices will update to locate the next
     closest sunken treasure chest.
+
     Press enter to continue...
     ''')
   input()
@@ -118,7 +126,7 @@ def placeChests(width, height, chests, chestList):
   - adds chest object to chestList, until as many chests as set in CHESTS
   '''
   while len(chestList) != chests: #is chest list full?
-    newChest = Chest() #create chest object
+    newChest = Chest(width, height) #create chest object
     if newChest not in chestList:
       chestList.append(newChest)
         
@@ -187,27 +195,37 @@ def placeSonar(width, height, sonarList, chestList, sonars):
   - updates sonar list
   '''
   playerInput = ''
-  validFormat = True
-  validNumbers = True
-  validPlace = True
+  pattern = '\d{2},\d{2}'
+  validInput = False
   sonarsLeft = sonars - len(sonarList)
 
-  while not validFormat or not validNumbers or not validPlace: #regex
-    print("You have %s sonar devices left. %s treasure chests remaining. Where do you want to drop the next sonar device? (0-59 0-15) (or type quit)" % (sonarsLeft, len(chestList)))
+  while not validInput:
+    print("You have %s sonar devices left. %s treasure chests remaining. Where do you want to drop the next sonar device? (00-59,00-15) (or type quit)" % (sonarsLeft, len(chestList)))
     playerInput = input()
-    x_coordinate = int(playerInput[0:2])
-    y_coordinate = int(playerInput[3:5])
-    newSonar = Sonar(x_coordinate, y_coordinate)
-    newSonar.calculateDistance()
-
-    if newSonar.distance == 0:
-      print('You have found a sunken treasure chest!')
-      for chest in chestList:
-        if chest == newSonar:
-          chestList.remove(chest)
-    elif newSonar.distance < 11:
-      print('Treasure detected at a distance of %s from the sonar device.' % newSonar.distance)
-    sonarList.append(newSonar)
+    if re.match(pattern, playerInput): #checks for valid input pattern
+      x_coordinate = int(playerInput.split(',')[0])
+      y_coordinate = int(playerInput.split(',')[1])
+      if x_coordinate <= width and y_coordinate <= height: #check for numbers within borders of game board
+        newSonar = Sonar(x_coordinate, y_coordinate)
+        if newSonar not in sonarList: #check no sonar already there at same place
+          #komplette validierung erfolgreich
+          validInput = True
+          newSonar.calculateDistance()
+          if newSonar.distance == 0:
+            print('You have found a sunken treasure chest!')
+            for chest in chestList:
+              if chest == newSonar:
+                chestList.remove(chest)
+          elif newSonar.distance < 10:
+            print('Treasure detected at a distance of %s from the sonar device.' % newSonar.distance)
+          sonarList.append(newSonar)
+          #komplette validierung erfolgreich
+        else:
+          print('You already have a sonar with these coordinates.')
+      else:
+        print('Please choose coordinates within the borders of the game board. (%s, %s)' % (width - 1, height - 1))
+    else:
+      print('Please type your chosen sonar location in the correct format: (00,00), ie. two sets of two digits, sperated by a comma.')
 
 def gameChoice():
   '''
@@ -231,7 +249,7 @@ while gameState == True:
   chestList = [] #list of chest objects
   sonarList = [] #list of sonar objects
 
-  printIntro() #print game intro and game instructions
+  printIntro(CHESTS) #print game intro and game instructions
   placeChests(BOARD_WIDTH, BOARD_HEIGHT, CHESTS, chestList) # create chests, add to chests list
   printBoard(BOARD_WIDTH, BOARD_HEIGHT, chestList, sonarList) #Spielbrett mit aktualisierten Sonar-zahlen drucken
 

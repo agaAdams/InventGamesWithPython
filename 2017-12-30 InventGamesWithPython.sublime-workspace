@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"val",
+				"validInput〔variable〕"
+			],
+			[
+				"vali",
+				"validPlace〔variable〕"
+			],
+			[
+				"sonar",
+				"sonarList〔argument〕"
+			],
+			[
+				"he",
+				"height〔argument〕"
+			],
+			[
+				"va",
+				"validFormat〔variable〕"
+			],
+			[
+				"wi",
+				"width〔argument〕"
+			],
+			[
 				"son",
 				"sonar.distance"
 			],
@@ -42,10 +66,6 @@
 			[
 				"play",
 				"playerInput"
-			],
-			[
-				"sonar",
-				"sonarsLeft"
 			],
 			[
 				"valid",
@@ -392,10 +412,6 @@
 				"return"
 			],
 			[
-				"va",
-				"validatePlayerInput"
-			],
-			[
 				"HA",
 				"HANGMAN_PICS〔variable〕"
 			],
@@ -498,22 +514,6 @@
 			[
 				"blo",
 				"block_sight"
-			],
-			[
-				"dr",
-				"draw_char"
-			],
-			[
-				"con",
-				"console"
-			],
-			[
-				"__",
-				"__init__\t(p2_RLT_v03.py)"
-			],
-			[
-				"o",
-				"objects"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "12 sonar 180910.py",
 			"settings":
 			{
-				"buffer_size": 8236,
+				"buffer_size": 9237,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1010,7 +1010,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8236,
+						"buffer_size": 9237,
 						"regions":
 						{
 							"bookmarks":
@@ -1019,6 +1019,10 @@
 								"icon": "bookmark",
 								"regions":
 								[
+									[
+										6237,
+										6237
+									]
 								],
 								"scope": "bookmarks"
 							}
@@ -1026,8 +1030,8 @@
 						"selection":
 						[
 							[
-								7473,
-								7473
+								6176,
+								6176
 							]
 						],
 						"settings":
@@ -1036,7 +1040,7 @@
 							"origPos":
 							[
 								0.0,
-								2610.0
+								5422.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1044,7 +1048,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2610.0,
+						"translation.y": 5152.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
