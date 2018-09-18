@@ -17,8 +17,8 @@ class Chest(object):
   - takes board width and height as arguments
   """
   def __init__(self, width, height):
-    self.x = random.randint(0, width)
-    self.y = random.randint(0, height)
+    self.x = random.randint(0, width - 1)
+    self.y = random.randint(0, height - 1)
   def __eq__(self, other):
     ''' equality comparison: compares x and y coordinates '''
     return self.x == other.x and self.y == other.y
@@ -31,14 +31,13 @@ class Sonar(object):
   def __init__(self, x, y):
     self.x = x
     self.y = y
-    self.distance = 11
 
   def __eq__(self, other):
     return self.x == other.x and self.y == other.y
 
-  def calculateDistance(self):
+  def calculateDistance(self, chestList):
     '''calculate distance to nearest chest'''
-    global chestList
+    self.distance = 10
 
     for chest in chestList:
       distanceX = abs(chest.x - self.x)
@@ -142,7 +141,7 @@ def printBoard(width, height, chestList, sonarList):
   firstLine = ' ' * 10
   secondLine = ''
   felder = ['~', '`']
-  sonarPlaced = False
+  sonarVisible = False
 
   #print top border 
   for x in range(1,int(width/10)):
@@ -163,14 +162,16 @@ def printBoard(width, height, chestList, sonarList):
     for x_coordinate in range(width): #rows
       for sonar in sonarList:
         if sonar.x == x_coordinate and sonar.y == y_coordinate:
-          if sonar.distance < 11:
+          sonar.calculateDistance(chestList)
+          if sonar.distance < 10:
             print(sonar.distance, end='') #print sonar distance
+            sonarVisible = True
           else:
-            print('S')
-          sonarPlaced = True
-      if sonarPlaced == False:
+            print('0', end='')
+            sonarVisible = True
+      if sonarVisible == False:
         print(random.choice(felder), end='') #print random character
-      sonarPlaced = False
+      sonarVisible = False
     print(y_coordinate) #print right border
 
   #print bottom border
@@ -210,7 +211,7 @@ def placeSonar(width, height, sonarList, chestList, sonars):
         if newSonar not in sonarList: #check no sonar already there at same place
           #komplette validierung erfolgreich
           validInput = True
-          newSonar.calculateDistance()
+          newSonar.calculateDistance(chestList)
           if newSonar.distance == 0:
             print('You have found a sunken treasure chest!')
             for chest in chestList:
@@ -271,4 +272,4 @@ while gameState == True:
       print() #objekt x, objekt y
 
   # ?does the player want to play again?
-  # gameState = gameChoice()
+  gameState = gameChoice()
