@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"boar",
+				"board"
+			],
+			[
+				"crea",
+				"createTopBorder〔function〕"
+			],
+			[
+				"second",
+				"secondLine"
+			],
+			[
+				"fir",
+				"firstLine"
+			],
+			[
+				"cal",
+				"calculateDistance"
+			],
+			[
 				"val",
 				"validInput〔variable〕"
 			],
@@ -58,10 +78,6 @@
 			[
 				"d",
 				"calculateDistance〔function〕"
-			],
-			[
-				"cal",
-				"calculateChestDistance〔function〕"
 			],
 			[
 				"play",
@@ -120,10 +136,6 @@
 				"boardHeight"
 			],
 			[
-				"boar",
-				"boardWidth"
-			],
-			[
 				"c",
 				"chestList"
 			],
@@ -142,10 +154,6 @@
 			[
 				"chests",
 				"chestList"
-			],
-			[
-				"crea",
-				"createChests"
 			],
 			[
 				"in",
@@ -306,10 +314,6 @@
 			[
 				"G",
 				"GAMEBOARD"
-			],
-			[
-				"fir",
-				"firstDraw〔function〕"
 			],
 			[
 				"we",
@@ -510,10 +514,6 @@
 			[
 				"Tile",
 				"Tile〔class〕"
-			],
-			[
-				"blo",
-				"block_sight"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "12 sonar 180910.py",
 			"settings":
 			{
-				"buffer_size": 9237,
+				"buffer_size": 9916,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -911,7 +911,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -922,9 +922,12 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"Chest",
+			"calculateDistance",
+			"sonarPlaced",
 			"field",
 			"y_coord",
 			"line",
@@ -1010,7 +1013,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9237,
+						"buffer_size": 9916,
 						"regions":
 						{
 							"bookmarks":
@@ -1019,10 +1022,6 @@
 								"icon": "bookmark",
 								"regions":
 								[
-									[
-										6237,
-										6237
-									]
 								],
 								"scope": "bookmarks"
 							}
@@ -1030,17 +1029,18 @@
 						"selection":
 						[
 							[
-								6176,
-								6176
+								433,
+								433
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
+							"history_list_is_closing": true,
 							"origPos":
 							[
 								0.0,
-								5422.0
+								218.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1048,7 +1048,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5152.0,
+						"translation.y": 218.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

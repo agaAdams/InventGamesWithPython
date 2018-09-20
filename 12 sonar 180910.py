@@ -23,6 +23,40 @@ class Chest(object):
     ''' equality comparison: compares x and y coordinates '''
     return self.x == other.x and self.y == other.y
 
+class Board(object):
+  """board class, represents game board"""
+  def __init__(self):
+    self.board = []
+    
+  def calculateBoard(self, width, height, chestList, sonarList):
+    sonarVisible = False
+    felder = ['~', '`']
+
+    for y_coordinate in range(height): #lines
+      if y_coordinate < 10:
+        # print(' ', end='')
+        self.board.append(' ')
+      # print(y_coordinate, end='') #print left border
+      self.board.append(str(y_coordinate))
+      for x_coordinate in range(width): #rows
+        for sonar in sonarList:
+          if sonar.x == x_coordinate and sonar.y == y_coordinate:
+            sonar.calculateDistance(chestList)
+            if sonar.distance < 10:
+              # print(sonar.distance, end='') #print sonar distance
+              self.board.append(str(sonar.distance))
+              sonarVisible = True
+            else:
+              # print('0', end='')
+              self.board.append('0')
+              sonarVisible = True
+        if sonarVisible == False:
+          # print(random.choice(felder), end='') #print random character
+          self.board.append(random.choice(felder))
+        sonarVisible = False
+      # print(y_coordinate) #print right border
+      self.board.append(str(y_coordinate))
+
 class Sonar(object):
   """
   - sonar class, represents sonar object with x and y coordinates and distance to chests
@@ -131,52 +165,34 @@ def placeChests(width, height, chests, chestList):
         
 def printBoard(width, height, chestList, sonarList):
   '''
-  - prints game board with distances of chests from sonar devices
-  - prints borders
-  - for every board field
-    - if field corresponds to sonar
-      - print distance of sonar
-    - else print random character: ~ or `
+  - prints game board with borders and distances of chests from sonar devices
   '''
-  firstLine = ' ' * 10
-  secondLine = ''
-  felder = ['~', '`']
-  sonarVisible = False
+  firstLine, secondLine = createBorder(width)
+  newBoard = Board()
+  newBoard.calculateBoard(width, height, chestList, sonarList)
 
-  #print top border 
-  for x in range(1,int(width/10)):
-    firstLine += str(x)
-    firstLine += ' ' * 9
+  #print top boarder
   print('  ' + firstLine)
-
-  for x in range(10):
-    secondLine += str(x)
-  secondLine *= int(width/10)
   print('  ' + secondLine)
 
-  #print board
-  for y_coordinate in range(height): #lines
-    if y_coordinate < 10:
-      print(' ', end='')
-    print(y_coordinate, end='') #print left border
-    for x_coordinate in range(width): #rows
-      for sonar in sonarList:
-        if sonar.x == x_coordinate and sonar.y == y_coordinate:
-          sonar.calculateDistance(chestList)
-          if sonar.distance < 10:
-            print(sonar.distance, end='') #print sonar distance
-            sonarVisible = True
-          else:
-            print('0', end='')
-            sonarVisible = True
-      if sonarVisible == False:
-        print(random.choice(felder), end='') #print random character
-      sonarVisible = False
-    print(y_coordinate) #print right border
+  #print game board
+  for item in newBoard.board:
+    print(*item)
 
   #print bottom border
   print('  ' + secondLine)
   print('  ' + firstLine)
+
+def createBorder(width):
+  firstLine = ' ' * 10
+  secondLine = ''
+  for x in range(1,int(width/10)):
+    firstLine += str(x)
+    firstLine += ' ' * 9
+  for x in range(10):
+    secondLine += str(x)
+  secondLine *= int(width/10)
+  return firstLine, secondLine
 
 def placeSonar(width, height, sonarList, chestList, sonars):
   '''
