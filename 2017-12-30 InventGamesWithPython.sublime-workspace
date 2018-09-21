@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"sonar",
+				"sonar.distance"
+			],
+			[
+				"near",
+				"nearestDistance〔variable〕"
+			],
+			[
+				"nea",
+				"nearestDistance〔variable〕"
+			],
+			[
+				"son",
+				"sonar.distance"
+			],
+			[
+				"chest",
+				"chestList〔variable〕"
+			],
+			[
+				"c",
+				"calculateDistance"
+			],
+			[
+				"che",
+				"checkChestFind〔function〕"
+			],
+			[
+				"cur",
+				"currentDistance〔variable〕"
+			],
+			[
+				"d",
+				"distance〔variable〕"
+			],
+			[
+				"el",
+				"elif〔keyword〕"
+			],
+			[
 				"boar",
 				"board"
 			],
@@ -32,10 +72,6 @@
 				"validPlace〔variable〕"
 			],
 			[
-				"sonar",
-				"sonarList〔argument〕"
-			],
-			[
 				"he",
 				"height〔argument〕"
 			],
@@ -46,10 +82,6 @@
 			[
 				"wi",
 				"width〔argument〕"
-			],
-			[
-				"son",
-				"sonar.distance"
 			],
 			[
 				"dist",
@@ -64,10 +96,6 @@
 				"distanceX〔variable〕"
 			],
 			[
-				"che",
-				"chest〔variable〕"
-			],
-			[
 				"rem",
 				"removes"
 			],
@@ -76,20 +104,12 @@
 				"newSonar〔variable〕"
 			],
 			[
-				"d",
-				"calculateDistance〔function〕"
-			],
-			[
 				"play",
 				"playerInput"
 			],
 			[
 				"valid",
 				"validPlace〔variable〕"
-			],
-			[
-				"chest",
-				"chestList〔argument〕"
 			],
 			[
 				"sona",
@@ -134,10 +154,6 @@
 			[
 				"bo",
 				"boardHeight"
-			],
-			[
-				"c",
-				"chestList"
 			],
 			[
 				"b",
@@ -262,10 +278,6 @@
 			[
 				"playf",
 				"playFields.get"
-			],
-			[
-				"el",
-				"else〔keyword〕"
 			],
 			[
 				"fre",
@@ -502,18 +514,6 @@
 			[
 				"col",
 				"color_dark_wall"
-			],
-			[
-				"MA",
-				"MAP_WIDTH"
-			],
-			[
-				"bl",
-				"blocked"
-			],
-			[
-				"Tile",
-				"Tile〔class〕"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "12 sonar 180910.py",
 			"settings":
 			{
-				"buffer_size": 9916,
+				"buffer_size": 9563,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -925,6 +925,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"currentDistance",
+			"self.xBoard",
+			"yBoard",
 			"Chest",
 			"calculateDistance",
 			"sonarPlaced",
@@ -1013,7 +1016,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9916,
+						"buffer_size": 9563,
 						"regions":
 						{
 							"bookmarks":
@@ -1029,8 +1032,8 @@
 						"selection":
 						[
 							[
-								433,
-								433
+								7988,
+								7988
 							]
 						],
 						"settings":
@@ -1040,7 +1043,7 @@
 							"origPos":
 							[
 								0.0,
-								218.0
+								3567.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1048,7 +1051,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 218.0,
+						"translation.y": 3567.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
