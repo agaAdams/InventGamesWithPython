@@ -1,12 +1,10 @@
 #This is a sonar game. The player places sonar devices at various places in the ocean to locate sunken treasure chests.
-
-#game description
 import random
 import re
 
 ########## Constants ##########
-SONARS = 16
-CHESTS = 3
+SONARS = 16 #number of sonars the player has to find chests
+CHESTS = 3 #number of placed chests
 BOARD_WIDTH = 60
 BOARD_HEIGHT = 16
 
@@ -24,7 +22,11 @@ class Chest(object):
     return self.x == other.x and self.y == other.y
 
 class Board(object):
-  """board class, represents game board"""
+  """
+  - board class, represents game board
+  - calculates game board as list of lists
+  - places sonar distances or random ocean characters
+  """
   def __init__(self):
     self.board = []
 
@@ -37,10 +39,9 @@ class Board(object):
       if y_coordinate < 10:
         line.append('')
       line.append(str(y_coordinate))
-      for x_coordinate in range(width): #rows
+      for x_coordinate in range(width): #cells
         for sonar in sonarList:
           if sonar.x == x_coordinate and sonar.y == y_coordinate:
-            sonar.calculateDistance(chestList)
             line.append(str(sonar.distance))
             sonarVisible = True
         if sonarVisible == False:
@@ -60,6 +61,7 @@ class Sonar(object):
     self.distance = 0
 
   def __eq__(self, other):
+    ''' equality comparison: compares x and y coordinates '''
     return self.x == other.x and self.y == other.y
 
   def calculateDistance(self, chestList):
@@ -78,8 +80,7 @@ class Sonar(object):
       elif chestDistance <= 9 and chestDistance < distance:
         distance = chestDistance
 
-    if distance > 0:
-      self.distance = distance
+    self.distance = distance
 
 ########## Functions ##########
 def printIntro(chests):
@@ -182,6 +183,9 @@ def printBoard(width, height, chestList, sonarList):
   print(*firstLine)
   
 def createBorder(width):
+  '''
+  - creates game board borders
+  '''
   firstLine = []
   secondLine = []
   tenLine = ''
@@ -216,7 +220,7 @@ def placeSonar(width, height, sonarList, chestList, sonars):
   sonarsLeft = sonars - len(sonarList)
 
   while not validInput:
-    print("You have %s sonar devices left. %s treasure chests remaining. Where do you want to drop the next sonar device? (00-%s,00-%s) (or type quit)" % (sonarsLeft, len(chestList), width - 1, height - 1))
+    print("You have %s sonar devices left. %s treasure chests remaining. Where do you want to drop the next sonar device? (00-%s,00-%s)" % (sonarsLeft, len(chestList), width - 1, height - 1))
     playerInput = input()
     if re.match(pattern, playerInput): #checks for valid input pattern
       x_coordinate = int(playerInput.split(',')[0])
@@ -224,10 +228,8 @@ def placeSonar(width, height, sonarList, chestList, sonars):
       if x_coordinate <= width - 1 and y_coordinate <= height - 1: #check for numbers within borders of game board
         newSonar = Sonar(x_coordinate, y_coordinate)
         if newSonar not in sonarList: #check no sonar already there at same place
-          #komplette validierung erfolgreich
           validInput = True
           sonarList.append(newSonar)
-          #komplette validierung erfolgreich
         else:
           print('You already have a sonar with these coordinates.')
       else:
@@ -235,24 +237,35 @@ def placeSonar(width, height, sonarList, chestList, sonars):
     else:
       print('Please type your chosen sonar location in the correct format: (00,00), ie. two sets of two digits, sperated by a comma.')
 
-def checkChestFind(sonarList, chestList):
-  ''' - checks for found chests  '''
-  for sonar in sonarList:
-    for chest in chestList:
-      if chest == sonar:
-        chestList.remove(chest)
-        return True
-
-def checkTreasureFind(chestList, sonarList):
-  '''checks for distance of sonars to chests'''
-  nearestDistance = 10
-
+def updateSonarDistances(sonarList, chestList):
+  ''' - updates distances to treasure chests left for all sonars '''
   for sonar in sonarList:
     sonar.calculateDistance(chestList)
-    if sonar.distance > 0 and sonar.distance < nearestDistance:
-      nearestDistance = sonar.distance
-  if nearestDistance < 10:
-    print('Treasure detected at a distance of %s from the sonar device.' % nearestDistance)
+
+def checkChestFind(sonarList, chestList):
+  '''
+  - checks for found chests or distance of last placed sonar to nearest chest
+  '''
+  lastSonar = sonarList[-1]
+  chestFound = False
+
+  for chest in chestList:
+    if chest == lastSonar:
+      chestList.remove(chest)
+      chestFound = True
+  return chestFound
+
+def printPlayerInfo(sonarList, chestFound):
+  '''
+  - informs the player whether a chest was found or detected
+  '''
+  lastSonar = sonarList[-1]
+  
+  if chestFound == True:
+    print('You have found a sunken treasure chest!')
+
+  if chestFound == False and lastSonar.distance != 0:
+    print('Treasure detected at a distance of %s from the sonar device.' % lastSonar.distance)
 
 def gameChoice():
   '''
@@ -272,35 +285,35 @@ gameState = True
 
 while gameState == True:
   ###### Globals ########
-  winState = False
+  winState = False #remains false as long as the player has not found all chests
   chestList = [] #list of chest objects
   sonarList = [] #list of sonar objects
 
-  printIntro(CHESTS) #print game intro and game instructions
-  placeChests(BOARD_WIDTH, BOARD_HEIGHT, CHESTS, chestList) # create chests, add to chests list
-  printBoard(BOARD_WIDTH, BOARD_HEIGHT, chestList, sonarList) #Spielbrett mit aktualisierten Sonar-zahlen drucken
+  printIntro(CHESTS)
+  placeChests(BOARD_WIDTH, BOARD_HEIGHT, CHESTS, chestList)
+  printBoard(BOARD_WIDTH, BOARD_HEIGHT, chestList, sonarList)
 
   ########## Round Loop #########
   while len(sonarList) != SONARS and winState == False:
-    placeSonar(BOARD_WIDTH, BOARD_HEIGHT, sonarList, chestList, SONARS) #Spieler fragen, wo sein sonar hin soll; eingabe validieren
-    printBoard(BOARD_WIDTH, BOARD_HEIGHT, chestList, sonarList) #Spielbrett mit aktualisierten Sonar-zahlen drucken
-    if checkChestFind(sonarList, chestList):
-      print('You have found a sunken treasure chest!')
-    else:
-      checkTreasureFind(chestList, sonarList)
+    chestFound = False #true if player has found a chest this round
+
+    placeSonar(BOARD_WIDTH, BOARD_HEIGHT, sonarList, chestList, SONARS)
+    chestFound = checkChestFind(sonarList, chestList)
+    updateSonarDistances(sonarList, chestList)
+    printBoard(BOARD_WIDTH, BOARD_HEIGHT, chestList, sonarList)
+    printPlayerInfo(sonarList, chestFound)
 
     if len(chestList) == 0:
-      winState = True # alle kisten gefunden?
+      winState = True
 
-  if winState == True: #alle Kisten gefunden? win
+  if winState == True:
     print("Congratulations. You have found all %s treasure chests!" % (CHESTS))
-  else: #alle Sonare verbraucht? lost
+  else:
     print('''
       We've run out of sonar devices! Now we have to turn the ship around and head for home with treasure chests still out there! Game over.
       The remaining chests were here:
       ''')
-    for x in chestList:
-      print() #objekt x, objekt y
+    for chest in chestList:
+      print(chest.x, chest.y)
 
-  # ?does the player want to play again?
   gameState = gameChoice()

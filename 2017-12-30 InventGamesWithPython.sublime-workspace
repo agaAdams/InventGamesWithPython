@@ -4,8 +4,36 @@
 		"selected_items":
 		[
 			[
+				"son",
+				"sonarList〔variable〕"
+			],
+			[
+				"prin",
+				"printPlayerInfo〔function〕"
+			],
+			[
+				"che",
+				"chestFound〔argument〕"
+			],
+			[
+				"chest",
+				"chestFound〔variable〕"
+			],
+			[
+				"last",
+				"lastSonar.distance"
+			],
+			[
+				"check",
+				"checkChestFind〔function〕"
+			],
+			[
+				"u",
+				"updateSonarDistances"
+			],
+			[
 				"sonar",
-				"sonar.distance"
+				"sonarList〔variable〕"
 			],
 			[
 				"near",
@@ -16,20 +44,8 @@
 				"nearestDistance〔variable〕"
 			],
 			[
-				"son",
-				"sonar.distance"
-			],
-			[
-				"chest",
-				"chestList〔variable〕"
-			],
-			[
 				"c",
 				"calculateDistance"
-			],
-			[
-				"che",
-				"checkChestFind〔function〕"
 			],
 			[
 				"cur",
@@ -288,10 +304,6 @@
 				"turnState〔variable〕"
 			],
 			[
-				"check",
-				"checkWin"
-			],
-			[
 				"while",
 				"while\tWhile Loop"
 			],
@@ -444,10 +456,6 @@
 				"caveChoice〔variable〕"
 			],
 			[
-				"u",
-				"userNumber"
-			],
-			[
 				"se",
 				"secretNumber〔variable〕"
 			],
@@ -506,14 +514,6 @@
 			[
 				"colo",
 				"color_dark_ground"
-			],
-			[
-				"console_set",
-				"console_set_char_background"
-			],
-			[
-				"col",
-				"color_dark_wall"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "12 sonar 180910.py",
 			"settings":
 			{
-				"buffer_size": 9563,
+				"buffer_size": 9664,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -911,7 +911,7 @@
 	],
 	"find":
 	{
-		"height": 49.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -1016,7 +1016,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9563,
+						"buffer_size": 9664,
 						"regions":
 						{
 							"bookmarks":
@@ -1032,8 +1032,8 @@
 						"selection":
 						[
 							[
-								7988,
-								7988
+								5338,
+								5338
 							]
 						],
 						"settings":
@@ -1043,7 +1043,7 @@
 							"origPos":
 							[
 								0.0,
-								3567.0
+								493.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1051,7 +1051,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3567.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
