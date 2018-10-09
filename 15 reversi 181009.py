@@ -3,7 +3,8 @@
 import sys
 
 ########## Constants ##########
-
+WIDTH = 8
+HEIGHT = 8
 ########## Functions ##########
 def printIntro():
   print("Welcome to Reversi!")
@@ -14,6 +15,41 @@ def printIntro():
     role = input()
 
   return role
+
+def firstLine():
+  first = '   '
+  for x in range(1, WIDTH + 1):
+    number = '  ' + str(x) + ' '
+    first += number
+
+  return first
+
+def borderLine():
+  border = '   +'
+  for x in range(1, WIDTH + 1):
+    border += '---+'
+
+  return border
+
+def horizontalLine():
+  horizontal = '|'
+  for x in range(1, WIDTH + 1):
+    horizontal += '   |'
+
+  return horizontal
+
+# def numberLine():
+#   for x in range(1, HEIGHT + 1):
+#     number = ' ' + str(x) + ' '
+
+def printBoard():
+  print(firstLine())
+  for x in range(1, HEIGHT + 1):
+    print(borderLine())
+    print('   ' + horizontalLine())
+    print(' ' + str(x) + ' ' + horizontalLine())
+    print('   ' + horizontalLine())
+  print(borderLine())
 
 def gameChoice():
   '''
@@ -37,8 +73,9 @@ while gameState == True:
   playerRole = printIntro()
 
   ########## Round Loop #########
-  while gameRound != 64 and winState == False:
+  while gameRound != (WIDTH * HEIGHT) and winState == False:
     print(gameRound)
+    printBoard()
     gameRound += 1
 
   # ?does the player want to play again?
