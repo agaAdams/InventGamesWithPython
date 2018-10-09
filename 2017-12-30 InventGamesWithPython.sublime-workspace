@@ -4,8 +4,248 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"inputValid"
+			],
+			[
+				"tran",
+				"translation"
+			],
+			[
+				"off",
+				"offsetCharacter"
+			],
+			[
+				"new",
+				"newMessage"
+			],
+			[
+				"of",
+				"offsetIndex"
+			],
+			[
+				"ke",
+				"key〔variable〕"
+			],
+			[
+				"C",
+				"CIPHER_TABLE"
+			],
+			[
+				"ca",
+				"calculateTranslation"
+			],
+			[
+				"le",
+				"length〔argument〕"
+			],
+			[
+				"isd",
+				"isdigit〔function〕"
+			],
+			[
+				"pr",
+				"print〔function〕"
+			],
+			[
+				"enter",
+				"enterKey"
+			],
+			[
 				"pri",
-				"printClues〔function〕"
+				"printIntro〔function〕"
+			],
+			[
+				"player",
+				"playerInput"
+			],
+			[
+				"str",
+				"string〔module〕"
+			],
+			[
+				"B",
+				"Board"
+			],
+			[
+				"son",
+				"sonarList〔variable〕"
+			],
+			[
+				"prin",
+				"printPlayerInfo〔function〕"
+			],
+			[
+				"che",
+				"chestFound〔argument〕"
+			],
+			[
+				"chest",
+				"chestFound〔variable〕"
+			],
+			[
+				"last",
+				"lastSonar.distance"
+			],
+			[
+				"check",
+				"checkChestFind〔function〕"
+			],
+			[
+				"u",
+				"updateSonarDistances"
+			],
+			[
+				"sonar",
+				"sonarList〔variable〕"
+			],
+			[
+				"near",
+				"nearestDistance〔variable〕"
+			],
+			[
+				"nea",
+				"nearestDistance〔variable〕"
+			],
+			[
+				"c",
+				"calculateDistance"
+			],
+			[
+				"cur",
+				"currentDistance〔variable〕"
+			],
+			[
+				"d",
+				"distance〔variable〕"
+			],
+			[
+				"el",
+				"elif〔keyword〕"
+			],
+			[
+				"boar",
+				"board"
+			],
+			[
+				"crea",
+				"createTopBorder〔function〕"
+			],
+			[
+				"second",
+				"secondLine"
+			],
+			[
+				"fir",
+				"firstLine"
+			],
+			[
+				"cal",
+				"calculateDistance"
+			],
+			[
+				"val",
+				"validInput〔variable〕"
+			],
+			[
+				"vali",
+				"validPlace〔variable〕"
+			],
+			[
+				"he",
+				"height〔argument〕"
+			],
+			[
+				"va",
+				"validFormat〔variable〕"
+			],
+			[
+				"wi",
+				"width〔argument〕"
+			],
+			[
+				"dist",
+				"distanceY〔variable〕"
+			],
+			[
+				"dis",
+				"distanceY〔variable〕"
+			],
+			[
+				"di",
+				"distanceX〔variable〕"
+			],
+			[
+				"rem",
+				"removes"
+			],
+			[
+				"play",
+				"playerInput"
+			],
+			[
+				"valid",
+				"validPlace〔variable〕"
+			],
+			[
+				"sona",
+				"sonarList〔argument〕"
+			],
+			[
+				"sec",
+				"secondLine〔variable〕"
+			],
+			[
+				"first",
+				"firstLine〔variable〕"
+			],
+			[
+				"ho",
+				"horBorder〔variable〕"
+			],
+			[
+				"ne",
+				"newChest〔variable〕"
+			],
+			[
+				"Tr",
+				"True〔variable〕"
+			],
+			[
+				"win",
+				"winState〔variable〕"
+			],
+			[
+				"BO",
+				"BOARD_WIDTH〔variable〕"
+			],
+			[
+				"place",
+				"placeSonar"
+			],
+			[
+				"bo",
+				"boardHeight"
+			],
+			[
+				"b",
+				"boardWidth"
+			],
+			[
+				"ch",
+				"chestList〔variable〕"
+			],
+			[
+				"chests",
+				"chestList"
+			],
+			[
+				"sh",
+				"showInstructions〔function〕"
+			],
+			[
+				"inst",
+				"instructionsChoice"
 			],
 			[
 				"clue",
@@ -26,10 +266,6 @@
 			[
 				"e",
 				"elif"
-			],
-			[
-				"che",
-				"checkBagels〔function〕"
 			],
 			[
 				"ran",
@@ -64,10 +300,6 @@
 				"guessedNumber〔variable〕"
 			],
 			[
-				"di",
-				"digit"
-			],
-			[
 				"ra",
 				"random"
 			],
@@ -86,14 +318,6 @@
 			[
 				"playe",
 				"playerRole〔argument〕"
-			],
-			[
-				"play",
-				"playerRole〔argument〕"
-			],
-			[
-				"win",
-				"winSets"
 			],
 			[
 				"cu",
@@ -120,20 +344,12 @@
 				"playFields.get"
 			],
 			[
-				"el",
-				"else〔keyword〕"
-			],
-			[
 				"fre",
 				"freieFelder〔variable〕"
 			],
 			[
 				"tur",
 				"turnState〔variable〕"
-			],
-			[
-				"check",
-				"checkWin"
 			],
 			[
 				"while",
@@ -170,10 +386,6 @@
 			[
 				"G",
 				"GAMEBOARD"
-			],
-			[
-				"fir",
-				"firstDraw〔function〕"
 			],
 			[
 				"we",
@@ -220,10 +432,6 @@
 				"wordList〔variable〕"
 			],
 			[
-				"sh",
-				"showGameBoard"
-			],
-			[
 				"whi",
 				"whichList〔argument〕"
 			],
@@ -238,10 +446,6 @@
 			[
 				"def",
 				"def〔keyword〕"
-			],
-			[
-				"in",
-				"input〔function〕"
 			],
 			[
 				"listen",
@@ -280,36 +484,16 @@
 				"list1"
 			],
 			[
-				"sec",
-				"secretWord〔variable〕"
-			],
-			[
 				"re",
 				"return"
-			],
-			[
-				"va",
-				"validatePlayerInput"
 			],
 			[
 				"HA",
 				"HANGMAN_PICS〔variable〕"
 			],
 			[
-				"pr",
-				"print"
-			],
-			[
 				"cav",
 				"caveChoice〔function〕"
-			],
-			[
-				"ca",
-				"caveChoice〔variable〕"
-			],
-			[
-				"u",
-				"userNumber"
 			],
 			[
 				"se",
@@ -330,200 +514,17 @@
 			[
 				"print",
 				"print〔function〕"
-			],
-			[
-				"fa",
-				"favorite_languages〔variable〕"
-			],
-			[
-				"new",
-				"new_users〔variable〕"
-			],
-			[
-				"admin",
-				"admin"
-			],
-			[
-				"yellow",
-				"yellow"
-			],
-			[
-				"cub",
-				"cubes"
-			],
-			[
-				"pi",
-				"pizza"
-			],
-			[
-				"radius",
-				"radius"
-			],
-			[
-				"l",
-				"lt〔function〕"
-			],
-			[
-				"random",
-				"randomWord"
-			],
-			[
-				"ren",
-				"render_all〔function〕"
-			],
-			[
-				"colo",
-				"color_dark_ground"
-			],
-			[
-				"console_set",
-				"console_set_char_background"
-			],
-			[
-				"col",
-				"color_dark_wall"
-			],
-			[
-				"MA",
-				"MAP_WIDTH"
-			],
-			[
-				"bl",
-				"blocked"
-			],
-			[
-				"Tile",
-				"Tile〔class〕"
-			],
-			[
-				"blo",
-				"block_sight"
-			],
-			[
-				"c",
-				"color〔variable〕"
-			],
-			[
-				"dr",
-				"draw_char"
-			],
-			[
-				"con",
-				"console"
-			],
-			[
-				"__",
-				"__init__\t(p2_RLT_v03.py)"
-			],
-			[
-				"o",
-				"objects"
-			],
-			[
-				"ob",
-				"object"
-			],
-			[
-				"obje",
-				"objects"
-			],
-			[
-				"bk",
-				"BKGND_NONE〔variable〕"
-			],
-			[
-				"cha",
-				"char"
-			],
-			[
-				"S",
-				"SCREEN_HEIGHT"
-			],
-			[
-				"ex",
-				"exit_game"
-			],
-			[
-				"K",
-				"KEY_CHAR〔variable〕"
-			],
-			[
-				"exit",
-				"exit〔variable〕"
-			],
-			[
-				"hand",
-				"handle_keys〔function〕"
-			],
-			[
-				"console_is",
-				"console_is_fullscreen〔function〕"
-			],
-			[
-				"Key_en",
-				"KEY_ENTER〔variable〕"
-			],
-			[
-				"ke",
-				"key"
-			],
-			[
-				"option",
-				"option"
-			],
-			[
-				"referral",
-				"referral_code"
-			],
-			[
-				"FREE",
-				"FREE_BOOKINGS_FOR_RECIPIENT"
-			],
-			[
-				"free_bookin",
-				"free_bookings_remaining"
-			],
-			[
-				"free_booking",
-				"free_bookings_credit_used"
-			],
-			[
-				"free_bookings",
-				"free_bookings_remaining"
-			],
-			[
-				"bus",
-				"bus_registration_number"
-			],
-			[
-				"last",
-				"last_bus_stop_departure_time"
-			],
-			[
-				"alighting",
-				"alighting_bus_stop_id"
-			],
-			[
-				"board",
-				"boarding_bus_stop_id"
-			],
-			[
-				"boarding_bus",
-				"boarding_bus_stop_name"
-			],
-			[
-				"prev",
-				"previous_path"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "000 game template.py",
+			"file": "14 cipher 180928.py",
 			"settings":
 			{
-				"buffer_size": 937,
+				"buffer_size": 2373,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -779,11 +780,13 @@
 	],
 	"file_history":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/12 sonar 180910.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/tester.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
@@ -904,9 +907,7 @@
 		"/Volumes/KOBOeReader/.adds/koreader/defaults.lua",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_15.md",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/README.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_9.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_13.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_3.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_9.md"
 	],
 	"find":
 	{
@@ -921,9 +922,29 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"newBoard",
+			"currentDistance",
+			"self.xBoard",
+			"yBoard",
+			"Chest",
+			"calculateDistance",
+			"sonarPlaced",
+			"field",
+			"y_coord",
+			"line",
+			"y",
+			"x",
+			"horBorder",
+			"gameRound",
+			"boardHeight",
+			"boardWidth",
+			"chest",
+			"randint",
+			"createChests",
+			"gameRound",
 			"shuffle",
 			"check",
 			"x",
@@ -992,23 +1013,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "000 game template.py",
-					"semi_transient": true,
+					"file": "14 cipher 180928.py",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 937,
+						"buffer_size": 2373,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								172,
+								172
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
+							"open_with_edit": true,
 							"origPos":
 							[
 								0.0,
