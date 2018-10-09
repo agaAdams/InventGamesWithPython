@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"inputValid"
+			],
+			[
+				"tran",
+				"translation"
+			],
+			[
+				"off",
+				"offsetCharacter"
+			],
+			[
+				"new",
+				"newMessage"
+			],
+			[
+				"of",
+				"offsetIndex"
+			],
+			[
+				"ke",
+				"key〔variable〕"
+			],
+			[
+				"C",
+				"CIPHER_TABLE"
+			],
+			[
+				"ca",
+				"calculateTranslation"
+			],
+			[
+				"le",
+				"length〔argument〕"
+			],
+			[
+				"isd",
+				"isdigit〔function〕"
+			],
+			[
+				"pr",
+				"print〔function〕"
+			],
+			[
+				"enter",
+				"enterKey"
+			],
+			[
+				"pri",
+				"printIntro〔function〕"
+			],
+			[
+				"player",
+				"playerInput"
+			],
+			[
+				"str",
+				"string〔module〕"
+			],
+			[
+				"B",
+				"Board"
+			],
+			[
 				"son",
 				"sonarList〔variable〕"
 			],
@@ -116,10 +180,6 @@
 				"removes"
 			],
 			[
-				"new",
-				"newSonar〔variable〕"
-			],
-			[
 				"play",
 				"playerInput"
 			],
@@ -148,10 +208,6 @@
 				"newChest〔variable〕"
 			],
 			[
-				"B",
-				"BOARD_HEIGHT"
-			],
-			[
 				"Tr",
 				"True〔variable〕"
 			],
@@ -176,20 +232,12 @@
 				"boardWidth"
 			],
 			[
-				"pri",
-				"printBoard"
-			],
-			[
 				"ch",
 				"chestList〔variable〕"
 			],
 			[
 				"chests",
 				"chestList"
-			],
-			[
-				"in",
-				"instructions"
 			],
 			[
 				"sh",
@@ -444,16 +492,8 @@
 				"HANGMAN_PICS〔variable〕"
 			],
 			[
-				"pr",
-				"print"
-			],
-			[
 				"cav",
 				"caveChoice〔function〕"
-			],
-			[
-				"ca",
-				"caveChoice〔variable〕"
 			],
 			[
 				"se",
@@ -474,56 +514,16 @@
 			[
 				"print",
 				"print〔function〕"
-			],
-			[
-				"fa",
-				"favorite_languages〔variable〕"
-			],
-			[
-				"admin",
-				"admin"
-			],
-			[
-				"yellow",
-				"yellow"
-			],
-			[
-				"cub",
-				"cubes"
-			],
-			[
-				"pi",
-				"pizza"
-			],
-			[
-				"radius",
-				"radius"
-			],
-			[
-				"l",
-				"lt〔function〕"
-			],
-			[
-				"random",
-				"randomWord"
-			],
-			[
-				"ren",
-				"render_all〔function〕"
-			],
-			[
-				"colo",
-				"color_dark_ground"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "12 sonar 180910.py",
+			"file": "14 cipher 180928.py",
 			"settings":
 			{
-				"buffer_size": 9664,
+				"buffer_size": 2373,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -780,8 +780,8 @@
 	],
 	"file_history":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/tester.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/12 sonar 180910.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/tester.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
@@ -925,6 +925,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"newBoard",
 			"currentDistance",
 			"self.xBoard",
 			"yBoard",
@@ -1012,38 +1013,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "12 sonar 180910.py",
+					"file": "14 cipher 180928.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9664,
+						"buffer_size": 2373,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								5338,
-								5338
+								172,
+								172
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"history_list_is_closing": true,
+							"open_with_edit": true,
 							"origPos":
 							[
 								0.0,
-								493.0
+								0.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
