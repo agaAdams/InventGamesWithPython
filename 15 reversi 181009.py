@@ -1,6 +1,7 @@
 #This is a reversi game. The player and the computer take turns to place marker so a board. Markers surrounded by 'hostile' markers change to hostile markers.
 
 import sys
+import random
 
 ########## Constants ##########
 WIDTH = 8
@@ -15,6 +16,10 @@ def printIntro():
     role = input()
 
   return role
+
+def randomizeTurn():
+  roles = [player,ai]
+  return random.choice(roles)
 
 def firstLine():
   first = '   '
@@ -38,18 +43,30 @@ def horizontalLine():
 
   return horizontal
 
-# def numberLine():
-#   for x in range(1, HEIGHT + 1):
-#     number = ' ' + str(x) + ' '
+def makeNewBoard():
+  for x in range(WIDTH):
+    board.append([])
+    for y in range(HEIGHT):
+      board[x].append(' ')
 
 def printBoard():
   print(firstLine())
-  for x in range(1, HEIGHT + 1):
+  for x in range(0, HEIGHT):
     print(borderLine())
     print('   ' + horizontalLine())
-    print(' ' + str(x) + ' ' + horizontalLine())
+    print(' ' + str(x + 1) + ' |', end='')
+    for y in board[x]:
+      print(' ' + y + ' |', end='')
+    print()
     print('   ' + horizontalLine())
   print(borderLine())
+
+def setMarker(role):
+  print("Enter move:")
+  playerInput = input()
+  y = int(playerInput[0]) - 1
+  x = int(playerInput[1]) - 1
+  board[x][y] = role
 
 def gameChoice():
   '''
@@ -70,12 +87,17 @@ while gameState == True:
   ###### Globals ########
   gameRound = 1
   winState = False
+  board = []
+  makeNewBoard()
   playerRole = printIntro()
+  turnState = randomizeTurn()
 
   ########## Round Loop #########
   while gameRound != (WIDTH * HEIGHT) and winState == False:
-    print(gameRound)
     printBoard()
+    if turnState == 'player':
+      pass
+    setMarker(playerRole)
     gameRound += 1
 
   # ?does the player want to play again?
