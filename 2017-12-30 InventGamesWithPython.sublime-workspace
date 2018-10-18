@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"fir",
+				"firstVItem〔variable〕"
+			],
+			[
+				"fi",
+				"firstItem"
+			],
+			[
+				"last",
+				"lastVY〔variable〕"
+			],
+			[
+				"vert",
+				"verticalItems〔variable〕"
+			],
+			[
+				"tur",
+				"turn〔variable〕"
+			],
+			[
+				"first",
+				"firstHY〔variable〕"
+			],
+			[
 				"la",
 				"lastY〔variable〕"
 			],
@@ -90,10 +114,6 @@
 			[
 				"pri",
 				"print"
-			],
-			[
-				"fir",
-				"firstLine"
 			],
 			[
 				"print",
@@ -198,10 +218,6 @@
 			[
 				"fre",
 				"freieFelder〔variable〕"
-			],
-			[
-				"tur",
-				"turnState〔variable〕"
 			],
 			[
 				"check",
@@ -498,22 +514,6 @@
 			[
 				"K",
 				"KEY_CHAR〔variable〕"
-			],
-			[
-				"exit",
-				"exit〔variable〕"
-			],
-			[
-				"hand",
-				"handle_keys〔function〕"
-			],
-			[
-				"console_is",
-				"console_is_fullscreen〔function〕"
-			],
-			[
-				"Key_en",
-				"KEY_ENTER〔variable〕"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "15 reversi 181009.py",
 			"settings":
 			{
-				"buffer_size": 6045,
+				"buffer_size": 6519,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -933,6 +933,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"checkPossibleMoves",
 			"playerRole",
 			"checkFields",
 			"checkPossibleMoves",
@@ -1022,15 +1023,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6045,
+						"buffer_size": 6519,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3346,
-								3346
+								3655,
+								3655
 							]
 						],
 						"settings":
@@ -1040,7 +1041,7 @@
 							"origPos":
 							[
 								0.0,
-								3015.0
+								3398.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1048,7 +1049,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3015.0,
+						"translation.y": 3398.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1076,7 +1077,7 @@
 							"origPos":
 							[
 								0.0,
-								5474.0
+								5893.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",

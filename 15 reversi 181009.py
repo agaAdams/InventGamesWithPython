@@ -34,30 +34,30 @@ def randomizeTurn():
 
 def firstLine():
   first = '   '
-  for x in range(1, WIDTH + 1):
-    number = '  ' + str(x) + ' '
+  for i in range(1, WIDTH + 1):
+    number = '  ' + str(i) + ' '
     first += number
 
   return first
 
 def borderLine():
   border = '   +'
-  for x in range(1, WIDTH + 1):
+  for i in range(1, WIDTH + 1):
     border += '---+'
 
   return border
 
 def horizontalLine():
   horizontal = '|'
-  for x in range(1, WIDTH + 1):
+  for i in range(1, WIDTH + 1):
     horizontal += '   |'
 
   return horizontal
 
 def makeNewBoard():
-  for x in range(HEIGHT):
+  for x in range(WIDTH):
     board.append([])
-    for y in range(WIDTH):
+    for y in range(HEIGHT):
       board[x].append(' ')
   board[3][3] = 'X'
   board[4][3] = 'O'
@@ -66,7 +66,7 @@ def makeNewBoard():
 
 def printBoard():
   print(firstLine())
-  for x in range(0, HEIGHT):
+  for x in range(0, WIDTH):
     print(borderLine())
     print('   ' + horizontalLine())
     print(' ' + str(x + 1) + ' |', end='')
@@ -80,7 +80,7 @@ def calculatePoints():
   xPoints = 0
   oPoints = 0
 
-  for x in range(HEIGHT):
+  for x in range(WIDTH):
     for y in board[x]:
       if y == 'X':
         xPoints += 1
@@ -92,98 +92,68 @@ def calculatePoints():
   else:
     print("You have %s points. The computer has %s points." % (oPoints, xPoints))
 
-def checkEmptyFields(x, y):
+def onBoard(x, y):
+  if x > 0 and x <= WIDTH and y > 0 and y <= HEIGHT:
+    return True
+
+def emptyField(x, y):
   empty = True
-  for line in range(HEIGHT):
-    if line == x and y in board[line]:
+
+  for i in range(WIDTH):
+    if i == x and y in board[i]:
       empty = False
   return empty
 
-def checkAdjecentMarkers(x, y):
-  adjecent = False
-  for line in range(WIDTH):
-    if line == x: #gleiche zeile
-      for cell in range(HEIGHT):
-        if cell == y - 1 and board[line][cell] != ' ':
-          adjecent = True
-        elif cell == y + 1 and board[line][cell] != ' ':
-          adjecent = True
-    elif line == x - 1:
-      for cell in range(HEIGHT):
-        if cell == y  and board[line][cell] != ' ':
-          adjecent = True
-        elif cell == y - 1 and board[line][cell] != ' ':
-          adjecent = True
-        elif cell == y + 1 and board[line][cell] != ' ':
-          adjecent = True
-    elif line == x + 1:
-      for cell in range(HEIGHT):
-        if cell == y  and board[line][cell] != ' ':
-          adjecent = True
-        elif cell == y - 1 and board[line][cell] != ' ':
-          adjecent = True
-        elif cell == y + 1 and board[line][cell] != ' ':
-          adjecent = True
-  return adjecent
+def validLine(x, y, role, other):
+  line = False
+  directions = [[-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0]]
 
-def checkTurnMarkers(x, y, role):
-  turn = False
+  tilesToFlip = []
 
-  #vertical line
-  verticalItems = []
-  for item in range(HEIGHT):
-    verticalItems.append(board[item][y])
-  firstVItem = next((item for item in verticalItems if item != ' '), - 1)
-  if firstVItem > 0:
-    firstVY = verticalItems.index(firstVItem)
-    lastVY = max(loc for loc, val in enumerate(verticalItems) if val != ' ')
-    if x < firstVY:
-      if board[lastVY][y] == role:
-        turn = True
-    elif x > lastVY:
-      if board[firstVY][y] == role:
-        turn = True
-  
-  #firstDY
-  #lastDY
+  for i in directions:
+    xDirection, yDirection = directions[i]
+    endOfBoard = False
+    endOfTiles = False
+    while not endOfBoard or not endOfTiles:
+      xPosition = x + xDirection
+      yPosition = y + yDirection
+      if xPosition <= WIDTH - 1 and yPosition <= HEIGHT - 1:
+        if board[x + xDirection][y + yDirection] == other:
+          tilesToFlip.append([xPosition, yPosition])
+          xDirection += xDirection
+          yDirection += yDirection
+        else:
+          endOfTiles = True
+      else:
+        endOfBoard = True
+  #dann, wenn folgendes Feld = role, dann line true
 
-  # horizontal line
-  firstHItem = next((item for item in board[x] if item != ' '), - 1)
-  if firstHItem > 0:
-    firstHY = board[x].index(firstItem)
-    lastHY = max(loc for loc, val in enumerate(board[x]) if val != ' ')
-    if y < firstHY:
-      if board[x][lastHY] == role:
-        turn = True
-    elif y > lastHY:
-      if board[x][firstHY] == role:
-        turn = True
+  return line
 
-  # diagonal line
-  diagonalItems = []
-  
-  return turn
-
-def checkPossibleMoves(x, y, role):
-  possible = False
+def checkValidMoves(x, y, role, other):
+  '''check if a move is valid: on board, empty field, adjecent to a tile of the other player, with last tile in line of player 
+  '''
+  valid = False
   message = ''
 
-  if checkEmptyFields(x, y) == True:
-    if checkAdjecentMarkers(x, y) == True:
-      if checkTurnMarkers(x, y, role) == True:
-        possible = True
+  if onBoard(x, y) == True:
+    if emptyField(x, y) == True:
+      if validLine(x, y, role, other) == True:
+        valid = True
       else:
         message = "Please choose a move that will turn a line."
     else:
-      message = "Please place your move next to an already existing marker."
+      message = "Please choose an empty field."
   else:
-    message = "Please choose an empty field."
-  return possible, message
+    message = "Please enter a valid move within the borders of the game board."
+  return valid, message
 
 def setMarker(role, y, x):
   board[x][y] = role
 
 def playerMove():
+  '''takes player input, checks for valid moves, sets tile, turns tiles
+  '''
   playerInput = ''
   validInput = False
 
@@ -193,18 +163,15 @@ def playerMove():
     if playerInput == 'quit':
       sys.exit()
     elif playerInput.isdigit() and len(playerInput) == 2:
-      if int(playerInput[0]) > 0 and int(playerInput[0]) <= WIDTH and int(playerInput[1]) > 0 and int(playerInput[1]) <= HEIGHT:
-        y = int(playerInput[0]) - 1
-        x = int(playerInput[1]) - 1
-        move, message = checkPossibleMoves(x, y, playerRole)
-        if move == True:
-          validInput = True
-          setMarker(playerRole, y, x)
-          # turnMarkers()
-        else:
-          print(message)
+      x = int(playerInput[0]) - 1
+      y = int(playerInput[1]) - 1
+      move, message = checkValidMoves(x, y, playerRole, aiRole)
+      if move == True:
+        validInput = True
+        setMarker(playerRole, y, x)
+        # turnMarkers()
       else:
-        print("Please enter a valid move within the borders of the game board.")
+        print(message)
     else:
       print("Please enter a valid move: two digits for line and column.")
 
