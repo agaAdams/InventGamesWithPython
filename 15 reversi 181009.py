@@ -6,6 +6,36 @@ import random
 ########## Constants ##########
 WIDTH = 8
 HEIGHT = 8
+DIRECTIONS = [[-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0]]
+
+########### Classes ###########
+class Tile(object):
+  """game tile"""
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+    self.lines = []
+    self.validLines = []
+
+  def updateLines(self):
+    for d in DIRECTIONS:
+      newLine = Line(self.x, self.y, d)
+      self.validLines.append(newLine)
+
+  def onBoard(self):
+    '''checks if tile within game board borders'''
+    if self.x >= 0 and self.x < (WIDTH) and self.y >= 0 and self.y < (HEIGHT):
+      return True
+
+class Line(object):
+  """line of tiles"""
+  def __init__(self, startX, startY, direction):
+    super(Line, self).__init__()
+    self.startX = startX
+    self.startY = startY
+    self.direction = direction
+    self.tiles = []
+
 ########## Functions ##########
 def makeNewBoard():
   '''creates a new board data structure, sets four set up markers'''
@@ -48,8 +78,8 @@ def randomizeTurn():
 def firstLine():
   '''creates and returns first line of game board'''
   first = '   '
-  for i in range(1, WIDTH + 1):
-    number = '  ' + str(i) + ' '
+  for i in range(WIDTH):
+    number = '  ' + str(i + 1) + ' '
     first += number
 
   return first
@@ -73,11 +103,11 @@ def horizontalLine():
 def printBoard():
   '''prints game board'''
   print(firstLine())
-  for line in range(0, HEIGHT):
+  for line in range(HEIGHT):
     print(borderLine())
     print('   ' + horizontalLine())
     print(' ' + str(line + 1) + ' |', end='')
-    for x in range(0, WIDTH - 1):
+    for x in range(0, WIDTH):
       print(' ' + board[x][line] + ' |', end='')
     print()
     print('   ' + horizontalLine())
@@ -100,14 +130,9 @@ def calculatePoints():
   else:
     print("You have %s points. The computer has %s points." % (oPoints, xPoints))
 
-def onBoard(x, y):
-  '''checks if tile within game board borders'''
-  if x > 0 and x <= (WIDTH - 1) and y > 0 and y <= (HEIGHT - 1):
-    return True
-
-def emptyField(x, y):
+def emptyField(tile):
   '''checks if field empty'''
-  if board[x][y] == ' ':
+  if board[tile.x][tile.y] == ' ':
     return True
 
 def checkLines(x, y, role, other):
@@ -116,10 +141,9 @@ def checkLines(x, y, role, other):
   - returns check and list of tiles to flip in all directions
   '''
   line = False
-  directions = [[-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0]]
   flippedTiles = []
 
-  for i in directions:
+  for i in DIRECTIONS:
     if line == False:
       line, tiles = validLine(i, x, y, role, other)
     else:
@@ -212,6 +236,42 @@ def playerMove():
     else:
       print("Please enter a valid move: two digits for line and column.")
 
+def calculatePossibleMoves():
+  '''
+  - calculates all possible moves on game board at given time
+  - returns list of possible moves
+  '''
+  possibleMoves = []
+  possibleCornerMoves = []
+  possibleNonCornerMoves = []
+  cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
+
+  for idx, x in enumerate(board):
+    for idy, y in enumerate(x):
+      if emptyField(idx, idy):
+        for i in DIRECTIONS:
+          valid, tiles = validLine(i, idx, idy, aiRole, playerRole)
+          if valid:
+            xDirection, yDirection = i
+            newLine = Line(idx, idy, xDirection, yDirection, tiles)
+            if i in cornerDirections:
+              possibleCornerMoves.append(newLine)
+            else:
+              possibleNonCornerMoves.append(newLine)
+  possibleMoves.append(possibleCornerMoves)
+  possibleMoves.append(possibleNonCornerMoves)
+
+  return possibleMoves
+
+def chooseBestMove(moves):
+  cornerMoves, nonCornerMoves = moves  
+
+  if len(cornerMoves) > 0:
+    bestMove = max(cornerMoves, key=lambda item:item.tiles)
+  else:
+    bestMove = max(nonCornerMoves, key=lambda item:item.tiles)
+  return bestMove
+
 def aiMove():
   '''
   - calculates possible moves
@@ -219,8 +279,11 @@ def aiMove():
   - turns tiles
   '''
   input("Press Enter to see the computer's move.")
-  flipTiles(aiRole, [[2, 2]])
-  # setMarker(aiRole, 2, 2)
+  possibleMoves = calculatePossibleMoves()
+  bestMove = chooseBestMove(possibleMoves)
+  _, tilesToFlip = checkLines(bestMove.x, bestMove.y, aiRole, playerRole)
+  tilesToFlip.append([bestMove.x, bestMove.y])
+  flipTiles(aiRole, tilesToFlip)
 
 def gameChoice():
   '''
@@ -257,8 +320,6 @@ while gameState == True:
       aiMove()
       turnState = 'player'
     gameRound += 1
-
-
 
   # ?does the player want to play again?
   gameState = gameChoice()

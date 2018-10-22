@@ -4,8 +4,100 @@
 		"selected_items":
 		[
 			[
+				"li",
+				"line.startX"
+			],
+			[
+				"new",
+				"newTile〔variable〕"
+			],
+			[
+				"ob",
+				"onBoard"
+			],
+			[
+				"def",
+				"defs\tMethod"
+			],
+			[
+				"best",
+				"bestMove.y"
+			],
+			[
+				"be",
+				"bestMove.x"
+			],
+			[
+				"tile",
+				"tiles.append"
+			],
+			[
+				"chec",
+				"checkLines〔function〕"
+			],
+			[
+				"tiles",
+				"tiles"
+			],
+			[
+				"possi",
+				"possibleMoves"
+			],
+			[
+				"corner",
+				"cornerMoves"
+			],
+			[
+				"mo",
+				"movesToCompare"
+			],
+			[
+				"corn",
+				"cornerMoves"
+			],
+			[
+				"cor",
+				"cornerMoves"
+			],
+			[
+				"ch",
+				"chooseBestMove"
+			],
+			[
+				"y",
+				"yPosition"
+			],
+			[
+				"x",
+				"xPosition"
+			],
+			[
+				"pos",
+				"possibleMoves〔variable〕"
+			],
+			[
+				"ne",
+				"newLine〔variable〕"
+			],
+			[
+				"po",
+				"possibleMoves〔variable〕"
+			],
+			[
 				"ai",
-				"aiRole"
+				"aiRole〔variable〕"
+			],
+			[
+				"dire",
+				"directions〔variable〕"
+			],
+			[
+				"em",
+				"emptyField〔function〕"
+			],
+			[
+				"cal",
+				"calculatePossibleMoves"
 			],
 			[
 				"fli",
@@ -44,28 +136,12 @@
 				"endOfBoard〔variable〕"
 			],
 			[
-				"y",
-				"yPosition"
-			],
-			[
-				"x",
-				"xPosition"
-			],
-			[
 				"ti",
 				"tilesToFlip〔variable〕"
 			],
 			[
 				"on",
 				"onBoard"
-			],
-			[
-				"pos",
-				"positionY〔variable〕"
-			],
-			[
-				"po",
-				"positionX〔variable〕"
 			],
 			[
 				"dia",
@@ -228,10 +304,6 @@
 				"gameRound"
 			],
 			[
-				"cor",
-				"corners〔variable〕"
-			],
-			[
 				"rol",
 				"roles"
 			],
@@ -360,10 +432,6 @@
 				"guessedLetter"
 			],
 			[
-				"def",
-				"def〔keyword〕"
-			],
-			[
 				"in",
 				"input〔function〕"
 			],
@@ -398,10 +466,6 @@
 			[
 				"lis",
 				"list2"
-			],
-			[
-				"li",
-				"list1"
 			],
 			[
 				"sec",
@@ -450,70 +514,6 @@
 			[
 				"fa",
 				"favorite_languages〔variable〕"
-			],
-			[
-				"new",
-				"new_users〔variable〕"
-			],
-			[
-				"admin",
-				"admin"
-			],
-			[
-				"yellow",
-				"yellow"
-			],
-			[
-				"cub",
-				"cubes"
-			],
-			[
-				"pi",
-				"pizza"
-			],
-			[
-				"radius",
-				"radius"
-			],
-			[
-				"l",
-				"lt〔function〕"
-			],
-			[
-				"random",
-				"randomWord"
-			],
-			[
-				"ren",
-				"render_all〔function〕"
-			],
-			[
-				"colo",
-				"color_dark_ground"
-			],
-			[
-				"console_set",
-				"console_set_char_background"
-			],
-			[
-				"col",
-				"color_dark_wall"
-			],
-			[
-				"MA",
-				"MAP_WIDTH"
-			],
-			[
-				"bl",
-				"blocked"
-			],
-			[
-				"Tile",
-				"Tile〔class〕"
-			],
-			[
-				"blo",
-				"block_sight"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "15 reversi 181009.py",
 			"settings":
 			{
-				"buffer_size": 6806,
+				"buffer_size": 8651,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -533,6 +533,15 @@
 			"settings":
 			{
 				"buffer_size": 9664,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "zz_test.py",
+			"settings":
+			{
+				"buffer_size": 1025,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -933,6 +942,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"directions",
+			"index",
 			"roles",
 			"validLine",
 			"x",
@@ -1028,15 +1039,24 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6806,
+						"buffer_size": 8651,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
 						},
 						"selection":
 						[
 							[
-								6319,
-								6319
+								796,
+								796
 							]
 						],
 						"settings":
@@ -1046,7 +1066,7 @@
 							"origPos":
 							[
 								0.0,
-								2926.0
+								1804.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1054,7 +1074,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2926.0,
+						"translation.y": 182.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1063,7 +1083,7 @@
 				{
 					"buffer": 1,
 					"file": "12 sonar 180910.py",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 9664,
@@ -1073,8 +1093,8 @@
 						"selection":
 						[
 							[
-								6979,
-								7016
+								684,
+								684
 							]
 						],
 						"settings":
@@ -1082,7 +1102,7 @@
 							"origPos":
 							[
 								0.0,
-								5893.0
+								402.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1090,10 +1110,126 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5893.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "15 reversi 181009.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8651,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1019,
+								1019
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"origPos":
+							[
+								0.0,
+								1804.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 333.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "zz_test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								468,
+								468
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 111.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "zz_test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1116,11 +1252,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
