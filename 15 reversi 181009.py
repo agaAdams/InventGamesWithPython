@@ -11,13 +11,18 @@ DIRECTIONS = [[-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 
 ########### Classes ###########
 class Tile(object):
   """game tile"""
-  def __init__(self, x, y):
+  def __init__(self, x, y, role):
     self.x = x
     self.y = y
-    self.lines = []
+    self.role = role
     self.validLines = []
 
-  def updateLines(self):
+  def updateRole(self, newRole):
+    '''update role of tile'''
+    self.role = newRole
+
+  def updateValidLines(self):
+    '''update list of valid lines'''
     for d in DIRECTIONS:
       newLine = Line(self.x, self.y, d)
       self.validLines.append(newLine)
@@ -27,27 +32,114 @@ class Tile(object):
     if self.x >= 0 and self.x < (WIDTH) and self.y >= 0 and self.y < (HEIGHT):
       return True
 
+  def __eq__(self, other):
+    ''' equality comparison: compares x and y coordinates '''
+    return self.x == other.x and self.y == other.y
+
 class Line(object):
   """line of tiles"""
   def __init__(self, startX, startY, direction):
-    super(Line, self).__init__()
     self.startX = startX
     self.startY = startY
     self.direction = direction
     self.tiles = []
 
-########## Functions ##########
-def makeNewBoard():
-  '''creates a new board data structure, sets four set up markers'''
-  for x in range(WIDTH):
-    board.append([])
-    for y in range(HEIGHT):
-      board[x].append(' ')
-  board[3][3] = 'X'
-  board[4][3] = 'O'
-  board[3][4] = 'O'
-  board[4][4] = 'X'
+  def updateTiles(self):
+    '''update list of tiles in line'''
+    self.tiles.clear()
+    endOfBoard = False
+    xDirection, yDirection = self.direction
 
+    while not endOfBoard:
+      xPosition = self.x + xDirection
+      yPosition = self.y + yDirection
+      if (xPosition <= WIDTH - 1 and xPosition >= 0) and (yPosition <= HEIGHT - 1 or yPosition >= 0):
+        if next((t for t in newBoard.tiles if t.x == xPosition and t.y == yPosition), None):
+          self.tiles.append([xPosition, yPosition])
+          xDirection += xDirection
+          yDirection += yDirection
+      else:
+        endOfBoard = True
+
+class Board(object):
+  """game board"""
+  def __init__(self):
+    self.tiles = [] #all tiles on board
+    self.makeNewBoard()
+  
+  def makeNewBoard(self):
+    '''creates four start tiles'''
+    newTile1 = Tile(3, 3, 'X')
+    self.tiles.append(newTile1)
+    newTile2 = Tile(4, 3, 'O')
+    self.tiles.append(newTile2)
+    newTile3 = Tile(3, 4, 'O')
+    self.tiles.append(newTile3)
+    newTile4 = Tile(4, 4, 'X')
+    self.tiles.append(newTile4)
+
+  def emptyField(self, tile):
+    '''checks if field empty'''
+    if tile not in self.tiles:
+      return True
+
+  def firstLine(self):
+    '''creates and returns first line of game board'''
+    first = '   '
+    for i in range(WIDTH):
+      number = '  ' + str(i + 1) + ' '
+      first += number
+
+    return first
+
+  def borderLine(self):
+    '''creates and returns border line of game board fields'''
+    border = '   +'
+    for i in range(1, WIDTH + 1):
+      border += '---+'
+
+    return border
+
+  def horizontalLine(self):
+    '''creates and returns horizontal seperator line of game board fields'''
+    horizontal = '|'
+    for i in range(1, WIDTH + 1):
+      horizontal += '   |'
+
+    return horizontal
+
+  def printBoard(self):
+    '''prints game board'''
+    print(self.firstLine())
+    for line in range(HEIGHT):
+      print(self.borderLine())
+      print('   ' + self.horizontalLine())
+      print(' ' + str(line + 1) + ' |', end='')
+      for x in range(0, WIDTH):
+        tile = next((tile for tile in self.tiles if tile.x == x and tile.y == line), None)
+        if tile:
+          field = tile.role
+        else:
+          field = ' '
+        print(' ' + field + ' |', end='')
+      print()
+      print('   ' + self.horizontalLine())
+    print(self.borderLine())
+
+  def calculatePoints(self):
+    '''calculates and prints player's and computer's points'''
+    playerPoints = 0
+    aiPoints = 0
+
+    for tile in self.tiles:
+      if tile.role == playerRole:
+        playerPoints += 1
+      elif tile.role == aiRole:
+        aiPoints += 1
+
+    print("You have %s points. The computer has %s points." % (playerPoints, aiPoints))
+
+########## Functions ##########
 def printIntro():
   '''prints welcome message, sets and returns player's and computer's role'''
   playerRole = ''
@@ -74,66 +166,6 @@ def randomizeTurn():
   else:
     print("The computer will go first.")
   return first
-
-def firstLine():
-  '''creates and returns first line of game board'''
-  first = '   '
-  for i in range(WIDTH):
-    number = '  ' + str(i + 1) + ' '
-    first += number
-
-  return first
-
-def borderLine():
-  '''creates and returns border line of game board fields'''
-  border = '   +'
-  for i in range(1, WIDTH + 1):
-    border += '---+'
-
-  return border
-
-def horizontalLine():
-  '''creates and returns horizontal seperator line of game board fields'''
-  horizontal = '|'
-  for i in range(1, WIDTH + 1):
-    horizontal += '   |'
-
-  return horizontal
-
-def printBoard():
-  '''prints game board'''
-  print(firstLine())
-  for line in range(HEIGHT):
-    print(borderLine())
-    print('   ' + horizontalLine())
-    print(' ' + str(line + 1) + ' |', end='')
-    for x in range(0, WIDTH):
-      print(' ' + board[x][line] + ' |', end='')
-    print()
-    print('   ' + horizontalLine())
-  print(borderLine())
-
-def calculatePoints():
-  '''calculates and prints player's and computer's points'''
-  xPoints = 0
-  oPoints = 0
-
-  for x in range(WIDTH):
-    for y in board[x]:
-      if y == 'X':
-        xPoints += 1
-      elif y == 'O':
-        oPoints += 1
-
-  if playerRole == 'X':
-    print("You have %s points. The computer has %s points." % (xPoints, oPoints))
-  else:
-    print("You have %s points. The computer has %s points." % (oPoints, xPoints))
-
-def emptyField(tile):
-  '''checks if field empty'''
-  if board[tile.x][tile.y] == ' ':
-    return True
 
 def checkLines(x, y, role, other):
   '''
@@ -184,17 +216,17 @@ def validLine(direction, x, y, role, other):
 
   return valid, tilesToFlip
 
-def checkValidMoves(x, y, role, other):
+def checkValidMoves(tile):
   '''
   - check if a move is valid
   - return check, error message and list of tiles to flip
   '''
   valid = False
   message = ''
-  tiles = []
+  # tiles = []
 
-  if onBoard(x, y) == True:
-    if emptyField(x, y) == True:
+  if tile.onBoard() == True:
+    if newBoard.emptyField(tile) == True:
       valid, tiles = checkLines(x, y, role, other)
       if valid == True:
         return valid, message, tiles
@@ -226,11 +258,12 @@ def playerMove():
     elif playerInput.isdigit() and len(playerInput) == 2:
       x = int(playerInput[0]) - 1
       y = int(playerInput[1]) - 1
-      move, message, tiles = checkValidMoves(x, y, playerRole, aiRole)
+      newTile = Tile(x, y, playerRole)
+      move, message, tiles = checkValidMoves(newTile)
       if move == True:
         validInput = True
-        tiles.append([x, y])
-        flipTiles(playerRole, tiles)
+  #      tiles.append([x, y])
+   #     flipTiles(playerRole, tiles)
       else:
         print(message)
     else:
@@ -304,15 +337,15 @@ while gameState == True:
   ###### Globals ########
   gameRound = 1
   endState = False
-  board = []
-  makeNewBoard()
+
   playerRole, aiRole = printIntro()
   turnState = randomizeTurn()
+  newBoard = Board()
 
   ########## Round Loop #########
   while gameRound != (WIDTH * HEIGHT - 4) and endState == False:
-    printBoard()
-    calculatePoints()
+    newBoard.printBoard()
+    newBoard.calculatePoints()
     if turnState == 'player':
       playerMove()
       turnState = 'ai'
