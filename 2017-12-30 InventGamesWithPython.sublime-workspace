@@ -4,16 +4,48 @@
 		"selected_items":
 		[
 			[
+				"valid",
+				"validInput〔variable〕"
+			],
+			[
 				"new",
-				"newTile1〔variable〕"
+				"newTile〔variable〕"
+			],
+			[
+				"tiles",
+				"tilesToFlip"
+			],
+			[
+				"pla",
+				"playerRole〔variable〕"
+			],
+			[
+				"u",
+				"updateRole"
+			],
+			[
+				"end",
+				"endOfValidTiles〔variable〕"
+			],
+			[
+				"fli",
+				"flipTiles〔function〕"
+			],
+			[
+				"v",
+				"validLine"
+			],
+			[
+				"endOf",
+				"endOfValidTiles"
+			],
+			[
+				"n",
+				"newBoard"
 			],
 			[
 				"updat",
 				"updateBoard"
-			],
-			[
-				"tiles",
-				"tilesOnBoard"
 			],
 			[
 				"tile",
@@ -22,10 +54,6 @@
 			[
 				"til",
 				"tile.x"
-			],
-			[
-				"n",
-				"newTile1"
 			],
 			[
 				"li",
@@ -112,10 +140,6 @@
 				"calculatePossibleMoves"
 			],
 			[
-				"fli",
-				"flippedTiles"
-			],
-			[
 				"computer",
 				"computer's"
 			],
@@ -138,10 +162,6 @@
 			[
 				"endo",
 				"endOfTiles〔variable〕"
-			],
-			[
-				"end",
-				"endOfBoard〔variable〕"
 			],
 			[
 				"ti",
@@ -290,10 +310,6 @@
 			[
 				"digit",
 				"digitList"
-			],
-			[
-				"pla",
-				"playerInput〔variable〕"
 			],
 			[
 				"gue",
@@ -498,22 +514,6 @@
 			[
 				"ca",
 				"caveChoice〔variable〕"
-			],
-			[
-				"u",
-				"userNumber"
-			],
-			[
-				"se",
-				"secretNumber〔variable〕"
-			],
-			[
-				"car",
-				"car"
-			],
-			[
-				"per",
-				"person3"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "15 reversi 181009.py",
 			"settings":
 			{
-				"buffer_size": 9910,
+				"buffer_size": 9056,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -928,7 +928,7 @@
 	],
 	"find":
 	{
-		"height": 47.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -942,6 +942,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"checkValidMoves",
+			"directions",
+			"DIRECTIONS",
 			"t for t",
 			"t fort",
 			"next",
@@ -1045,25 +1048,35 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9910,
+						"buffer_size": 9056,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
 						},
 						"selection":
 						[
 							[
-								763,
-								763
+								7725,
+								7725
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
+							"history_list_is_closing": true,
 							"open_with_edit": true,
 							"origPos":
 							[
 								0.0,
-								0.0
+								5539.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1072,7 +1085,7 @@
 							"wrap_width": 0
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 609.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

@@ -6,11 +6,12 @@ import random
 ########## Constants ##########
 WIDTH = 8
 HEIGHT = 8
-DIRECTIONS = [[-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0]]
 
 ########### Classes ###########
 class Tile(object):
   """game tile"""
+  DIRECTIONS = [[-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0]]
+
   def __init__(self, x, y, role):
     self.x = x
     self.y = y
@@ -23,9 +24,11 @@ class Tile(object):
 
   def updateValidLines(self):
     '''update list of valid lines'''
-    for d in DIRECTIONS:
-      newLine = Line(self.x, self.y, d)
-      self.validLines.append(newLine)
+    for d in Tile.DIRECTIONS:
+      newLine = Line(self.x, self.y, d, self.role)
+      newLine.updateValidTiles()
+      if len(newLine.validTiles) > 0:
+        self.validLines.append(newLine)
 
   def onBoard(self):
     '''checks if tile within game board borders'''
@@ -38,26 +41,36 @@ class Tile(object):
 
 class Line(object):
   """line of tiles"""
-  def __init__(self, startX, startY, direction):
+  def __init__(self, startX, startY, direction, role):
     self.startX = startX
     self.startY = startY
     self.direction = direction
-    self.tiles = []
+    self.role = role
+    self.validTiles = []
 
-  def updateTiles(self):
-    '''update list of tiles in line'''
-    self.tiles.clear()
+  def updateValidTiles(self):
+    '''update list of valid tiles in line'''
+    self.validTiles.clear()
     endOfBoard = False
+    endOfValidTiles = False
     xDirection, yDirection = self.direction
 
-    while not endOfBoard:
-      xPosition = self.x + xDirection
-      yPosition = self.y + yDirection
+    while not endOfBoard and not endOfValidTiles:
+      xPosition = self.startX + xDirection
+      yPosition = self.startY + yDirection
       if (xPosition <= WIDTH - 1 and xPosition >= 0) and (yPosition <= HEIGHT - 1 or yPosition >= 0):
-        if next((t for t in newBoard.tiles if t.x == xPosition and t.y == yPosition), None):
-          self.tiles.append([xPosition, yPosition])
-          xDirection += xDirection
-          yDirection += yDirection
+        tile = next((t for t in newBoard.tiles if t.x == xPosition and t.y == yPosition), None)
+        if tile:
+          if tile.role != self.role:
+            self.validTiles.append(tile)
+            xDirection += xDirection
+            yDirection += yDirection
+          elif tile.role == self.role and len(self.validTiles) > 0:
+            endOfValidTiles = True
+          else:
+            endOfValidTiles = True
+        else:
+          endOfValidTiles = True
       else:
         endOfBoard = True
 
@@ -167,69 +180,19 @@ def randomizeTurn():
     print("The computer will go first.")
   return first
 
-def checkLines(x, y, role, other):
-  '''
-  - checks field for valid lines in all directions
-  - returns check and list of tiles to flip in all directions
-  '''
-  line = False
-  flippedTiles = []
-
-  for i in DIRECTIONS:
-    if line == False:
-      line, tiles = validLine(i, x, y, role, other)
-    else:
-      _, tiles = validLine(i, x, y, role, other)
-    for tile in tiles:
-      flippedTiles.append(tile)
-
-  return line, flippedTiles
-
-def validLine(direction, x, y, role, other):
-  '''
-  - checks valid line in given direction
-  - returns check and tiles to flip in one direction
-  '''
-  valid = False
-  tilesToFlip = []
-  endOfBoard = False
-  endOfTiles = False
-  xDirection, yDirection = direction
-
-  while not endOfBoard and not endOfTiles:
-    xPosition = x + xDirection
-    yPosition = y + yDirection
-    if xPosition <= WIDTH - 1 and yPosition <= HEIGHT - 1:
-      if board[xPosition][yPosition] == other:
-        tilesToFlip.append([xPosition, yPosition])
-        xDirection += xDirection
-        yDirection += yDirection
-      elif board[xPosition][yPosition] == role and len(tilesToFlip) > 0:
-        endOfTiles = True
-        valid = True
-      else:
-        endOfTiles = True
-        del tilesToFlip[:]
-    else:
-      endOfBoard = True
-      del tilesToFlip[:]
-
-  return valid, tilesToFlip
-
-def checkValidMoves(tile):
+def validMove(tile):
   '''
   - check if a move is valid
-  - return check, error message and list of tiles to flip
+  - return error message
   '''
   valid = False
   message = ''
-  # tiles = []
 
   if tile.onBoard() == True:
     if newBoard.emptyField(tile) == True:
-      valid, tiles = checkLines(x, y, role, other)
-      if valid == True:
-        return valid, message, tiles
+      tile.updateValidLines()
+      if len(tile.validLines) > 0:
+        valid = True
       else:
         message = "Please choose a move that will turn a line."
     else:
@@ -237,12 +200,13 @@ def checkValidMoves(tile):
   else:
     message = "Please enter a valid move within the borders of the game board."
 
-  return valid, message, tiles
+  return valid, message
 
-def flipTiles(role, tiles):
+def flipTiles(lines, role):
   '''set all tiles in list to set role'''
-  for tile in tiles:
-    board[tile[0]][tile[1]] = role
+  for line in lines:
+    for tile in line.validTiles:
+      tile.updateRole(role)
 
 def playerMove():
   '''takes player input, checks for valid moves, turns tiles
@@ -259,55 +223,55 @@ def playerMove():
       x = int(playerInput[0]) - 1
       y = int(playerInput[1]) - 1
       newTile = Tile(x, y, playerRole)
-      move, message, tiles = checkValidMoves(newTile)
-      if move == True:
+      valid, message = validMove(newTile)
+      if valid:
+        newBoard.tiles.append(newTile)
+        flipTiles(newTile.validLines, playerRole)
         validInput = True
-  #      tiles.append([x, y])
-   #     flipTiles(playerRole, tiles)
       else:
         print(message)
     else:
       print("Please enter a valid move: two digits for line and column.")
 
-def calculatePossibleMoves():
-  '''
-  - calculates all possible moves on game board at given time
-  - returns list of possible moves
-  '''
-  possibleMoves = []
-  possibleCornerMoves = []
-  possibleNonCornerMoves = []
-  cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
+# def calculatePossibleMoves():
+#   '''
+#   - calculates all possible moves on game board at given time
+#   - returns list of possible moves
+#   '''
+#   possibleMoves = []
+#   possibleCornerMoves = []
+#   possibleNonCornerMoves = []
+#   cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
 
-  for idx, x in enumerate(board):
-    for idy, y in enumerate(x):
-      if emptyField(idx, idy):
-        for i in DIRECTIONS:
-          valid, tiles = validLine(i, idx, idy, aiRole, playerRole)
-          if valid:
-            xDirection, yDirection = i
-            newLine = Line(idx, idy, xDirection, yDirection, tiles)
-            if i in cornerDirections:
-              possibleCornerMoves.append(newLine)
-            else:
-              possibleNonCornerMoves.append(newLine)
-  possibleMoves.append(possibleCornerMoves)
-  possibleMoves.append(possibleNonCornerMoves)
+#   for idx, x in enumerate(board):
+#     for idy, y in enumerate(x):
+#       if emptyField(idx, idy):
+#         for i in DIRECTIONS:
+#           valid, tiles = validLine(i, idx, idy, aiRole, playerRole)
+#           if valid:
+#             xDirection, yDirection = i
+#             newLine = Line(idx, idy, xDirection, yDirection, tiles)
+#             if i in cornerDirections:
+#               possibleCornerMoves.append(newLine)
+#             else:
+#               possibleNonCornerMoves.append(newLine)
+#   possibleMoves.append(possibleCornerMoves)
+#   possibleMoves.append(possibleNonCornerMoves)
 
-  return possibleMoves
+#   return possibleMoves
 
-def chooseBestMove(moves):
-  cornerMoves, nonCornerMoves = moves  
+# def chooseBestMove(moves):
+#   cornerMoves, nonCornerMoves = moves  
 
-  if len(cornerMoves) > 0:
-    bestMove = max(cornerMoves, key=lambda item:item.tiles)
-  else:
-    bestMove = max(nonCornerMoves, key=lambda item:item.tiles)
-  return bestMove
+#   if len(cornerMoves) > 0:
+#     bestMove = max(cornerMoves, key=lambda item:item.tiles)
+#   else:
+#     bestMove = max(nonCornerMoves, key=lambda item:item.tiles)
+#   return bestMove
 
 def aiMove():
   '''
-  - calculates possible moves
+  - finds possible moves
   - chooses best move: corner stone, most tiles to be flipped
   - turns tiles
   '''
