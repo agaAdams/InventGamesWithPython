@@ -4,12 +4,72 @@
 		"selected_items":
 		[
 			[
-				"valid",
-				"validInput〔variable〕"
+				"tile",
+				"tileList〔variable〕"
+			],
+			[
+				"ti",
+				"tile〔variable〕"
+			],
+			[
+				"line",
+				"line.tiles"
 			],
 			[
 				"new",
-				"newTile〔variable〕"
+				"newLine.tiles"
+			],
+			[
+				"di",
+				"direction"
+			],
+			[
+				"best",
+				"bestMove〔variable〕"
+			],
+			[
+				"bes",
+				"bestMove〔variable〕"
+			],
+			[
+				"se",
+				"self〔argument〕"
+			],
+			[
+				"role",
+				"role〔variable〕"
+			],
+			[
+				"newLi",
+				"newLine.validTiles"
+			],
+			[
+				"pos",
+				"possibleNonCornerMoves〔variable〕"
+			],
+			[
+				"po",
+				"possibleNonCornerMoves〔variable〕"
+			],
+			[
+				"cor",
+				"cornerDirections〔variable〕"
+			],
+			[
+				"newBoard",
+				"newBoard.emptyField"
+			],
+			[
+				"u",
+				"updateValidLines〔function〕"
+			],
+			[
+				"T",
+				"Tile"
+			],
+			[
+				"valid",
+				"validInput〔variable〕"
 			],
 			[
 				"tiles",
@@ -18,10 +78,6 @@
 			[
 				"pla",
 				"playerRole〔variable〕"
-			],
-			[
-				"u",
-				"updateRole"
 			],
 			[
 				"end",
@@ -48,10 +104,6 @@
 				"updateBoard"
 			],
 			[
-				"tile",
-				"tile〔variable〕"
-			],
-			[
 				"til",
 				"tile.x"
 			],
@@ -66,10 +118,6 @@
 			[
 				"def",
 				"defs\tMethod"
-			],
-			[
-				"best",
-				"bestMove.y"
 			],
 			[
 				"be",
@@ -96,10 +144,6 @@
 				"cornerMoves"
 			],
 			[
-				"cor",
-				"cornerMoves"
-			],
-			[
 				"ch",
 				"chooseBestMove"
 			],
@@ -112,16 +156,8 @@
 				"xPosition"
 			],
 			[
-				"pos",
-				"possibleMoves〔variable〕"
-			],
-			[
 				"ne",
 				"newLine〔variable〕"
-			],
-			[
-				"po",
-				"possibleMoves〔variable〕"
 			],
 			[
 				"ai",
@@ -164,19 +200,11 @@
 				"endOfTiles〔variable〕"
 			],
 			[
-				"ti",
-				"tilesToFlip〔variable〕"
-			],
-			[
 				"on",
 				"onBoard"
 			],
 			[
 				"dia",
-				"diagonalItemsR〔variable〕"
-			],
-			[
-				"di",
 				"diagonalItemsR〔variable〕"
 			],
 			[
@@ -222,10 +250,6 @@
 			[
 				"me",
 				"message〔variable〕"
-			],
-			[
-				"T",
-				"True"
 			],
 			[
 				"pl",
@@ -490,30 +514,6 @@
 			[
 				"lis",
 				"list2"
-			],
-			[
-				"sec",
-				"secretWord〔variable〕"
-			],
-			[
-				"re",
-				"return"
-			],
-			[
-				"HA",
-				"HANGMAN_PICS〔variable〕"
-			],
-			[
-				"pr",
-				"print"
-			],
-			[
-				"cav",
-				"caveChoice〔function〕"
-			],
-			[
-				"ca",
-				"caveChoice〔variable〕"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "15 reversi 181009.py",
 			"settings":
 			{
-				"buffer_size": 9056,
+				"buffer_size": 9346,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -942,6 +942,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"updateValidTiles",
+			"validTiles",
+			"ValidTiles",
+			"validTiles",
+			"ValidTiles",
+			"validTiles",
+			"endOfValidTiles",
 			"checkValidMoves",
 			"directions",
 			"DIRECTIONS",
@@ -1048,7 +1055,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9056,
+						"buffer_size": 9346,
 						"regions":
 						{
 							"bookmarks":
@@ -1057,6 +1064,10 @@
 								"icon": "bookmark",
 								"regions":
 								[
+									[
+										1690,
+										1690
+									]
 								],
 								"scope": "bookmarks"
 							}
@@ -1064,8 +1075,8 @@
 						"selection":
 						[
 							[
-								7725,
-								7725
+								1734,
+								1734
 							]
 						],
 						"settings":
@@ -1076,7 +1087,7 @@
 							"origPos":
 							[
 								0.0,
-								5539.0
+								908.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1085,7 +1096,7 @@
 							"wrap_width": 0
 						},
 						"translation.x": 0.0,
-						"translation.y": 609.0,
+						"translation.y": 908.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1141,8 +1152,8 @@
 						"selection":
 						[
 							[
-								771,
-								771
+								0,
+								0
 							]
 						],
 						"settings":

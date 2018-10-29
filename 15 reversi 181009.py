@@ -26,9 +26,12 @@ class Tile(object):
     '''update list of valid lines'''
     for d in Tile.DIRECTIONS:
       newLine = Line(self.x, self.y, d, self.role)
-      newLine.updateValidTiles()
-      if len(newLine.validTiles) > 0:
-        self.validLines.append(newLine)
+      newLine.updateTiles()
+      if len(newLine.tiles) > 1:
+        if newLine.tiles[0].role != self.role:
+          for tile in newLine.tiles:
+            if tile.role == self.role:
+              self.validLines.append(newLine)
 
   def onBoard(self):
     '''checks if tile within game board borders'''
@@ -46,33 +49,36 @@ class Line(object):
     self.startY = startY
     self.direction = direction
     self.role = role
-    self.validTiles = []
+    self.tiles = []
 
-  def updateValidTiles(self):
+  def updateTiles(self):
     '''update list of valid tiles in line'''
-    self.validTiles.clear()
+    self.tiles.clear()
     endOfBoard = False
-    endOfValidTiles = False
+    endOfTiles = False
     xDirection, yDirection = self.direction
 
-    while not endOfBoard and not endOfValidTiles:
+    while not endOfBoard and not endOfTiles:
       xPosition = self.startX + xDirection
       yPosition = self.startY + yDirection
       if (xPosition <= WIDTH - 1 and xPosition >= 0) and (yPosition <= HEIGHT - 1 or yPosition >= 0):
         tile = next((t for t in newBoard.tiles if t.x == xPosition and t.y == yPosition), None)
         if tile:
-          if tile.role != self.role:
-            self.validTiles.append(tile)
-            xDirection += xDirection
-            yDirection += yDirection
-          elif tile.role == self.role and len(self.validTiles) > 0:
-            endOfValidTiles = True
-          else:
-            endOfValidTiles = True
+          self.tiles.append(tile)
+          xDirection += xDirection
+          yDirection += yDirection
         else:
-          endOfValidTiles = True
+          endOfTiles = True
       else:
         endOfBoard = True
+
+  def __gt__(self, other):
+    ''' > comparison: compares length of list of valid tiles '''
+    return len(self.tiles) > len(other.tiles)
+
+  def __lt__(self, other):
+    ''' < comparison: compares length of list of valid tiles '''
+    return len(self.tiles) < len(other.tiles)
 
 class Board(object):
   """game board"""
@@ -190,7 +196,6 @@ def validMove(tile):
 
   if tile.onBoard() == True:
     if newBoard.emptyField(tile) == True:
-      tile.updateValidLines()
       if len(tile.validLines) > 0:
         valid = True
       else:
@@ -204,8 +209,15 @@ def validMove(tile):
 
 def flipTiles(lines, role):
   '''set all tiles in list to set role'''
+  tileList = []
   for line in lines:
-    for tile in line.validTiles:
+    lastTile = next(t for t in reversed(line.tiles) if t.role == role)
+    # tileList = (x for x in line.tiles if line.tiles.index(x) <= line.tiles.index(lastTile))
+    tileList.clear()
+    for tile in line.tiles:
+      if line.tiles.index(tile) <= line.tiles.index(lastTile):
+        tileList.append(tile)
+    for tile in tileList:
       tile.updateRole(role)
 
 def playerMove():
@@ -223,6 +235,7 @@ def playerMove():
       x = int(playerInput[0]) - 1
       y = int(playerInput[1]) - 1
       newTile = Tile(x, y, playerRole)
+      newTile.updateValidLines()
       valid, message = validMove(newTile)
       if valid:
         newBoard.tiles.append(newTile)
@@ -233,41 +246,41 @@ def playerMove():
     else:
       print("Please enter a valid move: two digits for line and column.")
 
-# def calculatePossibleMoves():
-#   '''
-#   - calculates all possible moves on game board at given time
-#   - returns list of possible moves
-#   '''
-#   possibleMoves = []
-#   possibleCornerMoves = []
-#   possibleNonCornerMoves = []
-#   cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
+def calculatePossibleMoves():
+  '''
+  - calculates all possible moves on game board at given time
+  - returns list of possible moves
+  '''
+  possibleMoves = []
+  possibleCornerMoves = []
+  possibleNonCornerMoves = []
+  cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
 
-#   for idx, x in enumerate(board):
-#     for idy, y in enumerate(x):
-#       if emptyField(idx, idy):
-#         for i in DIRECTIONS:
-#           valid, tiles = validLine(i, idx, idy, aiRole, playerRole)
-#           if valid:
-#             xDirection, yDirection = i
-#             newLine = Line(idx, idy, xDirection, yDirection, tiles)
-#             if i in cornerDirections:
-#               possibleCornerMoves.append(newLine)
-#             else:
-#               possibleNonCornerMoves.append(newLine)
-#   possibleMoves.append(possibleCornerMoves)
-#   possibleMoves.append(possibleNonCornerMoves)
+  for x in range(WIDTH):
+    for y in range(HEIGHT):
+      newTile = Tile(x, y, aiRole)
+      if newBoard.emptyField(newTile):
+        newTile.updateValidLines()
+        if len(newTile.validLines) > 0:
+          for line in newTile.validLines:
+            if line.direction in cornerDirections:
+              possibleCornerMoves.append(newTile)
+            else:
+              possibleNonCornerMoves.append(newTile)
 
-#   return possibleMoves
+  possibleMoves.append(possibleCornerMoves)
+  possibleMoves.append(possibleNonCornerMoves)
 
-# def chooseBestMove(moves):
-#   cornerMoves, nonCornerMoves = moves  
+  return possibleMoves
 
-#   if len(cornerMoves) > 0:
-#     bestMove = max(cornerMoves, key=lambda item:item.tiles)
-#   else:
-#     bestMove = max(nonCornerMoves, key=lambda item:item.tiles)
-#   return bestMove
+def chooseBestMove(moves):
+  cornerMoves, nonCornerMoves = moves  
+
+  if len(cornerMoves) > 0:
+    bestMove = max(cornerMoves, key=lambda item:item.validLines)
+  else:
+    bestMove = max(nonCornerMoves, key=lambda item:item.validLines)
+  return bestMove
 
 def aiMove():
   '''
@@ -278,9 +291,8 @@ def aiMove():
   input("Press Enter to see the computer's move.")
   possibleMoves = calculatePossibleMoves()
   bestMove = chooseBestMove(possibleMoves)
-  _, tilesToFlip = checkLines(bestMove.x, bestMove.y, aiRole, playerRole)
-  tilesToFlip.append([bestMove.x, bestMove.y])
-  flipTiles(aiRole, tilesToFlip)
+  newBoard.tiles.append(bestMove)
+  flipTiles(bestMove.validLines, aiRole)
 
 def gameChoice():
   '''
