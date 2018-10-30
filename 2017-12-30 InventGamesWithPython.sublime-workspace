@@ -4,8 +4,56 @@
 		"selected_items":
 		[
 			[
+				"el",
+				"else〔keyword〕"
+			],
+			[
+				"ai",
+				"aiPoints〔variable〕"
+			],
+			[
+				"pla",
+				"playerPoints〔variable〕"
+			],
+			[
+				"end",
+				"endState〔variable〕"
+			],
+			[
+				"calc",
+				"calculatePossibleMoves"
+			],
+			[
+				"rem",
+				"remover〔variable〕"
+			],
+			[
 				"tile",
-				"tileList〔variable〕"
+				"tile.x"
+			],
+			[
+				"newBoard",
+				"newBoard.tiles"
+			],
+			[
+				"new",
+				"newBoard〔variable〕"
+			],
+			[
+				"po",
+				"possibleMoves〔variable〕"
+			],
+			[
+				"pl",
+				"playerRole"
+			],
+			[
+				"show",
+				"showHints"
+			],
+			[
+				"y",
+				"yDirection"
 			],
 			[
 				"ti",
@@ -14,10 +62,6 @@
 			[
 				"line",
 				"line.tiles"
-			],
-			[
-				"new",
-				"newLine.tiles"
 			],
 			[
 				"di",
@@ -48,16 +92,8 @@
 				"possibleNonCornerMoves〔variable〕"
 			],
 			[
-				"po",
-				"possibleNonCornerMoves〔variable〕"
-			],
-			[
 				"cor",
 				"cornerDirections〔variable〕"
-			],
-			[
-				"newBoard",
-				"newBoard.emptyField"
 			],
 			[
 				"u",
@@ -74,14 +110,6 @@
 			[
 				"tiles",
 				"tilesToFlip"
-			],
-			[
-				"pla",
-				"playerRole〔variable〕"
-			],
-			[
-				"end",
-				"endOfValidTiles〔variable〕"
 			],
 			[
 				"fli",
@@ -148,20 +176,12 @@
 				"chooseBestMove"
 			],
 			[
-				"y",
-				"yPosition"
-			],
-			[
 				"x",
 				"xPosition"
 			],
 			[
 				"ne",
 				"newLine〔variable〕"
-			],
-			[
-				"ai",
-				"aiRole〔variable〕"
 			],
 			[
 				"dire",
@@ -240,20 +260,12 @@
 				"adjecentY〔variable〕"
 			],
 			[
-				"el",
-				"else〔keyword〕"
-			],
-			[
 				"tu",
 				"turn〔variable〕"
 			],
 			[
 				"me",
 				"message〔variable〕"
-			],
-			[
-				"pl",
-				"playerRole〔variable〕"
 			],
 			[
 				"isd",
@@ -502,18 +514,6 @@
 			[
 				"missed",
 				"missed〔variable〕"
-			],
-			[
-				"non",
-				"nonMatches〔variable〕"
-			],
-			[
-				"matches",
-				"matches"
-			],
-			[
-				"lis",
-				"list2"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "15 reversi 181009.py",
 			"settings":
 			{
-				"buffer_size": 9346,
+				"buffer_size": 10261,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -942,6 +942,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"calculatePoints",
 			"updateValidTiles",
 			"validTiles",
 			"ValidTiles",
@@ -1055,7 +1056,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9346,
+						"buffer_size": 10261,
 						"regions":
 						{
 							"bookmarks":
@@ -1064,10 +1065,6 @@
 								"icon": "bookmark",
 								"regions":
 								[
-									[
-										1690,
-										1690
-									]
 								],
 								"scope": "bookmarks"
 							}
@@ -1075,8 +1072,8 @@
 						"selection":
 						[
 							[
-								1734,
-								1734
+								9310,
+								9310
 							]
 						],
 						"settings":
@@ -1087,7 +1084,7 @@
 							"origPos":
 							[
 								0.0,
-								908.0
+								6460.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1096,7 +1093,7 @@
 							"wrap_width": 0
 						},
 						"translation.x": 0.0,
-						"translation.y": 908.0,
+						"translation.y": 7540.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

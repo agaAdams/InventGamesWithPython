@@ -57,16 +57,16 @@ class Line(object):
     endOfBoard = False
     endOfTiles = False
     xDirection, yDirection = self.direction
+    xPosition = self.startX + xDirection
+    yPosition = self.startY + yDirection
 
     while not endOfBoard and not endOfTiles:
-      xPosition = self.startX + xDirection
-      yPosition = self.startY + yDirection
       if (xPosition <= WIDTH - 1 and xPosition >= 0) and (yPosition <= HEIGHT - 1 or yPosition >= 0):
         tile = next((t for t in newBoard.tiles if t.x == xPosition and t.y == yPosition), None)
         if tile:
           self.tiles.append(tile)
-          xDirection += xDirection
-          yDirection += yDirection
+          xPosition += xDirection
+          yPosition += yDirection
         else:
           endOfTiles = True
       else:
@@ -99,7 +99,7 @@ class Board(object):
 
   def emptyField(self, tile):
     '''checks if field empty'''
-    if tile not in self.tiles:
+    if tile not in self.tiles or tile.role != '.':
       return True
 
   def firstLine(self):
@@ -156,7 +156,7 @@ class Board(object):
       elif tile.role == aiRole:
         aiPoints += 1
 
-    print("You have %s points. The computer has %s points." % (playerPoints, aiPoints))
+    return playerPoints, aiPoints
 
 ########## Functions ##########
 def printIntro():
@@ -220,33 +220,7 @@ def flipTiles(lines, role):
     for tile in tileList:
       tile.updateRole(role)
 
-def playerMove():
-  '''takes player input, checks for valid moves, turns tiles
-  '''
-  playerInput = ''
-  validInput = False
-
-  while validInput == False:
-    print("Enter your move, or type quit to end the game, or hints to show hints.")
-    playerInput = input()
-    if playerInput == 'quit':
-      sys.exit()
-    elif playerInput.isdigit() and len(playerInput) == 2:
-      x = int(playerInput[0]) - 1
-      y = int(playerInput[1]) - 1
-      newTile = Tile(x, y, playerRole)
-      newTile.updateValidLines()
-      valid, message = validMove(newTile)
-      if valid:
-        newBoard.tiles.append(newTile)
-        flipTiles(newTile.validLines, playerRole)
-        validInput = True
-      else:
-        print(message)
-    else:
-      print("Please enter a valid move: two digits for line and column.")
-
-def calculatePossibleMoves():
+def calculatePossibleMoves(role):
   '''
   - calculates all possible moves on game board at given time
   - returns list of possible moves
@@ -258,7 +232,7 @@ def calculatePossibleMoves():
 
   for x in range(WIDTH):
     for y in range(HEIGHT):
-      newTile = Tile(x, y, aiRole)
+      newTile = Tile(x, y, role)
       if newBoard.emptyField(newTile):
         newTile.updateValidLines()
         if len(newTile.validLines) > 0:
@@ -272,6 +246,46 @@ def calculatePossibleMoves():
   possibleMoves.append(possibleNonCornerMoves)
 
   return possibleMoves
+
+def showHints():
+  possibleMoves = calculatePossibleMoves(playerRole)
+  for moves in possibleMoves:
+    for move in moves:
+      newTile = Tile(move.x, move.y, '.')
+      newBoard.tiles.append(newTile)
+  newBoard.printBoard()
+
+def removeHints():
+  newBoard.tiles = [z for z in newBoard.tiles if z.role != '.']
+
+def playerMove():
+  '''takes player input, checks for valid moves, turns tiles
+  '''
+  playerInput = ''
+  validInput = False
+
+  while validInput == False:
+    print("Enter your move, or type quit to end the game, or hints to show hints.")
+    playerInput = input()
+    if playerInput == 'quit':
+      sys.exit()
+    elif playerInput == 'hints':
+      showHints()
+    elif playerInput.isdigit() and len(playerInput) == 2:
+      x = int(playerInput[0]) - 1
+      y = int(playerInput[1]) - 1
+      newTile = Tile(x, y, playerRole)
+      newTile.updateValidLines()
+      valid, message = validMove(newTile)
+      if valid:
+        newBoard.tiles.append(newTile)
+        flipTiles(newTile.validLines, playerRole)
+        removeHints()
+        validInput = True
+      else:
+        print(message)
+    else:
+      print("Please enter a valid move: two digits for line and column.")
 
 def chooseBestMove(moves):
   cornerMoves, nonCornerMoves = moves  
@@ -289,7 +303,7 @@ def aiMove():
   - turns tiles
   '''
   input("Press Enter to see the computer's move.")
-  possibleMoves = calculatePossibleMoves()
+  possibleMoves = calculatePossibleMoves(aiRole)
   bestMove = chooseBestMove(possibleMoves)
   newBoard.tiles.append(bestMove)
   flipTiles(bestMove.validLines, aiRole)
@@ -321,14 +335,30 @@ while gameState == True:
   ########## Round Loop #########
   while gameRound != (WIDTH * HEIGHT - 4) and endState == False:
     newBoard.printBoard()
-    newBoard.calculatePoints()
+    playerPoints, aiPoints = newBoard.calculatePoints()
+    print("You have %s points. The computer has %s points." % (playerPoints, aiPoints))
+
     if turnState == 'player':
-      playerMove()
-      turnState = 'ai'
+      possibleMoves = calculatePossibleMoves(playerRole)
+      if len(possibleMoves) > 0:
+        playerMove()
+        turnState = 'ai'
+      else:
+        endState = True
+        print("You are out of moves.")
     elif turnState == 'ai':
-      aiMove()
-      turnState = 'player'
+      possibleMoves = calculatePossibleMoves(aiRole)
+      if len(possibleMoves) > 0:
+        aiMove()
+        turnState = 'player'
+      else:
+        endState = True
+        print("The computer is out of moves.")
     gameRound += 1
 
+  if playerPoints > aiPoints:
+    print("Congratulations! You win.")
+  else:
+    print("Sorry! You lost.")
   # ?does the player want to play again?
   gameState = gameChoice()
