@@ -311,6 +311,7 @@ def aiMove():
   flipTiles(bestMove.validLines, aiRole)
 
 def movesLeft(role):
+  '''check for moves left for given role'''
   possibleMoves = calculatePossibleMoves(role)
   if len(possibleMoves) > 0:
     return True
