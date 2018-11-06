@@ -216,15 +216,10 @@ def validMove(tile):
   return valid, message
 
 def flipTiles(lines, role):
-  '''sets all tiles in list to set role'''
-  tileList = []
+  '''sets all tiles in line to set role'''
   for line in lines:
     lastTile = next(t for t in reversed(line.tiles) if t.role == role)
-    # tileList = (x for x in line.tiles if line.tiles.index(x) <= line.tiles.index(lastTile))
-    tileList.clear()
-    for tile in line.tiles:
-      if line.tiles.index(tile) <= line.tiles.index(lastTile):
-        tileList.append(tile)
+    tileList = (x for x in line.tiles if line.tiles.index(x) <= line.tiles.index(lastTile))
     for tile in tileList:
       tile.updateRole(role)
 
@@ -315,6 +310,11 @@ def aiMove():
   newBoard.tiles.append(bestMove)
   flipTiles(bestMove.validLines, aiRole)
 
+def movesLeft(role):
+  possibleMoves = calculatePossibleMoves(role)
+  if len(possibleMoves) > 0:
+    return True
+
 def gameChoice():
   '''
   - asks player, whether he wants to play again and validates the input
@@ -347,16 +347,14 @@ while gameState == True:
     print("You have %s points. The computer has %s points." % (playerPoints, aiPoints))
 
     if turnState == 'player':
-      possibleMoves = calculatePossibleMoves(playerRole)
-      if len(possibleMoves) > 0:
+      if movesLeft(playerRole):
         playerMove()
         turnState = 'ai'
       else:
-        endSta1t 
+        endState = True
         print("You are out of moves.")
     elif turnState == 'ai':
-      possibleMoves = calculatePossibleMoves(aiRole)
-      if len(possibleMoves) > 0:
+      if movesLeft(aiRole):
         aiMove()
         turnState = 'player'
       else:
