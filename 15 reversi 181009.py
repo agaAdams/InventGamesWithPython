@@ -1,4 +1,4 @@
-#This is a reversi game. The player and the computer take turns to place marker so a board. Markers surrounded by 'hostile' markers change to hostile markers.
+#This is a reversi game. The player and the computer take turns to place markers on a board. Markers surrounded by 'hostile' markers change to hostile markers.
 
 import sys
 import random
@@ -195,8 +195,8 @@ def randomizeTurn():
 
 def validMove(tile):
   '''
-  - check if a move is valid
-  - return error message
+  - checks if a move is valid
+  - returns error message
   '''
   valid = False
   message = ''
@@ -216,7 +216,7 @@ def validMove(tile):
   return valid, message
 
 def flipTiles(lines, role):
-  '''set all tiles in list to set role'''
+  '''sets all tiles in list to set role'''
   tileList = []
   for line in lines:
     lastTile = next(t for t in reversed(line.tiles) if t.role == role)
@@ -230,8 +230,7 @@ def flipTiles(lines, role):
 
 def calculatePossibleMoves(role):
   '''
-  - calculates all possible moves on game board at given time
-  - returns list of possible moves
+  - calculates and returns all possible moves on game board at given time for given role
   '''
   possibleMoves = []
 
@@ -246,6 +245,7 @@ def calculatePossibleMoves(role):
   return possibleMoves
 
 def showHints():
+  '''shows possible moves for player as dots on game board'''
   moves = calculatePossibleMoves(playerRole)
   for move in moves:
     newTile = Tile(move.x, move.y, '.')
@@ -253,10 +253,11 @@ def showHints():
   newBoard.printBoard()
 
 def removeHints():
+  '''removes dotted hint tiles form game board'''
   newBoard.tiles = [z for z in newBoard.tiles if z.role != '.']
 
 def playerMove():
-  '''takes player input, checks for valid moves, turns tiles
+  '''takes player input, checks for valid moves, flips tiles
   '''
   playerInput = ''
   validInput = False
@@ -284,6 +285,7 @@ def playerMove():
       print("Please enter a valid move: two digits for line and column.")
 
 def chooseBestMove(moves):
+  '''chooses best possible move out of a list of possible moves'''
   cornerMoves = []
   nonCornerMoves = []
   cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
@@ -329,6 +331,7 @@ gameState = True
 # remains true for as long, as the player wants to keep playing
 
 while gameState == True:
+  '''basic game loop'''
   ###### Globals ########
   endState = False
 
@@ -338,6 +341,7 @@ while gameState == True:
 
   ########## Round Loop #########
   while endState == False:
+    '''basic round loop'''
     newBoard.printBoard()
     playerPoints, aiPoints = newBoard.calculatePoints()
     print("You have %s points. The computer has %s points." % (playerPoints, aiPoints))
