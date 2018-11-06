@@ -4,248 +4,320 @@
 		"selected_items":
 		[
 			[
-				"in",
-				"inputValid"
+				"em",
+				"empty"
 			],
 			[
-				"tran",
-				"translation"
+				"ro",
+				"role"
 			],
 			[
-				"off",
-				"offsetCharacter"
+				"ne",
+				"next〔function〕"
+			],
+			[
+				"el",
+				"else〔keyword〕"
+			],
+			[
+				"ai",
+				"aiPoints〔variable〕"
+			],
+			[
+				"pla",
+				"playerPoints〔variable〕"
+			],
+			[
+				"end",
+				"endState〔variable〕"
+			],
+			[
+				"calc",
+				"calculatePossibleMoves"
+			],
+			[
+				"rem",
+				"remover〔variable〕"
+			],
+			[
+				"tile",
+				"tile.x"
+			],
+			[
+				"newBoard",
+				"newBoard.tiles"
 			],
 			[
 				"new",
-				"newMessage"
+				"newBoard〔variable〕"
 			],
 			[
-				"of",
-				"offsetIndex"
+				"po",
+				"possibleMoves〔variable〕"
 			],
 			[
-				"ke",
-				"key〔variable〕"
+				"pl",
+				"playerRole"
 			],
 			[
-				"C",
-				"CIPHER_TABLE"
+				"show",
+				"showHints"
 			],
 			[
-				"ca",
-				"calculateTranslation"
+				"y",
+				"yDirection"
 			],
 			[
-				"le",
-				"length〔argument〕"
+				"ti",
+				"tile〔variable〕"
+			],
+			[
+				"line",
+				"line.tiles"
+			],
+			[
+				"di",
+				"direction"
+			],
+			[
+				"best",
+				"bestMove〔variable〕"
+			],
+			[
+				"bes",
+				"bestMove〔variable〕"
+			],
+			[
+				"se",
+				"self〔argument〕"
+			],
+			[
+				"role",
+				"role〔variable〕"
+			],
+			[
+				"newLi",
+				"newLine.validTiles"
+			],
+			[
+				"pos",
+				"possibleNonCornerMoves〔variable〕"
+			],
+			[
+				"cor",
+				"cornerDirections〔variable〕"
+			],
+			[
+				"u",
+				"updateValidLines〔function〕"
+			],
+			[
+				"T",
+				"Tile"
+			],
+			[
+				"valid",
+				"validInput〔variable〕"
+			],
+			[
+				"tiles",
+				"tilesToFlip"
+			],
+			[
+				"fli",
+				"flipTiles〔function〕"
+			],
+			[
+				"v",
+				"validLine"
+			],
+			[
+				"endOf",
+				"endOfValidTiles"
+			],
+			[
+				"n",
+				"newBoard"
+			],
+			[
+				"updat",
+				"updateBoard"
+			],
+			[
+				"til",
+				"tile.x"
+			],
+			[
+				"li",
+				"line.startX"
+			],
+			[
+				"ob",
+				"onBoard"
+			],
+			[
+				"def",
+				"defs\tMethod"
+			],
+			[
+				"be",
+				"bestMove.x"
+			],
+			[
+				"chec",
+				"checkLines〔function〕"
+			],
+			[
+				"possi",
+				"possibleMoves"
+			],
+			[
+				"corner",
+				"cornerMoves"
+			],
+			[
+				"mo",
+				"movesToCompare"
+			],
+			[
+				"corn",
+				"cornerMoves"
+			],
+			[
+				"ch",
+				"chooseBestMove"
+			],
+			[
+				"x",
+				"xPosition"
+			],
+			[
+				"dire",
+				"directions〔variable〕"
+			],
+			[
+				"cal",
+				"calculatePossibleMoves"
+			],
+			[
+				"computer",
+				"computer's"
+			],
+			[
+				"vali",
+				"validLine〔function〕"
+			],
+			[
+				"che",
+				"checkLines〔function〕"
+			],
+			[
+				"fl",
+				"flippedTiles〔variable〕"
+			],
+			[
+				"va",
+				"validLine〔function〕"
+			],
+			[
+				"endo",
+				"endOfTiles〔variable〕"
+			],
+			[
+				"on",
+				"onBoard"
+			],
+			[
+				"dia",
+				"diagonalItemsR〔variable〕"
+			],
+			[
+				"fir",
+				"firstVItem〔variable〕"
+			],
+			[
+				"fi",
+				"firstItem"
+			],
+			[
+				"last",
+				"lastVY〔variable〕"
+			],
+			[
+				"vert",
+				"verticalItems〔variable〕"
+			],
+			[
+				"tur",
+				"turn〔variable〕"
+			],
+			[
+				"first",
+				"firstHY〔variable〕"
+			],
+			[
+				"la",
+				"lastY〔variable〕"
+			],
+			[
+				"adj",
+				"adjecentY〔variable〕"
+			],
+			[
+				"tu",
+				"turn〔variable〕"
+			],
+			[
+				"me",
+				"message〔variable〕"
 			],
 			[
 				"isd",
 				"isdigit〔function〕"
 			],
 			[
-				"pr",
-				"print〔function〕"
-			],
-			[
-				"enter",
-				"enterKey"
-			],
-			[
-				"pri",
-				"printIntro〔function〕"
+				"sy",
+				"sys.exit"
 			],
 			[
 				"player",
-				"playerInput"
+				"playerMove"
 			],
 			[
-				"str",
-				"string〔module〕"
-			],
-			[
-				"B",
-				"Board"
-			],
-			[
-				"son",
-				"sonarList〔variable〕"
-			],
-			[
-				"prin",
-				"printPlayerInfo〔function〕"
-			],
-			[
-				"che",
-				"chestFound〔argument〕"
-			],
-			[
-				"chest",
-				"chestFound〔variable〕"
-			],
-			[
-				"last",
-				"lastSonar.distance"
-			],
-			[
-				"check",
-				"checkChestFind〔function〕"
-			],
-			[
-				"u",
-				"updateSonarDistances"
-			],
-			[
-				"sonar",
-				"sonarList〔variable〕"
-			],
-			[
-				"near",
-				"nearestDistance〔variable〕"
-			],
-			[
-				"nea",
-				"nearestDistance〔variable〕"
-			],
-			[
-				"c",
-				"calculateDistance"
-			],
-			[
-				"cur",
-				"currentDistance〔variable〕"
-			],
-			[
-				"d",
-				"distance〔variable〕"
-			],
-			[
-				"el",
-				"elif〔keyword〕"
-			],
-			[
-				"boar",
-				"board"
-			],
-			[
-				"crea",
-				"createTopBorder〔function〕"
-			],
-			[
-				"second",
-				"secondLine"
-			],
-			[
-				"fir",
-				"firstLine"
-			],
-			[
-				"cal",
-				"calculateDistance"
-			],
-			[
-				"val",
-				"validInput〔variable〕"
-			],
-			[
-				"vali",
-				"validPlace〔variable〕"
-			],
-			[
-				"he",
-				"height〔argument〕"
-			],
-			[
-				"va",
-				"validFormat〔variable〕"
-			],
-			[
-				"wi",
-				"width〔argument〕"
-			],
-			[
-				"dist",
-				"distanceY〔variable〕"
-			],
-			[
-				"dis",
-				"distanceY〔variable〕"
-			],
-			[
-				"di",
-				"distanceX〔variable〕"
-			],
-			[
-				"rem",
-				"removes"
+				"turn",
+				"turnState〔variable〕"
 			],
 			[
 				"play",
-				"playerInput"
+				"playerRole〔variable〕"
 			],
 			[
-				"valid",
-				"validPlace〔variable〕"
+				"mak",
+				"makeNewBoard〔function〕"
 			],
 			[
-				"sona",
-				"sonarList〔argument〕"
-			],
-			[
-				"sec",
-				"secondLine〔variable〕"
-			],
-			[
-				"first",
-				"firstLine〔variable〕"
-			],
-			[
-				"ho",
-				"horBorder〔variable〕"
-			],
-			[
-				"ne",
-				"newChest〔variable〕"
-			],
-			[
-				"Tr",
-				"True〔variable〕"
-			],
-			[
-				"win",
-				"winState〔variable〕"
-			],
-			[
-				"BO",
-				"BOARD_WIDTH〔variable〕"
-			],
-			[
-				"place",
-				"placeSonar"
+				"set",
+				"setMarker〔function〕"
 			],
 			[
 				"bo",
-				"boardHeight"
+				"board〔variable〕"
 			],
 			[
-				"b",
-				"boardWidth"
+				"bor",
+				"borderLine〔function〕"
 			],
 			[
-				"ch",
-				"chestList〔variable〕"
+				"pri",
+				"print"
 			],
 			[
-				"chests",
-				"chestList"
+				"print",
+				"printBoard"
 			],
 			[
-				"sh",
-				"showInstructions〔function〕"
-			],
-			[
-				"inst",
-				"instructionsChoice"
+				"game",
+				"gameRound"
 			],
 			[
 				"clue",
@@ -258,10 +330,6 @@
 			[
 				"rand",
 				"randomNumber〔variable〕"
-			],
-			[
-				"game",
-				"gameRound〔variable〕"
 			],
 			[
 				"e",
@@ -284,14 +352,6 @@
 				"digitList"
 			],
 			[
-				"pl",
-				"playerInput〔variable〕"
-			],
-			[
-				"pla",
-				"playerInput〔variable〕"
-			],
-			[
 				"gue",
 				"guessedNumber〔variable〕"
 			],
@@ -308,16 +368,16 @@
 				"gameRound"
 			],
 			[
-				"cor",
-				"corners〔variable〕"
-			],
-			[
 				"rol",
 				"roles"
 			],
 			[
 				"playe",
 				"playerRole〔argument〕"
+			],
+			[
+				"win",
+				"winSets"
 			],
 			[
 				"cu",
@@ -336,10 +396,6 @@
 				"whether"
 			],
 			[
-				"ai",
-				"aiRole"
-			],
-			[
 				"playf",
 				"playFields.get"
 			],
@@ -348,8 +404,8 @@
 				"freieFelder〔variable〕"
 			],
 			[
-				"tur",
-				"turnState〔variable〕"
+				"check",
+				"checkWin"
 			],
 			[
 				"while",
@@ -380,10 +436,6 @@
 				"player"
 			],
 			[
-				"tu",
-				"turnState"
-			],
-			[
 				"G",
 				"GAMEBOARD"
 			],
@@ -402,10 +454,6 @@
 			[
 				"rou",
 				"roundCounter〔variable〕"
-			],
-			[
-				"set",
-				"setDifficulty〔function〕"
 			],
 			[
 				"max",
@@ -432,6 +480,10 @@
 				"wordList〔variable〕"
 			],
 			[
+				"sh",
+				"showGameBoard"
+			],
+			[
 				"whi",
 				"whichList〔argument〕"
 			],
@@ -444,8 +496,8 @@
 				"guessedLetter"
 			],
 			[
-				"def",
-				"def〔keyword〕"
+				"in",
+				"input〔function〕"
 			],
 			[
 				"listen",
@@ -462,69 +514,34 @@
 			[
 				"list",
 				"listenVergleich〔function〕"
-			],
-			[
-				"missed",
-				"missed〔variable〕"
-			],
-			[
-				"non",
-				"nonMatches〔variable〕"
-			],
-			[
-				"matches",
-				"matches"
-			],
-			[
-				"lis",
-				"list2"
-			],
-			[
-				"li",
-				"list1"
-			],
-			[
-				"re",
-				"return"
-			],
-			[
-				"HA",
-				"HANGMAN_PICS〔variable〕"
-			],
-			[
-				"cav",
-				"caveChoice〔function〕"
-			],
-			[
-				"se",
-				"secretNumber〔variable〕"
-			],
-			[
-				"car",
-				"car"
-			],
-			[
-				"per",
-				"person3"
-			],
-			[
-				"person",
-				"person1"
-			],
-			[
-				"print",
-				"print〔function〕"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "14 cipher 180928.py",
+			"file": "15 reversi 181009.py",
 			"settings":
 			{
-				"buffer_size": 2373,
+				"buffer_size": 10406,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "zz_test.py",
+			"settings":
+			{
+				"buffer_size": 1025,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "12 sonar 180910.py",
+			"settings":
+			{
+				"buffer_size": 9664,
 				"line_ending": "Unix"
 			}
 		}
@@ -540,6 +557,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"upgra",
 				"Package Control: Upgrade/Overwrite All Packages"
@@ -575,10 +596,6 @@
 			[
 				"color",
 				"ColorSchemeSelector: Select Color Scheme"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"sublime tuto",
@@ -780,13 +797,14 @@
 	],
 	"file_history":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/12 sonar 180910.py",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/tester.py",
 		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/zz_test.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/14 cipher 180928.py",
+		"/Users/agata/Library/Application Support/DEVONthink Pro 2/Inbox.dtBase2/Files.noindex/txt/4/14. Caesar Cipher.txt",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
@@ -906,12 +924,11 @@
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Sublime Tutor/tutorial/README.md",
 		"/Volumes/KOBOeReader/.adds/koreader/defaults.lua",
 		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_15.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/README.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_9.md"
+		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/README.md"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -922,29 +939,55 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
-			"newBoard",
-			"currentDistance",
-			"self.xBoard",
-			"yBoard",
-			"Chest",
-			"calculateDistance",
-			"sonarPlaced",
-			"field",
-			"y_coord",
-			"line",
-			"y",
+			"calculatePossibleMoves",
+			"next",
+			"emptyField",
+			"validMove",
+			"calculatePossibleMoves",
+			"calculatePoints",
+			"updateValidTiles",
+			"validTiles",
+			"ValidTiles",
+			"validTiles",
+			"ValidTiles",
+			"validTiles",
+			"endOfValidTiles",
+			"checkValidMoves",
+			"directions",
+			"DIRECTIONS",
+			"t for t",
+			"t fort",
+			"next",
+			"self.board",
+			"board",
+			"tilesOnBoard",
+			"directions",
+			"index",
+			"roles",
+			"validLine",
 			"x",
-			"horBorder",
-			"gameRound",
-			"boardHeight",
-			"boardWidth",
-			"chest",
-			"randint",
-			"createChests",
-			"gameRound",
+			"i",
+			"x",
+			"checkPossibleMoves",
+			"playerRole",
+			"checkFields",
+			"checkPossibleMoves",
+			"checkFields",
+			"winState",
+			"()\n",
+			"i",
+			"x",
+			"^[\\s]*?[\\n\\r]+",
+			"·        ",
+			"^[\\s]*?[\\n\\r]+",
+			"^\\n",
+			" ^\\n",
+			" ^\\n      ",
+			"^\\n      ",
+			"·        ",
 			"shuffle",
 			"check",
 			"x",
@@ -998,12 +1041,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			""
 		],
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": false
+		"wrap": true
 	},
 	"groups":
 	[
@@ -1013,25 +1057,109 @@
 			[
 				{
 					"buffer": 0,
-					"file": "14 cipher 180928.py",
+					"file": "15 reversi 181009.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2373,
+						"buffer_size": 10406,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								8931,
+								8931
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"history_list_is_closing": true,
+							"open_with_edit": true,
+							"origPos":
+							[
+								0.0,
+								4780.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"wrap_width": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 4780.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "zz_test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1025,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								172,
-								172
+								468,
+								468
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"open_with_edit": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "12 sonar 180910.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
 							"origPos":
 							[
 								0.0,
@@ -1046,7 +1174,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
