@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"em",
+				"empty"
+			],
+			[
+				"ro",
+				"role"
+			],
+			[
+				"ne",
+				"next〔function〕"
+			],
+			[
 				"el",
 				"else〔keyword〕"
 			],
@@ -180,16 +192,8 @@
 				"xPosition"
 			],
 			[
-				"ne",
-				"newLine〔variable〕"
-			],
-			[
 				"dire",
 				"directions〔variable〕"
-			],
-			[
-				"em",
-				"emptyField〔function〕"
 			],
 			[
 				"cal",
@@ -510,10 +514,6 @@
 			[
 				"list",
 				"listenVergleich〔function〕"
-			],
-			[
-				"missed",
-				"missed〔variable〕"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "15 reversi 181009.py",
 			"settings":
 			{
-				"buffer_size": 10261,
+				"buffer_size": 10406,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -928,7 +928,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -942,6 +942,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"calculatePossibleMoves",
+			"next",
+			"emptyField",
+			"validMove",
+			"calculatePossibleMoves",
 			"calculatePoints",
 			"updateValidTiles",
 			"validTiles",
@@ -1056,7 +1061,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10261,
+						"buffer_size": 10406,
 						"regions":
 						{
 							"bookmarks":
@@ -1072,8 +1077,8 @@
 						"selection":
 						[
 							[
-								9310,
-								9310
+								8931,
+								8931
 							]
 						],
 						"settings":
@@ -1084,7 +1089,7 @@
 							"origPos":
 							[
 								0.0,
-								6460.0
+								4780.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1093,7 +1098,7 @@
 							"wrap_width": 0
 						},
 						"translation.x": 0.0,
-						"translation.y": 7540.0,
+						"translation.y": 4780.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

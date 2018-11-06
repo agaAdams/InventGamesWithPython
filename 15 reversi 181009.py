@@ -62,7 +62,7 @@ class Line(object):
 
     while not endOfBoard and not endOfTiles:
       if (xPosition <= WIDTH - 1 and xPosition >= 0) and (yPosition <= HEIGHT - 1 or yPosition >= 0):
-        tile = next((t for t in newBoard.tiles if t.x == xPosition and t.y == yPosition), None)
+        tile = next((t for t in newBoard.tiles if t.x == xPosition and t.y == yPosition and t.role != '.'), None)
         if tile:
           self.tiles.append(tile)
           xPosition += xDirection
@@ -99,8 +99,15 @@ class Board(object):
 
   def emptyField(self, tile):
     '''checks if field empty'''
-    if tile not in self.tiles or tile.role != '.':
-      return True
+    empty = False
+    boardTile = next((t for t in self.tiles if t == tile), None)
+    if tile not in self.tiles:
+      empty = True
+    else:
+      if boardTile.role == '.':
+        empty = True
+
+    return empty
 
   def firstLine(self):
     '''creates and returns first line of game board'''
@@ -196,6 +203,7 @@ def validMove(tile):
 
   if tile.onBoard() == True:
     if newBoard.emptyField(tile) == True:
+      tile.updateValidLines()
       if len(tile.validLines) > 0:
         valid = True
       else:
@@ -226,9 +234,6 @@ def calculatePossibleMoves(role):
   - returns list of possible moves
   '''
   possibleMoves = []
-  possibleCornerMoves = []
-  possibleNonCornerMoves = []
-  cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
 
   for x in range(WIDTH):
     for y in range(HEIGHT):
@@ -236,23 +241,15 @@ def calculatePossibleMoves(role):
       if newBoard.emptyField(newTile):
         newTile.updateValidLines()
         if len(newTile.validLines) > 0:
-          for line in newTile.validLines:
-            if line.direction in cornerDirections:
-              possibleCornerMoves.append(newTile)
-            else:
-              possibleNonCornerMoves.append(newTile)
-
-  possibleMoves.append(possibleCornerMoves)
-  possibleMoves.append(possibleNonCornerMoves)
+          possibleMoves.append(newTile)
 
   return possibleMoves
 
 def showHints():
-  possibleMoves = calculatePossibleMoves(playerRole)
-  for moves in possibleMoves:
-    for move in moves:
-      newTile = Tile(move.x, move.y, '.')
-      newBoard.tiles.append(newTile)
+  moves = calculatePossibleMoves(playerRole)
+  for move in moves:
+    newTile = Tile(move.x, move.y, '.')
+    newBoard.tiles.append(newTile)
   newBoard.printBoard()
 
 def removeHints():
@@ -275,7 +272,6 @@ def playerMove():
       x = int(playerInput[0]) - 1
       y = int(playerInput[1]) - 1
       newTile = Tile(x, y, playerRole)
-      newTile.updateValidLines()
       valid, message = validMove(newTile)
       if valid:
         newBoard.tiles.append(newTile)
@@ -288,7 +284,16 @@ def playerMove():
       print("Please enter a valid move: two digits for line and column.")
 
 def chooseBestMove(moves):
-  cornerMoves, nonCornerMoves = moves  
+  cornerMoves = []
+  nonCornerMoves = []
+  cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
+
+  for move in moves:
+    for line in move.validLines:
+      if line.direction in cornerDirections:
+        cornerMoves.append(move)
+      else:
+        nonCornerMoves.append(move)
 
   if len(cornerMoves) > 0:
     bestMove = max(cornerMoves, key=lambda item:item.validLines)
@@ -325,7 +330,6 @@ gameState = True
 
 while gameState == True:
   ###### Globals ########
-  gameRound = 1
   endState = False
 
   playerRole, aiRole = printIntro()
@@ -333,7 +337,7 @@ while gameState == True:
   newBoard = Board()
 
   ########## Round Loop #########
-  while gameRound != (WIDTH * HEIGHT - 4) and endState == False:
+  while endState == False:
     newBoard.printBoard()
     playerPoints, aiPoints = newBoard.calculatePoints()
     print("You have %s points. The computer has %s points." % (playerPoints, aiPoints))
@@ -344,7 +348,7 @@ while gameState == True:
         playerMove()
         turnState = 'ai'
       else:
-        endState = True
+        endSta1t 
         print("You are out of moves.")
     elif turnState == 'ai':
       possibleMoves = calculatePossibleMoves(aiRole)
@@ -354,7 +358,6 @@ while gameState == True:
       else:
         endState = True
         print("The computer is out of moves.")
-    gameRound += 1
 
   if playerPoints > aiPoints:
     print("Congratulations! You win.")
