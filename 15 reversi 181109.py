@@ -17,6 +17,7 @@ class Tile(object):
     self.y = y
     self.role = role
     self.validLines = []
+    self.rank = 0
 
   def updateRole(self, newRole):
     '''update role of tile'''
@@ -27,11 +28,16 @@ class Tile(object):
     for d in Tile.DIRECTIONS:
       newLine = Line(self.x, self.y, d, self.role)
       newLine.updateTiles()
-      if len(newLine.tiles) > 1:
+      if newLine.tiles:
         if newLine.tiles[0].role != self.role:
-          for tile in newLine.tiles:
-            if tile.role == self.role:
-              self.validLines.append(newLine)
+          self.validLines.append(newLine)
+
+  def updateRank(self):
+    '''updates rank of tile'''
+    self.rank = 0
+    self.updateValidLines()
+    for line in self.validLines:
+      self.rank += len(line.tiles)
 
   def onBoard(self):
     '''checks if tile within game board borders'''
@@ -42,6 +48,12 @@ class Tile(object):
     ''' equality comparison: compares x and y coordinates '''
     return self.x == other.x and self.y == other.y
 
+  def __gt__(self, other):
+    return self.rank > other.rank
+
+  def __lt__(self, other):
+    return self.rank < other.rank
+    
 class Line(object):
   """line of tiles"""
   def __init__(self, startX, startY, direction, role):
@@ -54,6 +66,7 @@ class Line(object):
   def updateTiles(self):
     '''update list of valid tiles in line'''
     self.tiles.clear()
+    tilesInLine = []
     endOfBoard = False
     endOfTiles = False
     xDirection, yDirection = self.direction
@@ -61,16 +74,30 @@ class Line(object):
     yPosition = self.startY + yDirection
 
     while not endOfBoard and not endOfTiles:
+    # find all tiles in line
       if (xPosition <= WIDTH - 1 and xPosition >= 0) and (yPosition <= HEIGHT - 1 or yPosition >= 0):
         tile = next((t for t in newBoard.tiles if t.x == xPosition and t.y == yPosition and t.role != '.'), None)
         if tile:
-          self.tiles.append(tile)
+          tilesInLine.append(tile)
           xPosition += xDirection
           yPosition += yDirection
         else:
           endOfTiles = True
       else:
         endOfBoard = True
+
+    closingTile = next((t for t in tilesInLine if t.role == self.role), None)
+    # find tile of own role closing the line'''
+
+    if closingTile:
+      # add all valid tiles up to closing tile to list of valid tiles
+      for tile in tilesInLine:
+        if tilesInLine.index(tile) <= tilesInLine.index(closingTile):
+          self.tiles.append(tile)
+
+  def __eq__(self, other):
+    ''' equality comparison: compares starting coordinates and direction'''
+    return self.startX == other.startX and self.startY == other.startY and self.direction == other.direction
 
   def __gt__(self, other):
     ''' > comparison: compares length of list of valid tiles '''
@@ -204,7 +231,7 @@ def validMove(tile):
   if tile.onBoard() == True:
     if newBoard.emptyField(tile) == True:
       tile.updateValidLines()
-      if len(tile.validLines) > 0:
+      if tile.validLines:
         valid = True
       else:
         message = "Please choose a move that will turn a line."
@@ -215,12 +242,10 @@ def validMove(tile):
 
   return valid, message
 
-def flipTiles(lines, role):
+def flipTiles(tile, role):
   '''sets all tiles in line to set role'''
-  for line in lines:
-    lastTile = next(t for t in reversed(line.tiles) if t.role == role)
-    tileList = (x for x in line.tiles if line.tiles.index(x) <= line.tiles.index(lastTile))
-    for tile in tileList:
+  for line in tile.validLines:
+    for tile in line.tiles:
       tile.updateRole(role)
 
 def calculatePossibleMoves(role):
@@ -234,7 +259,7 @@ def calculatePossibleMoves(role):
       newTile = Tile(x, y, role)
       if newBoard.emptyField(newTile):
         newTile.updateValidLines()
-        if len(newTile.validLines) > 0:
+        if newTile.validLines:
           possibleMoves.append(newTile)
 
   return possibleMoves
@@ -271,7 +296,7 @@ def playerMove():
       valid, message = validMove(newTile)
       if valid:
         newBoard.tiles.append(newTile)
-        flipTiles(newTile.validLines, playerRole)
+        flipTiles(newTile, playerRole)
         removeHints()
         validInput = True
       else:
@@ -279,23 +304,46 @@ def playerMove():
     else:
       print("Please enter a valid move: two digits for line and column.")
 
+def topTiles(moves):
+  '''finds and returns highest ranked tiles in list of tiles'''
+  maxTiles = []
+  maxRank = 0
+  for tile in moves:
+    tile.updateRank()
+    if tile.rank > maxRank:
+      maxTiles.clear()
+      maxTiles.append(tile)
+      maxRank = tile.rank
+    elif tile.rank == maxRank:
+      maxTiles.append(tile)
+
+  return maxTiles
+
 def chooseBestMove(moves):
   '''chooses best possible move out of a list of possible moves'''
   cornerMoves = []
   nonCornerMoves = []
-  cornerDirections = [[-1, -1], [1, -1], [1, 1], [-1, 1]]
+  cornerTiles = []
+  newTile1 = Tile(0, 0, 'X')
+  cornerTiles.append(newTile1)
+  newTile2 = Tile(0, HEIGHT - 1, 'X')
+  cornerTiles.append(newTile2)
+  newTile3 = Tile(WIDTH - 1, 0, 'X')
+  cornerTiles.append(newTile3)
+  newTile4 = Tile(WIDTH - 1, HEIGHT - 1 , 'X')
+  cornerTiles.append(newTile4)
 
-  for move in moves:
-    for line in move.validLines:
-      if line.direction in cornerDirections:
-        cornerMoves.append(move)
-      else:
-        nonCornerMoves.append(move)
+  for tile in moves:
+    if tile in cornerTiles:
+      cornerMoves.append(tile)
+    else:
+      nonCornerMoves.append(tile)
 
-  if len(cornerMoves) > 0:
-    bestMove = max(cornerMoves, key=lambda item:item.validLines)
+  if cornerMoves:
+    bestMove = random.choice(topTiles(cornerMoves))
   else:
-    bestMove = max(nonCornerMoves, key=lambda item:item.validLines)
+    bestMove = random.choice(topTiles(nonCornerMoves))
+
   return bestMove
 
 def aiMove():
@@ -308,13 +356,12 @@ def aiMove():
   possibleMoves = calculatePossibleMoves(aiRole)
   bestMove = chooseBestMove(possibleMoves)
   newBoard.tiles.append(bestMove)
-  flipTiles(bestMove.validLines, aiRole)
+  flipTiles(bestMove, aiRole)
 
 def movesLeft(role):
   '''check for moves left for given role'''
   possibleMoves = calculatePossibleMoves(role)
-  if len(possibleMoves) > 0:
-    return True
+  return possibleMoves
 
 def gameChoice():
   '''

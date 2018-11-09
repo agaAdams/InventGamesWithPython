@@ -4,6 +4,86 @@
 		"selected_items":
 		[
 			[
+				"new",
+				"newLine〔variable〕"
+			],
+			[
+				"corn",
+				"cornerMoves"
+			],
+			[
+				"max",
+				"maxTiles"
+			],
+			[
+				"tile",
+				"tile.rank"
+			],
+			[
+				"update",
+				"updateRank"
+			],
+			[
+				"start",
+				"startY"
+			],
+			[
+				"corner",
+				"cornerTiles〔variable〕"
+			],
+			[
+				"cor",
+				"cornerMoves"
+			],
+			[
+				"most",
+				"mostTilesToFlip"
+			],
+			[
+				"log",
+				"longestLine"
+			],
+			[
+				"num",
+				"numberOfTilesInLines"
+			],
+			[
+				"nub",
+				"numberOfTilesInLines"
+			],
+			[
+				"v",
+				"valid"
+			],
+			[
+				"__",
+				"__gt__"
+			],
+			[
+				"long",
+				"longestLine"
+			],
+			[
+				"mov",
+				"movesLeft〔function〕"
+			],
+			[
+				"cal",
+				"calculatePossibleMoves〔function〕"
+			],
+			[
+				"pos",
+				"possibleMoves〔variable〕"
+			],
+			[
+				"u",
+				"updateValidLines"
+			],
+			[
+				"ti",
+				"tile〔argument〕"
+			],
+			[
 				"em",
 				"empty"
 			],
@@ -40,16 +120,8 @@
 				"remover〔variable〕"
 			],
 			[
-				"tile",
-				"tile.x"
-			],
-			[
 				"newBoard",
 				"newBoard.tiles"
-			],
-			[
-				"new",
-				"newBoard〔variable〕"
 			],
 			[
 				"po",
@@ -66,10 +138,6 @@
 			[
 				"y",
 				"yDirection"
-			],
-			[
-				"ti",
-				"tile〔variable〕"
 			],
 			[
 				"line",
@@ -100,18 +168,6 @@
 				"newLine.validTiles"
 			],
 			[
-				"pos",
-				"possibleNonCornerMoves〔variable〕"
-			],
-			[
-				"cor",
-				"cornerDirections〔variable〕"
-			],
-			[
-				"u",
-				"updateValidLines〔function〕"
-			],
-			[
 				"T",
 				"Tile"
 			],
@@ -126,10 +182,6 @@
 			[
 				"fli",
 				"flipTiles〔function〕"
-			],
-			[
-				"v",
-				"validLine"
 			],
 			[
 				"endOf",
@@ -172,16 +224,8 @@
 				"possibleMoves"
 			],
 			[
-				"corner",
-				"cornerMoves"
-			],
-			[
 				"mo",
 				"movesToCompare"
-			],
-			[
-				"corn",
-				"cornerMoves"
 			],
 			[
 				"ch",
@@ -194,10 +238,6 @@
 			[
 				"dire",
 				"directions〔variable〕"
-			],
-			[
-				"cal",
-				"calculatePossibleMoves"
 			],
 			[
 				"computer",
@@ -456,10 +496,6 @@
 				"roundCounter〔variable〕"
 			],
 			[
-				"max",
-				"maxCounter〔variable〕"
-			],
-			[
 				"dif",
 				"difficultyChoice〔variable〕"
 			],
@@ -478,73 +514,11 @@
 			[
 				"wordL",
 				"wordList〔variable〕"
-			],
-			[
-				"sh",
-				"showGameBoard"
-			],
-			[
-				"whi",
-				"whichList〔argument〕"
-			],
-			[
-				"geu",
-				"guessedLetter"
-			],
-			[
-				"g",
-				"guessedLetter"
-			],
-			[
-				"in",
-				"input〔function〕"
-			],
-			[
-				"listen",
-				"listenVergleich〔function〕"
-			],
-			[
-				"gues",
-				"guessedLetters〔variable〕"
-			],
-			[
-				"ma",
-				"matches〔variable〕"
-			],
-			[
-				"list",
-				"listenVergleich〔function〕"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "15 reversi 181009.py",
-			"settings":
-			{
-				"buffer_size": 10406,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "zz_test.py",
-			"settings":
-			{
-				"buffer_size": 1025,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "12 sonar 180910.py",
-			"settings":
-			{
-				"buffer_size": 9664,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -797,14 +771,18 @@
 	],
 	"file_history":
 	[
-		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi Arbeitskopie.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi 101108 tester.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi 181009.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/12 sonar 180910.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/zz_test.py",
+		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/14 cipher 180928.py",
 		"/Users/agata/Library/Application Support/DEVONthink Pro 2/Inbox.dtBase2/Files.noindex/txt/4/14. Caesar Cipher.txt",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
-		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
@@ -920,15 +898,11 @@
 		"/Users/agata/Documents/dev/ProcGenStories/procgenv001.py",
 		"/Users/agata/Documents/dev/RoguelikeTutorial/RoguelikeTutorial.sublime-project",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Sublime Tutor/tutorial/code/chapter_1.rb",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Sublime Tutor/tutorial/chapter_1.md",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Sublime Tutor/tutorial/README.md",
-		"/Volumes/KOBOeReader/.adds/koreader/defaults.lua",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/chapter_2_15.md",
-		"/Users/jai/Library/Application Support/Sublime Text 3/Packages/sublimetutor/tutorial/README.md"
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Sublime Tutor/tutorial/chapter_1.md"
 	],
 	"find":
 	{
-		"height": 49.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -942,6 +916,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"validTiles",
+			"lastTile",
+			"line",
+			"mostTilesToFlip",
+			"ix",
+			"id",
+			"idx",
+			"move",
+			"Move",
+			"move",
+			"possibleNonCornerMoves",
+			"possibleCornerMoves",
+			"updateValidLines",
 			"calculatePossibleMoves",
 			"next",
 			"emptyField",
@@ -1052,131 +1039,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "15 reversi 181009.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10406,
-						"regions":
-						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-								],
-								"scope": "bookmarks"
-							}
-						},
-						"selection":
-						[
-							[
-								8931,
-								8931
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"history_list_is_closing": true,
-							"open_with_edit": true,
-							"origPos":
-							[
-								0.0,
-								4780.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"wrap_width": 0
-						},
-						"translation.x": 0.0,
-						"translation.y": 4780.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "zz_test.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1025,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								468,
-								468
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"origPos":
-							[
-								0.0,
-								0.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "12 sonar 180910.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9664,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"origPos":
-							[
-								0.0,
-								0.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
