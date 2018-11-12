@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"textRect〔variable〕"
+			],
+			[
+				"B",
+				"BLUE"
+			],
+			[
 				"po",
 				"possible"
 			],
@@ -506,14 +514,6 @@
 			[
 				"iss",
 				"isspace\tfunction"
-			],
-			[
-				"sho",
-				"showGameboard"
-			],
-			[
-				"field",
-				"field"
 			]
 		]
 	},
@@ -524,6 +524,15 @@
 			"settings":
 			{
 				"buffer_size": 10980,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "17 graphics.py",
+			"settings":
+			{
+				"buffer_size": 929,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -776,7 +785,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython"
+		"/Users/agata/Documents/GitHub/InventGamesWithPython",
+		"/Users/agata/Documents/dev/Invent Your Own Computer Games with Python, 3rd Edition - source code/src"
 	],
 	"file_history":
 	[
@@ -911,7 +921,7 @@
 	],
 	"find":
 	{
-		"height": 49.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -1060,7 +1070,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1097,6 +1107,41 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 2842.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "17 graphics.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 929,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								929,
+								929
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
