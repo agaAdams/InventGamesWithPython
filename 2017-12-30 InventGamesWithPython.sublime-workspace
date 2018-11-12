@@ -4,6 +4,102 @@
 		"selected_items":
 		[
 			[
+				"po",
+				"possible"
+			],
+			[
+				"rank",
+				"rankBestMove〔function〕"
+			],
+			[
+				"best",
+				"bestMove〔variable〕"
+			],
+			[
+				"tr",
+				"try\tTry/Except"
+			],
+			[
+				"other",
+				"otherMoves"
+			],
+			[
+				"side",
+				"sideMoves"
+			],
+			[
+				"is",
+				"isSide"
+			],
+			[
+				"corner",
+				"cornerSideBestMove"
+			],
+			[
+				"rando",
+				"random.choice"
+			],
+			[
+				"rand",
+				"randomMove"
+			],
+			[
+				"wor",
+				"worstTiles"
+			],
+			[
+				"min",
+				"minTiles.append"
+			],
+			[
+				"tile",
+				"tile.rank"
+			],
+			[
+				"el",
+				"elif〔keyword〕"
+			],
+			[
+				"alg",
+				"algorithm"
+			],
+			[
+				"ch",
+				"chooseAlgorithms〔function〕"
+			],
+			[
+				"player",
+				"playerInput〔variable〕"
+			],
+			[
+				"pl",
+				"playerInput〔variable〕"
+			],
+			[
+				"play",
+				"playerInput"
+			],
+			[
+				"algorithm",
+				"algorithms"
+			],
+			[
+				"oP",
+				"oPoints〔variable〕"
+			],
+			[
+				"tie",
+				"ties"
+			],
+			[
+				"o",
+				"oPoints"
+			],
+			[
+				"x",
+				"xPoints"
+			],
+			[
 				"new",
 				"newLine〔variable〕"
 			],
@@ -16,20 +112,12 @@
 				"maxTiles"
 			],
 			[
-				"tile",
-				"tile.rank"
-			],
-			[
 				"update",
 				"updateRank"
 			],
 			[
 				"start",
 				"startY"
-			],
-			[
-				"corner",
-				"cornerTiles〔variable〕"
 			],
 			[
 				"cor",
@@ -96,10 +184,6 @@
 				"next〔function〕"
 			],
 			[
-				"el",
-				"else〔keyword〕"
-			],
-			[
 				"ai",
 				"aiPoints〔variable〕"
 			],
@@ -124,14 +208,6 @@
 				"newBoard.tiles"
 			],
 			[
-				"po",
-				"possibleMoves〔variable〕"
-			],
-			[
-				"pl",
-				"playerRole"
-			],
-			[
 				"show",
 				"showHints"
 			],
@@ -146,10 +222,6 @@
 			[
 				"di",
 				"direction"
-			],
-			[
-				"best",
-				"bestMove〔variable〕"
 			],
 			[
 				"bes",
@@ -226,14 +298,6 @@
 			[
 				"mo",
 				"movesToCompare"
-			],
-			[
-				"ch",
-				"chooseBestMove"
-			],
-			[
-				"x",
-				"xPosition"
 			],
 			[
 				"dire",
@@ -320,16 +384,8 @@
 				"sys.exit"
 			],
 			[
-				"player",
-				"playerMove"
-			],
-			[
 				"turn",
 				"turnState〔variable〕"
-			],
-			[
-				"play",
-				"playerRole〔variable〕"
 			],
 			[
 				"mak",
@@ -368,10 +424,6 @@
 				"clues〔variable〕"
 			],
 			[
-				"rand",
-				"randomNumber〔variable〕"
-			],
-			[
 				"e",
 				"elif"
 			],
@@ -382,10 +434,6 @@
 			[
 				"ga",
 				"gameState"
-			],
-			[
-				"rando",
-				"randomNumber〔argument〕"
 			],
 			[
 				"digit",
@@ -466,59 +514,20 @@
 			[
 				"field",
 				"field"
-			],
-			[
-				"fiel",
-				"fieldChoice"
-			],
-			[
-				"p",
-				"player"
-			],
-			[
-				"G",
-				"GAMEBOARD"
-			],
-			[
-				"we",
-				"welcomeMessage〔function〕"
-			],
-			[
-				"wel",
-				"welcomeMessage"
-			],
-			[
-				"gamer",
-				"gameRound〔variable〕"
-			],
-			[
-				"rou",
-				"roundCounter〔variable〕"
-			],
-			[
-				"dif",
-				"difficultyChoice〔variable〕"
-			],
-			[
-				"word",
-				"wordNumber〔variable〕"
-			],
-			[
-				"wor",
-				"wordListName〔variable〕"
-			],
-			[
-				"wordlist",
-				"wordListName"
-			],
-			[
-				"wordL",
-				"wordList〔variable〕"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "16.3 reversi 181109.py",
+			"settings":
+			{
+				"buffer_size": 10980,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -771,6 +780,8 @@
 	],
 	"file_history":
 	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/16.1 reversi 181109.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/16.2 reversi 181109.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi Arbeitskopie.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi 101108 tester.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi 181009.py",
@@ -896,13 +907,11 @@
 		"/Users/agata/Documents/dev/ProcGenStories/procgen_v001.py",
 		"/Users/agata/Documents/dev/RoguelikeTutorial/libtcodpy/__init__.py",
 		"/Users/agata/Documents/dev/ProcGenStories/procgenv001.py",
-		"/Users/agata/Documents/dev/RoguelikeTutorial/RoguelikeTutorial.sublime-project",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Sublime Tutor/tutorial/code/chapter_1.rb",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Sublime Tutor/tutorial/chapter_1.md"
+		"/Users/agata/Documents/dev/RoguelikeTutorial/RoguelikeTutorial.sublime-project"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
@@ -916,6 +925,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"worseTiles",
+			"topTiles",
+			"chooseBestMove",
+			"printBoard",
+			"100",
+			"int",
+			"player",
+			"aiPoints",
+			"playerPoints",
+			"player",
+			"aiRole",
+			"playerRole",
 			"validTiles",
 			"lastTile",
 			"line",
@@ -1039,8 +1060,48 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "16.3 reversi 181109.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10980,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9199,
+								9199
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"history_list_is_closing": true,
+							"open_with_edit": true,
+							"origPos":
+							[
+								0.0,
+								2842.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2842.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
