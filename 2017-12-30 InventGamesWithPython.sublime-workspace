@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"rect",
+				"Rect\tpygame(Rect) "
+			],
+			[
+				"disp",
+				"display\tpygame(Overlay) "
+			],
+			[
+				"py",
+				"pygame〔module〕"
+			],
+			[
+				"wind",
+				"windowSurface〔variable〕"
+			],
+			[
+				"pyga",
+				"pygame"
+			],
+			[
+				"pygame",
+				"pygame.init"
+			],
+			[
 				"text",
 				"textRect〔variable〕"
 			],
@@ -490,49 +514,16 @@
 			[
 				"w",
 				"whether"
-			],
-			[
-				"playf",
-				"playFields.get"
-			],
-			[
-				"fre",
-				"freieFelder〔variable〕"
-			],
-			[
-				"check",
-				"checkWin"
-			],
-			[
-				"while",
-				"while\tWhile Loop"
-			],
-			[
-				"nu",
-				"nummer〔variable〕"
-			],
-			[
-				"iss",
-				"isspace\tfunction"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "16.3 reversi 181109.py",
-			"settings":
-			{
-				"buffer_size": 10980,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "17 graphics.py",
 			"settings":
 			{
-				"buffer_size": 929,
+				"buffer_size": 1271,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -552,6 +543,38 @@
 			[
 				"insta",
 				"Package Control: Install Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"packagesr",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"anaconda",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"anaconda mc",
+				"Anaconda: McCabe complexity check"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"GitGutter: Compare Against Branch"
 			],
 			[
 				"upgra",
@@ -785,11 +808,19 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/agata/Documents/GitHub/InventGamesWithPython",
 		"/Users/agata/Documents/dev/Invent Your Own Computer Games with Python, 3rd Edition - source code/src"
 	],
 	"file_history":
 	[
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/sublime_jedi.sublime-settings",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Python 3/Comments(Python3).tmPreferences",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Python/Completion Rules.tmPreferences",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings",
+		"/Applications/Sublime Text.app/Contents/MacOS/<string>",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/16.3 reversi 181109.py",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/16.1 reversi 181109.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/16.2 reversi 181109.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi Arbeitskopie.py",
@@ -804,15 +835,12 @@
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-08-24 11.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/README.md",
 		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
 		"/Users/agata/Desktop/test.py",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
-		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/Users/agata/GTD/werkstatt-todolist.txt",
 		"/Users/agata/Documents/dev/InventGamesWithPython/2017-12-30 InventGamesWithPython.sublime-project",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/Default (OSX).sublime-keymap",
@@ -838,7 +866,6 @@
 		"/Users/agata/Documents/dev/InventGamesWithPython/InventWithPython_resources/buggy.py",
 		"/Users/agata/Documents/dev/InventGamesWithPython/5-dragon_realm.py",
 		"/Applications/Sublime Text.app/Contents/MacOS/sublime.py",
-		"/Applications/Sublime Text.app/Contents/MacOS/<string>",
 		"/Applications/Sublime Text.app/Contents/MacOS/python3.3/bdb.py",
 		"/Applications/Sublime Text.app/Contents/MacOS/backends.dbPython3S in /Users/agata/Library/Application Support/Sublime Text 3/Installed Packages/Python Debugger.sublime-package",
 		"/Applications/Sublime Text.app/Contents/MacOS/python3.3/random.py",
@@ -912,12 +939,7 @@
 		"/Users/agata/Documents/dev/ProcGenStories/p3_PC_v0001",
 		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v01.py",
 		"/Users/agata/Documents/dev/RoguelikeTutorial/loguelike_v03.py",
-		"/Users/agata/Documents/dev/RoguelikeTutorial/roguelike_v02.py",
-		"/Users/agata/Documents/dev/ProcGenStories/procgen_v002.py",
-		"/Users/agata/Documents/dev/ProcGenStories/procgen_v001.py",
-		"/Users/agata/Documents/dev/RoguelikeTutorial/libtcodpy/__init__.py",
-		"/Users/agata/Documents/dev/ProcGenStories/procgenv001.py",
-		"/Users/agata/Documents/dev/RoguelikeTutorial/RoguelikeTutorial.sublime-project"
+		"/Users/agata/Documents/dev/RoguelikeTutorial/roguelike_v02.py"
 	],
 	"find":
 	{
@@ -1070,73 +1092,47 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "16.3 reversi 181109.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10980,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9199,
-								9199
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"history_list_is_closing": true,
-							"open_with_edit": true,
-							"origPos":
-							[
-								0.0,
-								2842.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2842.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "17 graphics.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 929,
+						"buffer_size": 1271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								929,
-								929
+								53,
+								53
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
+							"auto_complete": true,
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"git_gutter_is_enabled": true,
 							"origPos":
 							[
 								0.0,
 								0.0
 							],
+							"show_definitions": false,
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage"
 						},
@@ -1758,6 +1754,15 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		]
 	},
 	"show_minimap": true,
 	"show_open_files": true,
