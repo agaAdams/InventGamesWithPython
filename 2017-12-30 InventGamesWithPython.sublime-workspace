@@ -527,6 +527,14 @@
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "18 animation.py",
+			"settings":
+			{
+				"buffer_size": 2596,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -808,7 +816,7 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/agata/Documents/dev/Invent Your Own Computer Games with Python, 3rd Edition - source code/src"
+		"/Users/agata/Documents/GitHub/InventGamesWithPython"
 	],
 	"file_history":
 	[
@@ -1092,7 +1100,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1108,8 +1116,8 @@
 						"selection":
 						[
 							[
-								53,
-								53
+								105,
+								105
 							]
 						],
 						"settings":
@@ -1135,6 +1143,43 @@
 							"show_definitions": false,
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "18 animation.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								52,
+								52
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"origPos":
+							[
+								0.0,
+								0.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1767,7 +1812,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 358.0,
 	"status_bar_visible": true,
 	"template_settings":
