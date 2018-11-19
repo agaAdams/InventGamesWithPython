@@ -1,0 +1,1819 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fo",
+				"food〔variable〕"
+			],
+			[
+				"fod",
+				"foodBox〔class〕"
+			],
+			[
+				"dr",
+				"drawBox"
+			],
+			[
+				"foo",
+				"food〔variable〕"
+			],
+			[
+				"food",
+				"foodBox〔class〕"
+			],
+			[
+				"pla",
+				"playerBox〔class〕"
+			],
+			[
+				"pygame",
+				"pygame.Rect"
+			],
+			[
+				"rect",
+				"Rect\tpygame(Rect) "
+			],
+			[
+				"disp",
+				"display\tpygame(Overlay) "
+			],
+			[
+				"py",
+				"pygame〔module〕"
+			],
+			[
+				"wind",
+				"windowSurface〔variable〕"
+			],
+			[
+				"pyga",
+				"pygame"
+			],
+			[
+				"text",
+				"textRect〔variable〕"
+			],
+			[
+				"B",
+				"BLUE"
+			],
+			[
+				"po",
+				"possible"
+			],
+			[
+				"rank",
+				"rankBestMove〔function〕"
+			],
+			[
+				"best",
+				"bestMove〔variable〕"
+			],
+			[
+				"tr",
+				"try\tTry/Except"
+			],
+			[
+				"other",
+				"otherMoves"
+			],
+			[
+				"side",
+				"sideMoves"
+			],
+			[
+				"is",
+				"isSide"
+			],
+			[
+				"corner",
+				"cornerSideBestMove"
+			],
+			[
+				"rando",
+				"random.choice"
+			],
+			[
+				"rand",
+				"randomMove"
+			],
+			[
+				"wor",
+				"worstTiles"
+			],
+			[
+				"min",
+				"minTiles.append"
+			],
+			[
+				"tile",
+				"tile.rank"
+			],
+			[
+				"el",
+				"elif〔keyword〕"
+			],
+			[
+				"alg",
+				"algorithm"
+			],
+			[
+				"ch",
+				"chooseAlgorithms〔function〕"
+			],
+			[
+				"player",
+				"playerInput〔variable〕"
+			],
+			[
+				"pl",
+				"playerInput〔variable〕"
+			],
+			[
+				"play",
+				"playerInput"
+			],
+			[
+				"algorithm",
+				"algorithms"
+			],
+			[
+				"oP",
+				"oPoints〔variable〕"
+			],
+			[
+				"tie",
+				"ties"
+			],
+			[
+				"o",
+				"oPoints"
+			],
+			[
+				"x",
+				"xPoints"
+			],
+			[
+				"new",
+				"newLine〔variable〕"
+			],
+			[
+				"corn",
+				"cornerMoves"
+			],
+			[
+				"max",
+				"maxTiles"
+			],
+			[
+				"update",
+				"updateRank"
+			],
+			[
+				"start",
+				"startY"
+			],
+			[
+				"cor",
+				"cornerMoves"
+			],
+			[
+				"most",
+				"mostTilesToFlip"
+			],
+			[
+				"log",
+				"longestLine"
+			],
+			[
+				"num",
+				"numberOfTilesInLines"
+			],
+			[
+				"nub",
+				"numberOfTilesInLines"
+			],
+			[
+				"v",
+				"valid"
+			],
+			[
+				"__",
+				"__gt__"
+			],
+			[
+				"long",
+				"longestLine"
+			],
+			[
+				"mov",
+				"movesLeft〔function〕"
+			],
+			[
+				"cal",
+				"calculatePossibleMoves〔function〕"
+			],
+			[
+				"pos",
+				"possibleMoves〔variable〕"
+			],
+			[
+				"u",
+				"updateValidLines"
+			],
+			[
+				"ti",
+				"tile〔argument〕"
+			],
+			[
+				"em",
+				"empty"
+			],
+			[
+				"ro",
+				"role"
+			],
+			[
+				"ne",
+				"next〔function〕"
+			],
+			[
+				"ai",
+				"aiPoints〔variable〕"
+			],
+			[
+				"end",
+				"endState〔variable〕"
+			],
+			[
+				"calc",
+				"calculatePossibleMoves"
+			],
+			[
+				"rem",
+				"remover〔variable〕"
+			],
+			[
+				"newBoard",
+				"newBoard.tiles"
+			],
+			[
+				"show",
+				"showHints"
+			],
+			[
+				"y",
+				"yDirection"
+			],
+			[
+				"line",
+				"line.tiles"
+			],
+			[
+				"di",
+				"direction"
+			],
+			[
+				"bes",
+				"bestMove〔variable〕"
+			],
+			[
+				"se",
+				"self〔argument〕"
+			],
+			[
+				"role",
+				"role〔variable〕"
+			],
+			[
+				"newLi",
+				"newLine.validTiles"
+			],
+			[
+				"T",
+				"Tile"
+			],
+			[
+				"valid",
+				"validInput〔variable〕"
+			],
+			[
+				"tiles",
+				"tilesToFlip"
+			],
+			[
+				"fli",
+				"flipTiles〔function〕"
+			],
+			[
+				"endOf",
+				"endOfValidTiles"
+			],
+			[
+				"n",
+				"newBoard"
+			],
+			[
+				"updat",
+				"updateBoard"
+			],
+			[
+				"til",
+				"tile.x"
+			],
+			[
+				"li",
+				"line.startX"
+			],
+			[
+				"ob",
+				"onBoard"
+			],
+			[
+				"def",
+				"defs\tMethod"
+			],
+			[
+				"be",
+				"bestMove.x"
+			],
+			[
+				"chec",
+				"checkLines〔function〕"
+			],
+			[
+				"possi",
+				"possibleMoves"
+			],
+			[
+				"mo",
+				"movesToCompare"
+			],
+			[
+				"dire",
+				"directions〔variable〕"
+			],
+			[
+				"computer",
+				"computer's"
+			],
+			[
+				"vali",
+				"validLine〔function〕"
+			],
+			[
+				"che",
+				"checkLines〔function〕"
+			],
+			[
+				"fl",
+				"flippedTiles〔variable〕"
+			],
+			[
+				"va",
+				"validLine〔function〕"
+			],
+			[
+				"endo",
+				"endOfTiles〔variable〕"
+			],
+			[
+				"on",
+				"onBoard"
+			],
+			[
+				"dia",
+				"diagonalItemsR〔variable〕"
+			],
+			[
+				"fir",
+				"firstVItem〔variable〕"
+			],
+			[
+				"fi",
+				"firstItem"
+			],
+			[
+				"last",
+				"lastVY〔variable〕"
+			],
+			[
+				"vert",
+				"verticalItems〔variable〕"
+			],
+			[
+				"tur",
+				"turn〔variable〕"
+			],
+			[
+				"first",
+				"firstHY〔variable〕"
+			],
+			[
+				"la",
+				"lastY〔variable〕"
+			],
+			[
+				"adj",
+				"adjecentY〔variable〕"
+			],
+			[
+				"tu",
+				"turn〔variable〕"
+			],
+			[
+				"me",
+				"message〔variable〕"
+			],
+			[
+				"isd",
+				"isdigit〔function〕"
+			],
+			[
+				"sy",
+				"sys.exit"
+			],
+			[
+				"turn",
+				"turnState〔variable〕"
+			],
+			[
+				"mak",
+				"makeNewBoard〔function〕"
+			],
+			[
+				"set",
+				"setMarker〔function〕"
+			],
+			[
+				"bo",
+				"board〔variable〕"
+			],
+			[
+				"bor",
+				"borderLine〔function〕"
+			],
+			[
+				"pri",
+				"print"
+			],
+			[
+				"print",
+				"printBoard"
+			],
+			[
+				"game",
+				"gameRound"
+			],
+			[
+				"clue",
+				"cluesLine"
+			],
+			[
+				"cl",
+				"clues〔variable〕"
+			],
+			[
+				"e",
+				"elif"
+			],
+			[
+				"ran",
+				"randomNumber〔argument〕"
+			],
+			[
+				"ga",
+				"gameState"
+			],
+			[
+				"digit",
+				"digitList"
+			],
+			[
+				"gue",
+				"guessedNumber〔variable〕"
+			],
+			[
+				"gu",
+				"guessedNumber〔variable〕"
+			],
+			[
+				"ra",
+				"random"
+			],
+			[
+				"gam",
+				"gameRound"
+			],
+			[
+				"rol",
+				"roles"
+			],
+			[
+				"playe",
+				"playerRole〔argument〕"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "19 collision.py",
+			"settings":
+			{
+				"buffer_size": 2000,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "18 animation.py",
+			"settings":
+			{
+				"buffer_size": 2596,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"packagesr",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"anaconda",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"anaconda mc",
+				"Anaconda: McCabe complexity check"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"GitGutter: Compare Against Branch"
+			],
+			[
+				"upgra",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"color",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"sublime tuto",
+				"Sublime Tutor: Start"
+			],
+			[
+				"sublimegit",
+				"SublimeGit: Version"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"fine key ",
+				"FindKeyConflicts: All Key Maps to Quick Panel"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"install packae",
+				"Package Control: Install Package"
+			],
+			[
+				"list package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"synta",
+				"Set Syntax: Diff"
+			],
+			[
+				"git diff",
+				"Git: Diff"
+			],
+			[
+				"git blame",
+				"Git: Blame"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"pretty ",
+				"Pretty Ruby: Format"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"packageinstal",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax git diff",
+				"Set Syntax: SublimeGit Diff"
+			],
+			[
+				"syntax",
+				"Set Syntax: Diff"
+			],
+			[
+				"git b lame",
+				"Git: Blame"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"removepac",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"package remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"package remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"syntax css",
+				"Set Syntax: CSS"
+			],
+			[
+				"git blam",
+				"Git: Blame"
+			],
+			[
+				"syntax diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"syntax ",
+				"Set Syntax: Diff"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax:diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"syntax git",
+				"Set Syntax: SublimeGit Diff"
+			],
+			[
+				"blame",
+				"Git: Blame"
+			],
+			[
+				"gst",
+				"Git: Status"
+			]
+		],
+		"width": 442.0
+	},
+	"console":
+	{
+		"height": 180.0,
+		"history":
+		[
+			"sublime.log_commands(True)",
+			"subprocess.Popen([executable_path, './Tutorial'], cwd='/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/')",
+			"subprocess.Popen([executable_path, './'], cwd='/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/')",
+			"subprocess([executable_path, './'], cwd='/Users/jai/Library/Application Support/Sublime Text 3/Packages/SublimeTutor/')",
+			"executable_path",
+			"executable_path = app_path+\"Contents/SharedSupport/bin/subl\"",
+			"app_path = executable_path[:executable_path.rfind(\".app/\")+5]",
+			"executable_path = sublime.executable_path()",
+			"subprocess.Popen(['pwd'])",
+			"import subprocess",
+			"sublime.active_window().run_command(\"sublime_tutor_new_window\")",
+			"sublime.active_window().run_command",
+			"sublime.active_window()",
+			"sublime.executable_path()",
+			"subliem.executable_path()",
+			"executable_path[:executable_path.rfind(\".app/\")+5] + \"Contents/SharedSupport/bin/subl\"",
+			"executable_path[:executable_path.rfind(\".app/\")+5]",
+			"executable_path = sublime.executable_path()",
+			"sublime.executable_path().executable_path[:executable_path.rfind(\".app/\")+5]",
+			"executable_path[:executable_path.rfind(\".app/\")+5]",
+			"sublime.executable_path()",
+			"sublime.log_commands(False)",
+			"sublime.open_project",
+			"window.open_project",
+			"window.open_file",
+			"view.run_command(\"select_by_index\")",
+			"window.run_command(\"select_by_index\")",
+			"sublime.select_by_index",
+			"view.run_command(\"example\")",
+			"sublime.run_command(\"example\")",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython"
+	],
+	"file_history":
+	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/17 graphics.py",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/sublime_jedi.sublime-settings",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Python 3/Comments(Python3).tmPreferences",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Python/Completion Rules.tmPreferences",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings",
+		"/Applications/Sublime Text.app/Contents/MacOS/<string>",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/16.3 reversi 181109.py",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/16.1 reversi 181109.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/16.2 reversi 181109.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi Arbeitskopie.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi 101108 tester.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/15 reversi 181009.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/000 game template.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/12 sonar 180910.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/zz_test.py",
+		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/14 cipher 180928.py",
+		"/Users/agata/Library/Application Support/DEVONthink Pro 2/Inbox.dtBase2/Files.noindex/txt/4/14. Caesar Cipher.txt",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120226 bagels.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/11 bagels 2018-08-24.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/InventWithPython_resources/20161122120228 tictactoe.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/2018-08-24 11.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/README.md",
+		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-17 10-tic-tac-toe.py",
+		"/Users/agata/Desktop/test.py",
+		"/Users/agata/GTD/werkstatt-todolist.txt",
+		"/Users/agata/Documents/dev/InventGamesWithPython/2017-12-30 InventGamesWithPython.sublime-project",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/Default (OSX).sublime-keymap",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/agata/Documents/dev/InventGamesWithPython/2018-02-24 game template.py",
+		"/Volumes/KOBOeReader/.adds/koreader/frontend/apps/reader/modules/readerhighlight.lua",
+		"/Users/agata/Documents/dev/InventGamesWithPython/20180112131250 9-hangman_extended.py",
+		"/Users/agata/Documents/dev/MakingGamesWithPythonPygame/01_basics.py",
+		"/Users/agata/Documents/dev/MakingGamesWithPythonPygame/MakingGamesWithPythonPygame.sublime-project",
+		"/Users/agata/Documents/dev/MakingGamesWithPythonPygame/untitled.sublime-project",
+		"/Users/agata/Documents/dev/InventGamesWithPython/9-hangman_extended.py",
+		"/Volumes/KOBOeReader/.Ebooks/Sachbuch/Selbsthilfe/eng_Refuse To Choose!/Refuse To Choose!.sdr/metadata.epub.lua",
+		"/Users/agata/Documents/dev/InventGamesWithPython/InventWithPython_resources/hangman2.py",
+		"/Users/agata/agas_db.dtBase2/Files.noindex/dat/2/AppleIntelInfo-woSSDT.dat",
+		"/Volumes/KOBOeReader/.adds/koreader/settings.reader.lua",
+		"/Users/agata/Downloads/AppleIntelInfo-woSSDT.dat",
+		"/Users/agata/Documents/dev/InventGamesWithPython/8-hangman.py",
+		"/Users/agata/Documents/dev/InventGamesWithPython/InventWithPython_resources/hangman.py",
+		"/Users/agata/Desktop/AppleIntelInfo.dat",
+		"/Users/agata/Documents/dev/InventGamesWithPython/InventWithPython_resources/coinFlips.py",
+		"/Volumes/KOBOeReader/.Ebooks/Sachbuch/Selbsthilfe/eng_Milk the Pigeon/Milk the Pigeon.sdr/metadata.epub.lua",
+		"/Users/agata/Documents/dev/InventGamesWithPython/InventWithPython_resources/buggy.py",
+		"/Users/agata/Documents/dev/InventGamesWithPython/5-dragon_realm.py",
+		"/Applications/Sublime Text.app/Contents/MacOS/sublime.py",
+		"/Applications/Sublime Text.app/Contents/MacOS/python3.3/bdb.py",
+		"/Applications/Sublime Text.app/Contents/MacOS/backends.dbPython3S in /Users/agata/Library/Application Support/Sublime Text 3/Installed Packages/Python Debugger.sublime-package",
+		"/Applications/Sublime Text.app/Contents/MacOS/python3.3/random.py",
+		"/Users/agata/Documents/dev/InventGamesWithPython/4-Jokes.py",
+		"/Users/agata/Documents/dev/InventGamesWithPython/3-GuessTheNumber.py",
+		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Python Breakpoints/PythonBreakpoints.sublime-settings",
+		"/Users/agata/Downloads/book/chapter0.html",
+		"/Users/agata/Downloads/book/chapter1.html",
+		"/Users/agata/Downloads/book/chapter2.html",
+		"/Users/agata/Downloads/book/chapter3.html",
+		"/Users/agata/Downloads/book/chapter4.html",
+		"/Users/agata/Downloads/book/chapter5.html",
+		"/Users/agata/Downloads/book/chapter6.html",
+		"/Users/agata/Downloads/book/chapter7.html",
+		"/Users/agata/Downloads/book/chapter8.html",
+		"/Users/agata/Downloads/book/chapter9.html",
+		"/Users/agata/Downloads/book/chapter10.html",
+		"/Users/agata/Downloads/book/chapter11.html",
+		"/Users/agata/Downloads/book/chapter12.html",
+		"/Users/agata/Downloads/book/chapter13.html",
+		"/Users/agata/Downloads/book/chapter14.html",
+		"/Users/agata/Downloads/book/chapter15.html",
+		"/Users/agata/Downloads/book/chapter16.html",
+		"/Users/agata/Downloads/book/chapter17.html",
+		"/Users/agata/Downloads/book/chapter18.html",
+		"/Users/agata/Downloads/book/chapter19.html",
+		"/Users/agata/Downloads/book/chapter20.html",
+		"/Users/agata/Downloads/book/chapter21.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter0.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter15.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter12.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter11.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter10.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter9.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter8.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter7.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter6.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter5.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter4.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter3.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter2.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter1.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter16.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter17.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter18.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/chapter19.html",
+		"/Users/agata/Downloads/book/inventwithpython.com/invent4thed/index.html",
+		"/Users/agata/Documents/dev/python1/people.py",
+		"/Users/agata/Documents/dev/python1/restaurant.py",
+		"/Users/agata/Documents/dev/python1/multiple_ten.py",
+		"/Users/agata/Documents/dev/python1/pizza_toppings.py",
+		"/Users/agata/Documents/dev/python1/rental.py",
+		"/Users/agata/Documents/dev/python1/rivers.py",
+		"/Users/agata/Documents/dev/python1/languages.py",
+		"/Users/agata/Documents/dev/python1/alien_colors.py",
+		"/Users/agata/Documents/dev/python1/admin.py",
+		"/Users/agata/Documents/dev/python1/ordinal_numbers.py",
+		"/Users/agata/Documents/dev/python1/buffet.py",
+		"/Users/agata/Documents/dev/python1/pizzas.py",
+		"/Users/agata/Documents/dev/python1/animals.py",
+		"/Users/agata/Documents/dev/python1/cubes.py",
+		"/Users/agata/Documents/dev/python1/counting_20.py",
+		"/Users/agata/Documents/dev/python1/4-turtle.py",
+		"/Users/agata/Documents/dev/RoguelikeTutorial/rl-items.py",
+		"/Users/agata/Documents/dev/python1/09_hangman_advanced.py",
+		"/Users/agata/Documents/dev/python1/09_hangman_aga.py",
+		"/Users/agata/Documents/dev/RoguelikeTutorial/p2_RLT_v04.py",
+		"/Users/agata/Documents/dev/RoguelikeTutorial/p2_RLT_v03.py",
+		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v02.py",
+		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v03.py",
+		"/Users/agata/Documents/dev/ProcGenStories/p3_PC_v0001",
+		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v01.py",
+		"/Users/agata/Documents/dev/RoguelikeTutorial/loguelike_v03.py"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 690.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"food",
+			"worseTiles",
+			"topTiles",
+			"chooseBestMove",
+			"printBoard",
+			"100",
+			"int",
+			"player",
+			"aiPoints",
+			"playerPoints",
+			"player",
+			"aiRole",
+			"playerRole",
+			"validTiles",
+			"lastTile",
+			"line",
+			"mostTilesToFlip",
+			"ix",
+			"id",
+			"idx",
+			"move",
+			"Move",
+			"move",
+			"possibleNonCornerMoves",
+			"possibleCornerMoves",
+			"updateValidLines",
+			"calculatePossibleMoves",
+			"next",
+			"emptyField",
+			"validMove",
+			"calculatePossibleMoves",
+			"calculatePoints",
+			"updateValidTiles",
+			"validTiles",
+			"ValidTiles",
+			"validTiles",
+			"ValidTiles",
+			"validTiles",
+			"endOfValidTiles",
+			"checkValidMoves",
+			"directions",
+			"DIRECTIONS",
+			"t for t",
+			"t fort",
+			"next",
+			"self.board",
+			"board",
+			"tilesOnBoard",
+			"directions",
+			"index",
+			"roles",
+			"validLine",
+			"x",
+			"i",
+			"x",
+			"checkPossibleMoves",
+			"playerRole",
+			"checkFields",
+			"checkPossibleMoves",
+			"checkFields",
+			"winState",
+			"()\n",
+			"i",
+			"x",
+			"^[\\s]*?[\\n\\r]+",
+			"·        ",
+			"^[\\s]*?[\\n\\r]+",
+			"^\\n",
+			" ^\\n",
+			" ^\\n      ",
+			"^\\n      ",
+			"·        ",
+			"shuffle",
+			"check",
+			"x",
+			"gameRound",
+			"x",
+			"playerGuess",
+			"zahl",
+			"randomNumber()",
+			"playerGuess",
+			"string",
+			"fieldChoice",
+			"WIN_SETS",
+			"currentFields",
+			"checkWin",
+			"return fields",
+			"aiSet",
+			"currentFields",
+			"corner",
+			"gameBoard",
+			"playerRole",
+			"gameRound",
+			"playFields",
+			"gameBoard",
+			"turnState",
+			"counter",
+			"F",
+			"f",
+			"F",
+			"f",
+			"F",
+			"f",
+			"freieFelder",
+			"zeichen",
+			"z",
+			"nummer",
+			"]",
+			"field",
+			"gesetzt",
+			"playFields",
+			"randint",
+			"find",
+			"GAMEBOARD",
+			"  \n",
+			"playFields",
+			"turnstate",
+			"gameRound"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "19 collision.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2000,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1942,
+								1942
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"origPos":
+							[
+								0.0,
+								1090.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1090.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "18 animation.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2566,
+								2566
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_is_enabled": true,
+							"origPos":
+							[
+								0.0,
+								1175.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1175.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 183.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.664138186222,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.help":
+	{
+		"height": 432.0
+	},
+	"output.tooltips":
+	{
+		"height": 188.0
+	},
+	"pinned_build_system": "",
+	"project": "2017-12-30 InventGamesWithPython.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"11",
+				"11 bagels 2018-08-24.py"
+			],
+			[
+				"p3",
+				"RoguelikeTutorial/p3_RLT_v02.py"
+			],
+			[
+				"r",
+				"RoguelikeTutorial/roguelike_v03.py"
+			],
+			[
+				"c2",
+				"chapter_2.md"
+			],
+			[
+				"",
+				"~/Documents/dev/python1/09_hangman_aga.py"
+			],
+			[
+				"1.r",
+				"code/chapter_1.rb"
+			],
+			[
+				"ha",
+				"~/Documents/dev/python1/09_hangman_aga.py"
+			],
+			[
+				"c1r",
+				"code/chapter_1.rb"
+			],
+			[
+				"han",
+				"~/Documents/dev/python1/09_hangman_aga.py"
+			],
+			[
+				"1.",
+				"chapter_1.md"
+			],
+			[
+				"1",
+				"chapter_1.md"
+			],
+			[
+				"c1rb",
+				"code/chapter_1.rb"
+			],
+			[
+				"chapt2.2",
+				"chapter_2_2.md"
+			],
+			[
+				"c21",
+				"chapter_2_1.md"
+			],
+			[
+				"c2.md",
+				"chapter_2.md"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"readme.",
+				"README.md"
+			],
+			[
+				"keybind",
+				"KeyBindingInspector/KeyBindingListener.py"
+			],
+			[
+				"keyb",
+				"KeyBindingInspector/KeyBindingListener.py"
+			],
+			[
+				"user.rb",
+				"app/models/user.rb"
+			],
+			[
+				"feedbackcontr",
+				"app/controllers/api/v1/feedbacks_controller.rb"
+			],
+			[
+				"referral.rb",
+				"app/models/referral.rb"
+			],
+			[
+				"freebookin",
+				"app/models/free_booking.rb"
+			],
+			[
+				"freebookingcontr",
+				"app/controllers/api/v1/free_bookings_controller.rb"
+			],
+			[
+				"usercontr",
+				"app/controllers/api/v1/users_controller.rb"
+			],
+			[
+				"trip.rb",
+				"app/models/trip.rb"
+			],
+			[
+				"route.rb",
+				"app/models/route.rb"
+			],
+			[
+				"bookingcontr",
+				"app/controllers/api/v1/bookings_controller.rb"
+			],
+			[
+				"routecontr",
+				"app/controllers/api/v1/routes_controller.rb"
+			],
+			[
+				"booking.rb",
+				"app/models/booking.rb"
+			],
+			[
+				"static",
+				"app/controllers/api/v1/static_controller.rb"
+			],
+			[
+				"schemar.b",
+				"db/schema.rb"
+			],
+			[
+				"secret",
+				"config/secrets.yml"
+			],
+			[
+				"bookingserial",
+				"app/serializers/booking_serializer.rb"
+			],
+			[
+				"freebookingscredit",
+				"db/migrate/20151015072825_add_default_value_for_free_bookings_credit_used.rb"
+			],
+			[
+				"freebookingcred",
+				"db/migrate/20151008113500_add_free_bookings_credit_used_to_bookings.rb"
+			],
+			[
+				"vagrantfile",
+				"railsbox/development/Vagrantfile"
+			],
+			[
+				"adddefault",
+				"db/migrate/20150820081758_add_default_values_to_booking_attributes.rb"
+			],
+			[
+				"bookingseria",
+				"app/serializers/booking_serializer.rb"
+			],
+			[
+				"routescontr",
+				"app/controllers/api/v1/routes_controller.rb"
+			],
+			[
+				"feedba",
+				"app/admin/feedback.rb"
+			],
+			[
+				"path.rb",
+				"app/admin/path.rb"
+			],
+			[
+				"bus.rb",
+				"app/admin/bus.rb"
+			],
+			[
+				"driver.rb",
+				"app/admin/driver.rb"
+			],
+			[
+				"driver.",
+				"app/admin/driver.rb"
+			],
+			[
+				"feedback.",
+				"app/admin/feedback.rb"
+			],
+			[
+				"booking",
+				"app/admin/booking.rb"
+			],
+			[
+				"secret.",
+				"config/secrets.yml"
+			],
+			[
+				".yml",
+				"config/locales/en.yml"
+			],
+			[
+				"en.ym",
+				"config/locales/en.yml"
+			],
+			[
+				"freebooking.rb",
+				"app/models/free_booking.rb"
+			],
+			[
+				"freebookingcont",
+				"app/controllers/api/v1/free_bookings_controller.rb"
+			],
+			[
+				"referralcontr",
+				"app/controllers/api/v1/referrals_controller.rb"
+			],
+			[
+				"reffer",
+				"db/migrate/20151014084146_add_referrer_credited_to_referrals.rb"
+			],
+			[
+				"schema.rb",
+				"db/schema.rb"
+			],
+			[
+				"referral",
+				"app/models/referral.rb"
+			],
+			[
+				"gettrevo",
+				"railsbox/ansible/roles/nginx/templates/get_trevoapp.conf.j2"
+			],
+			[
+				"gettrev",
+				"railsbox/ansible/roles/nginx/templates/get_trevoapp.conf.j2"
+			],
+			[
+				"unicorn.con",
+				"railsbox/ansible/roles/nginx/templates/nginx_unicorn.conf.j2"
+			],
+			[
+				"nginxunico",
+				"railsbox/ansible/roles/nginx/templates/nginx_unicorn.conf.j2"
+			],
+			[
+				"nginxconf",
+				"railsbox/ansible/roles/nginx/templates/nginx.conf.j2"
+			],
+			[
+				"userseria",
+				"app/serializers/user_serializer.rb"
+			],
+			[
+				"routes.rb",
+				"config/routes.rb"
+			],
+			[
+				"freebookings",
+				"app/serializers/free_booking_serializer.rb"
+			],
+			[
+				"freebookingscon",
+				"app/controllers/api/v1/free_bookings_controller.rb"
+			],
+			[
+				"referralseria",
+				"app/serializers/referral_serializer.rb"
+			],
+			[
+				"userserializer",
+				"app/serializers/user_serializer.rb"
+			],
+			[
+				"wallettransactionser",
+				"app/serializers/wallet_transaction_serializer.rb"
+			],
+			[
+				"applicationcontr",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"freebooking",
+				"app/models/free_booking.rb"
+			],
+			[
+				"freebookingser",
+				"app/serializers/free_booking_serializer.rb"
+			],
+			[
+				"freebookingscontr",
+				"app/controllers/api/v1/free_bookings_controller.rb"
+			],
+			[
+				"trevo.rake",
+				"lib/tasks/trevo.rake"
+			],
+			[
+				"bookingcontroller",
+				"app/controllers/api/v1/bookings_controller.rb"
+			],
+			[
+				"referralcon",
+				"app/controllers/api/v1/referrals_controller.rb"
+			],
+			[
+				"schem",
+				"db/schema.rb"
+			],
+			[
+				"location.rb",
+				"app/models/location.rb"
+			],
+			[
+				"referralscontr",
+				"app/controllers/api/v1/referrals_controller.rb"
+			],
+			[
+				"freebookingseri",
+				"app/serializers/free_booking_serializer.rb"
+			],
+			[
+				"freeb",
+				"app/models/free_booking.rb"
+			],
+			[
+				"bookingfreebooking",
+				"db/migrate/20151008130311_create_bookings_free_bookings.rb"
+			],
+			[
+				"bookingfree",
+				"app/models/bookings_free_booking.rb"
+			],
+			[
+				"bookingsfree",
+				"db/migrate/20151008130311_create_bookings_free_bookings.rb"
+			],
+			[
+				"renamefree",
+				"db/migrate/20151008125554_rename_free_bookings_to_promotions.rb"
+			],
+			[
+				"bookingscontr",
+				"app/controllers/api/v1/bookings_controller.rb"
+			],
+			[
+				"freebookingscontroller",
+				"app/controllers/api/v1/free_bookings_controller.rb"
+			],
+			[
+				"busserializer",
+				"app/serializers/bus_serializer.rb"
+			],
+			[
+				"freebookingseria",
+				"app/serializers/free_booking_serializer.rb"
+			],
+			[
+				"freebookings.rb",
+				"spec/models/free_booking_spec.rb"
+			],
+			[
+				"addfreebookings",
+				"db/migrate/20151008113500_add_free_bookings_credit_used_to_bookings.rb"
+			],
+			[
+				"addfreebooking",
+				"db/migrate/20151008110423_add_free_bookings_credit_used_to_bookings.rb"
+			],
+			[
+				"addfrees",
+				"db/migrate/20151008110423_add_frees_trip_credit_used_to_bookings.rb"
+			],
+			[
+				"addbooking",
+				"db/migrate/20151008110423_add_frees_trip_credit_used_to_bookings.rb"
+			],
+			[
+				"createreferr",
+				"db/migrate/20151008110827_create_referrals.rb"
+			],
+			[
+				"createbooking",
+				"db/migrate/20150819092129_create_bookings.rb"
+			],
+			[
+				"referralcode",
+				"db/migrate/20151008081112_add_referral_code_to_users.rb"
+			],
+			[
+				"add",
+				"db/migrate/20150828142243_add_devise_to_buses.rb"
+			],
+			[
+				"applicationcont",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"parkingsequence",
+				"app/models/parking_sequence.rb"
+			],
+			[
+				"drivercontr",
+				"app/controllers/api/v1/drivers_controller.rb"
+			],
+			[
+				"parameter",
+				"app/models/parameter.rb"
+			],
+			[
+				"feedback.rb",
+				"app/models/feedback.rb"
+			],
+			[
+				"hasnfc",
+				"db/migrate/20151007061805_add_has_ble_and_has_nfc_to_users.rb"
+			],
+			[
+				"driversess",
+				"app/controllers/api/v1/driver_sessions_controller.rb"
+			],
+			[
+				"userserial",
+				"app/serializers/user_serializer.rb"
+			],
+			[
+				"staticcont",
+				"app/controllers/api/v1/static_controller.rb"
+			],
+			[
+				"logout",
+				"app/workers/logout_drivers_worker.rb"
+			],
+			[
+				"driversession",
+				"app/controllers/api/v1/driver_sessions_controller.rb"
+			],
+			[
+				"smswor",
+				"app/workers/send_sms_worker.rb"
+			],
+			[
+				"removeuniqu",
+				"db/migrate/20151005140605_remove_uniq_index_from_buses.rb"
+			],
+			[
+				"session",
+				"app/controllers/api/v1/sessions_controller.rb"
+			],
+			[
+				"sendsms",
+				"app/workers/send_sms_worker.rb"
+			],
+			[
+				"bussession",
+				"app/controllers/api/v1/bus_sessions_controller.rb"
+			],
+			[
+				"routescont",
+				"app/controllers/api/v1/routes_controller.rb"
+			],
+			[
+				"sess",
+				"app/controllers/api/v1/sessions_controller.rb"
+			],
+			[
+				"trip",
+				"app/admin/trip.rb"
+			],
+			[
+				"routecont",
+				"app/controllers/api/v1/routes_controller.rb"
+			],
+			[
+				"authe",
+				"app/controllers/concerns/authenticable.rb"
+			],
+			[
+				"buscontr",
+				"app/controllers/api/v1/buses_controller.rb"
+			],
+			[
+				"authent",
+				"app/controllers/concerns/authenticable.rb"
+			],
+			[
+				"buscontro",
+				"app/controllers/api/v1/buses_controller.rb"
+			],
+			[
+				"isactivedri",
+				"db/migrate/20151003112122_add_is_active_to_drivers.rb"
+			],
+			[
+				"isactive",
+				"db/migrate/20151003104401_add_is_active_to_buses.rb"
+			],
+			[
+				"paymentcontr",
+				"app/controllers/api/v1/payments_controller.rb"
+			],
+			[
+				"payment.rb",
+				"app/models/payment.rb"
+			],
+			[
+				"bussessions",
+				"app/controllers/api/v1/bus_sessions_controller.rb"
+			],
+			[
+				"book",
+				"app/models/booking.rb"
+			],
+			[
+				"capturepaym",
+				"app/workers/capture_payment_worker.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/GTD/GTD.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"bar1"
+			]
+		],
+		"width": 588.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 358.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}
