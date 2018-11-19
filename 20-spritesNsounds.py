@@ -21,6 +21,7 @@ class playerBox(object):
     def __init__(self):
         super(playerBox, self).__init__()
         self.color = BLACK
+        self.image = pygame.image.load('player.png')
         self.rect = pygame.Rect(random.randint(0, WINDOWWIDTH - 50), random.randint(0, WINDOWHEIGHT - 50), 50, 50)
         
     def draw(self, surface):
@@ -40,11 +41,16 @@ class playerBox(object):
         if self.rect.colliderect(other.rect):
             return True
 
+    def eat(self, increment):
+        currentSize = self.rect.get_size()
+        self.image = pygame.transform.scale(self.image, (currentSize[0] + increment, currentSize[1] + increment))
+
 class foodBox(object):
     """green rectangular box representing food"""
     def __init__(self, left, top):
         super(foodBox, self).__init__()
         self.color = GREEN
+        self.image = pygame.image.load('cherry.png')
         self.rect = pygame.Rect(left, top, 20, 20)
 
     def draw(self, surface):

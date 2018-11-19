@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"c",
+				"createFood"
+			],
+			[
+				"evt",
+				"event.type"
+			],
+			[
+				"pl",
+				"player〔variable〕"
+			],
+			[
+				"player",
+				"playerBox"
+			],
+			[
 				"fo",
-				"food〔variable〕"
+				"food.append"
 			],
 			[
 				"fod",
@@ -122,14 +138,6 @@
 			[
 				"ch",
 				"chooseAlgorithms〔function〕"
-			],
-			[
-				"player",
-				"playerInput〔variable〕"
-			],
-			[
-				"pl",
-				"playerInput〔variable〕"
 			],
 			[
 				"play",
@@ -506,33 +514,17 @@
 			[
 				"gam",
 				"gameRound"
-			],
-			[
-				"rol",
-				"roles"
-			],
-			[
-				"playe",
-				"playerRole〔argument〕"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "19 collision.py",
+			"file": "20-spritesNsounds.py",
 			"settings":
 			{
-				"buffer_size": 2000,
+				"buffer_size": 4103,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "18 animation.py",
-			"settings":
-			{
-				"buffer_size": 2596,
 				"line_ending": "Unix"
 			}
 		}
@@ -548,6 +540,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"git",
+				"GitGutter: Disable for View"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -579,10 +575,6 @@
 			[
 				"instal",
 				"Package Control: Install Package"
-			],
-			[
-				"git",
-				"GitGutter: Compare Against Branch"
 			],
 			[
 				"upgra",
@@ -820,6 +812,8 @@
 	],
 	"file_history":
 	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/18 animation.py",
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/19 collision.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/17 graphics.py",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/User/sublime_jedi.sublime-settings",
 		"/Users/agata/Library/Application Support/Sublime Text 3/Packages/Python 3/Comments(Python3).tmPreferences",
@@ -945,9 +939,7 @@
 		"/Users/agata/Documents/dev/RoguelikeTutorial/p2_RLT_v03.py",
 		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v02.py",
 		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v03.py",
-		"/Users/agata/Documents/dev/ProcGenStories/p3_PC_v0001",
-		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v01.py",
-		"/Users/agata/Documents/dev/RoguelikeTutorial/loguelike_v03.py"
+		"/Users/agata/Documents/dev/ProcGenStories/p3_PC_v0001"
 	],
 	"find":
 	{
@@ -965,6 +957,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"moveBox",
+			"drawBox",
 			"food",
 			"worseTiles",
 			"topTiles",
@@ -1106,30 +1100,31 @@
 			[
 				{
 					"buffer": 0,
-					"file": "19 collision.py",
+					"file": "20-spritesNsounds.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2000,
+						"buffer_size": 4103,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1942,
-								1942
+								1570,
+								1570
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"git_gutter_is_enabled": true,
+							"git_gutter_enable": false,
+							"git_gutter_is_enabled": false,
 							"open_with_edit": true,
 							"origPos":
 							[
 								0.0,
-								1090.0
+								0.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1137,55 +1132,17 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1090.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 1,
-					"file": "18 animation.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2596,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2566,
-								2566
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"git_gutter_is_enabled": true,
-							"origPos":
-							[
-								0.0,
-								1175.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1175.0,
-						"zoom_level": 1.0
-					},
+					"file": "/Users/agata/Documents/dev/InventWithPython_resources, 4th Edition/cherry.png",
+					"semi_transient": true,
 					"stack_index": 1,
-					"type": "text"
+					"type": "image"
 				}
 			]
 		}
@@ -1207,12 +1164,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -1223,7 +1174,6 @@
 		"rows":
 		[
 			0.0,
-			0.664138186222,
 			1.0
 		]
 	},
