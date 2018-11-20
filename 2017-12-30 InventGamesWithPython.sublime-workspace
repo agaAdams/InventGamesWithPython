@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"B",
+				"BACKGROUND_MUSIC"
+			],
+			[
+				"pyg",
+				"pygame〔module〕"
+			],
+			[
+				"F",
+				"FOOD_IMAGE"
+			],
+			[
 				"c",
 				"createFood"
 			],
@@ -70,10 +82,6 @@
 			[
 				"text",
 				"textRect〔variable〕"
-			],
-			[
-				"B",
-				"BLUE"
 			],
 			[
 				"po",
@@ -506,28 +514,11 @@
 			[
 				"gu",
 				"guessedNumber〔variable〕"
-			],
-			[
-				"ra",
-				"random"
-			],
-			[
-				"gam",
-				"gameRound"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "20-spritesNsounds.py",
-			"settings":
-			{
-				"buffer_size": 4103,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -812,6 +803,7 @@
 	],
 	"file_history":
 	[
+		"/Users/agata/Documents/GitHub/InventGamesWithPython/20-spritesNsounds.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/18 animation.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/19 collision.py",
 		"/Users/agata/Documents/GitHub/InventGamesWithPython/17 graphics.py",
@@ -938,8 +930,7 @@
 		"/Users/agata/Documents/dev/RoguelikeTutorial/p2_RLT_v04.py",
 		"/Users/agata/Documents/dev/RoguelikeTutorial/p2_RLT_v03.py",
 		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v02.py",
-		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v03.py",
-		"/Users/agata/Documents/dev/ProcGenStories/p3_PC_v0001"
+		"/Users/agata/Documents/dev/RoguelikeTutorial/p3_RLT_v03.py"
 	],
 	"find":
 	{
@@ -957,6 +948,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"box",
+			"collide",
 			"moveBox",
 			"drawBox",
 			"food",
@@ -1095,55 +1088,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "20-spritesNsounds.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4103,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1570,
-								1570
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"git_gutter_enable": false,
-							"git_gutter_is_enabled": false,
-							"open_with_edit": true,
-							"origPos":
-							[
-								0.0,
-								0.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"file": "/Users/agata/Documents/dev/InventWithPython_resources, 4th Edition/cherry.png",
-					"semi_transient": true,
-					"stack_index": 1,
-					"type": "image"
-				}
 			]
 		}
 	],

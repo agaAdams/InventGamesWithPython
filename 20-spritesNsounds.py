@@ -14,51 +14,55 @@ STARTINGFOOD = 50
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
+PLAYER_IMAGE = 'player.png'
+FOOD_IMAGE = 'cherry.png'
+SOUND = 'pickup.wav'
+BACKGROUND_MUSIC = 'background.mid'
+INFLATE = 2
 
 ########### Classes ###########
 class playerBox(object):
-    """black rectangular box representing the player"""
-    def __init__(self):
+    """sprite representing the player"""
+    def __init__(self, image):
         super(playerBox, self).__init__()
-        self.color = BLACK
-        self.image = pygame.image.load('player.png')
-        self.rect = pygame.Rect(random.randint(0, WINDOWWIDTH - 50), random.randint(0, WINDOWHEIGHT - 50), 50, 50)
+        self.image = pygame.image.load(image)
+        self.rect = self.image.get_rect()
+        self.rect.move_ip(random.randint(0, WINDOWWIDTH - 50), random.randint(0, WINDOWHEIGHT - 50))
         
     def draw(self, surface):
-        '''draws box as a rectangular shape on given surface'''
-        pygame.draw.rect(surface, self.color, self.rect)
+        '''draws sprite on given surface positioned on a rectangle'''
+        surface.blit(self.image, self.rect)
 
     def move(self, direction):
-        '''moves box into given direction'''
+        '''moves sprite into given direction'''
         self.rect.move_ip(direction)
 
     def teleport(self):
-        '''teleports box to random location'''
+        '''teleports sprite to random location'''
         self.rect = pygame.Rect(random.randint(0, WINDOWWIDTH - 50), random.randint(0, WINDOWHEIGHT - 50), self.rect.width, self.rect.height)
 
-    def collide(self, other):
-        '''tests if given rectangle collides with playerBox'''
+    def eat(self, other):
+        '''tests if given rectangle collides with playerBox, resizes playerBox on collision'''
         if self.rect.colliderect(other.rect):
-            return True
-
-    def eat(self, increment):
-        currentSize = self.rect.get_size()
-        self.image = pygame.transform.scale(self.image, (currentSize[0] + increment, currentSize[1] + increment))
+            other.eaten()
+            self.rect.inflate_ip(INFLATE, INFLATE)
+            self.image = pygame.transform.scale(self.image, (self.rect.width, self.rect.height))
+            pickUpSound.play()
 
 class foodBox(object):
-    """green rectangular box representing food"""
-    def __init__(self, left, top):
+    """sprite representing food"""
+    def __init__(self, image, left, top):
         super(foodBox, self).__init__()
-        self.color = GREEN
-        self.image = pygame.image.load('cherry.png')
-        self.rect = pygame.Rect(left, top, 20, 20)
+        self.image = pygame.image.load(image)
+        self.rect = self.image.get_rect()
+        self.rect.move_ip(left, top)
 
     def draw(self, surface):
-        '''draws box as a rectangular shape on given surface'''
-        pygame.draw.rect(surface, self.color, self.rect)
+        '''draws sprite on given surface'''
+        surface.blit(self.image, self.rect)
 
     def eaten(self):
-        '''removes box from food list'''
+        '''removes sprite from food list'''
         food.remove(self)
 
 ########## Functions ##########
@@ -70,17 +74,21 @@ def createStartingFood():
 def createFood(position=None):
     '''creates a food box at given or random position'''
     if position:
-        newFood = foodBox(position[0], position[1])
+        newFood = foodBox(FOOD_IMAGE, position[0], position[1])
     else:
-        newFood = foodBox(random.randint(0, WINDOWWIDTH - 20), random.randint(0, WINDOWHEIGHT - 20))
+        newFood = foodBox(FOOD_IMAGE, random.randint(0, WINDOWWIDTH - 20), random.randint(0, WINDOWHEIGHT - 20))
     food.append(newFood)
 
 ############ Main ############
 mainClock = pygame.time.Clock()
-player = playerBox()
+pickUpSound = pygame.mixer.Sound(SOUND)
+pygame.mixer.music.load(BACKGROUND_MUSIC)
+pygame.mixer.music.play(-1, 0.0)
+
+player = playerBox(PLAYER_IMAGE)
 food = []
 window = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
-pygame.display.set_caption("Food Hunt")
+pygame.display.set_caption("Cherry Picker")
 createStartingFood()
 
 ########## Game Loop ##########
@@ -121,12 +129,11 @@ while True:
         createFood()
 
     for f in food:
-        if player.collide(f):
-            f.eaten()
+        player.eat(f)
 
     for f in food:
         f.draw(window)
     player.draw(window)
 
-    pygame.display.update()
+    pygame.display.flip()
     mainClock.tick(40)
