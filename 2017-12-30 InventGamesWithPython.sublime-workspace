@@ -4,8 +4,52 @@
 		"selected_items":
 		[
 			[
+				"gam",
+				"gameOver〔function〕"
+			],
+			[
+				"W",
+				"WINDOWHEIGHT"
+			],
+			[
+				"d",
+				"disappear"
+			],
+			[
+				"u",
+				"updateHighScore〔function〕"
+			],
+			[
+				"game",
+				"gameOver"
+			],
+			[
+				"bad",
+				"baddies〔variable〕"
+			],
+			[
+				"crea",
+				"createBaddie〔function〕"
+			],
+			[
+				"ba",
+				"baddies〔variable〕"
+			],
+			[
+				"cre",
+				"createBaddie〔function〕"
+			],
+			[
+				"def",
+				"def\tFunction"
+			],
+			[
+				"BA",
+				"BADDIE_IMAGE〔variable〕"
+			],
+			[
 				"B",
-				"Box"
+				"Baddie"
 			],
 			[
 				"fo",
@@ -220,10 +264,6 @@
 				"possibleMoves〔variable〕"
 			],
 			[
-				"u",
-				"updateValidLines"
-			],
-			[
 				"ti",
 				"tile〔argument〕"
 			],
@@ -330,10 +370,6 @@
 			[
 				"ob",
 				"onBoard"
-			],
-			[
-				"def",
-				"defs\tMethod"
 			],
 			[
 				"be",
@@ -464,10 +500,6 @@
 				"printBoard"
 			],
 			[
-				"game",
-				"gameRound"
-			],
-			[
 				"clue",
 				"cluesLine"
 			],
@@ -482,38 +514,6 @@
 			[
 				"ran",
 				"randomNumber〔argument〕"
-			],
-			[
-				"ga",
-				"gameState"
-			],
-			[
-				"digit",
-				"digitList"
-			],
-			[
-				"gue",
-				"guessedNumber〔variable〕"
-			],
-			[
-				"gu",
-				"guessedNumber〔variable〕"
-			],
-			[
-				"ra",
-				"random"
-			],
-			[
-				"gam",
-				"gameRound"
-			],
-			[
-				"rol",
-				"roles"
-			],
-			[
-				"playe",
-				"playerRole〔argument〕"
 			]
 		]
 	},
@@ -523,16 +523,7 @@
 			"file": "21-dodger.py",
 			"settings":
 			{
-				"buffer_size": 2327,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "20-spritesNsounds.py",
-			"settings":
-			{
-				"buffer_size": 4312,
+				"buffer_size": 4807,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1112,15 +1103,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2327,
+						"buffer_size": 4807,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2201,
-								2201
+								4807,
+								4807
 							]
 						],
 						"settings":
@@ -1129,7 +1120,7 @@
 							"origPos":
 							[
 								0.0,
-								580.0
+								2319.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1137,47 +1128,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 580.0,
+						"translation.y": 2319.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "20-spritesNsounds.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3036,
-								3036
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"origPos":
-							[
-								0.0,
-								0.0
-							],
-							"syncScroll": false,
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
