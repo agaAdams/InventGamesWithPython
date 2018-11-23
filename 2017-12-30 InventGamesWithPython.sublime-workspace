@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"B",
+				"Box"
+			],
+			[
 				"fo",
 				"food〔variable〕"
 			],
@@ -54,10 +58,6 @@
 			[
 				"text",
 				"textRect〔variable〕"
-			],
-			[
-				"B",
-				"BLUE"
 			],
 			[
 				"po",
@@ -523,7 +523,7 @@
 			"file": "21-dodger.py",
 			"settings":
 			{
-				"buffer_size": 2420,
+				"buffer_size": 2327,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1112,15 +1112,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2420,
+						"buffer_size": 2327,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2322,
-								2322
+								2201,
+								2201
 							]
 						],
 						"settings":
@@ -1129,12 +1129,15 @@
 							"origPos":
 							[
 								0.0,
-								0.0
+								580.0
 							],
-							"syntax": "Packages/Python 3/Python3.tmLanguage"
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 609.0,
+						"translation.y": 580.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1153,8 +1156,8 @@
 						"selection":
 						[
 							[
-								181,
-								181
+								3036,
+								3036
 							]
 						],
 						"settings":
@@ -1171,7 +1174,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1125.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,

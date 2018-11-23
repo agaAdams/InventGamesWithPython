@@ -10,15 +10,15 @@ pygame.key.set_repeat(1,50)
 ########## Constants ##########
 WINDOWWIDTH = 400
 WINDOWHEIGHT = 400
-
+SPEED = 2
 ########### Classes ###########
-class Player(object):
-    """represents the players sprite"""
+class Box(object):
+    """docstring for Box"""
     def __init__(self, image):
-        super(Player, self).__init__()
+        super(Box, self).__init__()
         self.image = pygame.image.load(image)
         self.rect = self.image.get_rect()
-
+    
     def draw(self, surface):
         '''draws sprite on given surface positioned on a rectangle'''
         surface.blit(self.image, self.rect)
@@ -27,32 +27,25 @@ class Player(object):
         '''moves sprite into given direction'''
         self.rect.move_ip(direction)
 
+class Player(Box):
+    """represents the players sprite"""
+
     def collide(self, other):
         '''tests if given object collides with player'''
         if self.rect.colliderect(other.rect):
             return True
 
-class Baddie(object):
+class Baddie(Box):
     """represents the baddies"""
-    def __init__(self, image, direction, speed):
-        super(Baddie, self).__init__()
-        self.image = pygame.image.load(image)
-        self.rect = self.image.get_rect()
-        self.direction = direction
-        self.speed = speed
-
-    def draw(self, surface):
-        '''draws sprite on given surface positioned on a rectangle'''
-        surface.blit(self.image, self.rect)
-
-    def move(self):
-        '''moves sprite into given direction'''
-        self.rect.move_ip(self.direction)
+    def __init__(self, image):
+        super().__init__(image)
+        self.direction = [0, 1]
+        self.speed = SPEED
 
     def changeDirection(self, direction):
         '''changes the direction the sprite moves'''
 
-    def slow(self, speed):
+    def changeSpeed(self, speed):
         '''changes the speed the sprite moves with'''
 
     def disappear(self, bottom):
@@ -78,5 +71,11 @@ class Score(object):
 ########## Functions ##########
 
 ############ Main ############
-
+window = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
+newPlayer = Player('player.png')
+newBaddie = Baddie('baddie.png')
 ########## Game Loop ##########
+while True:
+    newPlayer.draw(window)
+    newBaddie.draw(window)
+    pygame.display.flip()
