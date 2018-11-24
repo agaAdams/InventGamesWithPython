@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"cha",
+				"changeDirection"
+			],
+			[
+				"text",
+				"textScoreRect〔variable〕"
+			],
+			[
+				"te",
+				"text〔variable〕"
+			],
+			[
 				"gam",
 				"gameOver〔function〕"
 			],
@@ -98,10 +110,6 @@
 			[
 				"pyga",
 				"pygame"
-			],
-			[
-				"text",
-				"textRect〔variable〕"
 			],
 			[
 				"po",
@@ -506,14 +514,6 @@
 			[
 				"cl",
 				"clues〔variable〕"
-			],
-			[
-				"e",
-				"elif"
-			],
-			[
-				"ran",
-				"randomNumber〔argument〕"
 			]
 		]
 	},
@@ -523,8 +523,16 @@
 			"file": "21-dodger.py",
 			"settings":
 			{
-				"buffer_size": 4807,
+				"buffer_size": 5726,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "17 graphics.py",
+			"settings":
+			{
+				"buffer_size": 1271,
 				"line_ending": "Unix"
 			}
 		}
@@ -1103,15 +1111,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4807,
+						"buffer_size": 5726,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4807,
-								4807
+								5177,
+								5177
 							]
 						],
 						"settings":
@@ -1120,7 +1128,7 @@
 							"origPos":
 							[
 								0.0,
-								2319.0
+								2135.0
 							],
 							"syncScroll": false,
 							"syntax": "Packages/Python 3/Python3.tmLanguage",
@@ -1128,10 +1136,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2319.0,
+						"translation.y": 2135.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "17 graphics.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"origPos":
+							[
+								0.0,
+								267.0
+							],
+							"syncScroll": false,
+							"syntax": "Packages/Python 3/Python3.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 267.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

@@ -12,10 +12,13 @@ WINDOWWIDTH = 400
 WINDOWHEIGHT = 400
 SPEED = 2
 WHITE = (255, 255, 255)
-STARTING_BADDIES = int(WINDOWWIDTH / 20 / 2)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+STARTING_BADDIES = int(WINDOWWIDTH / 20)
 PLAYER_IMAGE = 'player.png'
 BADDIE_IMAGE = 'baddie.png'
 BACKGROUND_MUSIC = 'background.mid'
+
 ########### Classes ###########
 class Box(object):
     """docstring for Box"""
@@ -38,24 +41,24 @@ class Player(Box):
         super().__init__(image)
         self.rect.move_ip(random.randint(0, WINDOWWIDTH - 20), WINDOWHEIGHT-50) 
 
-    def collide(self, other):
-        '''tests if given object collides with player'''
-        if self.rect.colliderect(other.rect):
-            return True
-
 class Baddie(Box):
     """represents the baddies"""
-    def __init__(self, image):
+    def __init__(self, image, top, left):
         super().__init__(image)
         self.direction = [0, 1]
         self.speed = SPEED
-        self.rect.move_ip(random.randint(0, WINDOWWIDTH - 20), 0) 
+        self.rect.move_ip(top, left) 
 
     def move(self):
         '''moves sprite into given direction'''
         self.rect.move_ip(self.direction)
 
-    def changeDirection(self, direction):
+    def collide(self, other):
+        '''tests if given object collides with a baddie'''
+        if self.rect.colliderect(other.rect):
+            return True
+
+    def changeDirection(self):
         '''changes the direction the sprite moves'''
         self.direction[1] = -self.direction[1]
 
@@ -87,25 +90,36 @@ class Score(object):
         self.currentScore = 0
         
 ########## Functions ##########
-def createBaddie():
-    newBaddie = Baddie(BADDIE_IMAGE)
+def createBaddie(top, left):
+    newBaddie = Baddie(BADDIE_IMAGE, top, left)
     baddies.append(newBaddie)
 
 def createStartingBaddies():
     for b in range(STARTING_BADDIES):
-        createBaddie()
+        createBaddie(random.randint(0, WINDOWWIDTH - 20), random.randint(0, WINDOWHEIGHT - int(WINDOWHEIGHT/2)))
 
 def gameOver():
     score.updateHighScore()
     score.resetCurrentScore()
 
-def gameChoice():
-    pass
+def showScore():
+    textScore = basicFont.render("Score: " + str(score.currentScore), True, BLACK)
+    textHighScore = basicFont.render("HighScore: " + str(score.highScore), True, RED)
+    textScoreRect = textScore.get_rect()
+    textHighScoreRect = textHighScore.get_rect()
+    textHighScoreRect.move_ip(0, textScoreRect.bottom)
+    window.blit(textScore, textScoreRect)
+    window.blit(textHighScore, textHighScoreRect)
+
+def changeDirection():
+    for b in baddies:
+        b.changeDirection()
 ############ Main ############
 gameState = True
 mainClock = pygame.time.Clock()
 pygame.mixer.music.load(BACKGROUND_MUSIC)
 # pygame.mixer.music.play(-1, 0.0)
+basicFont = pygame.font.SysFont(None, 30)
 
 window = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
 pygame.display.set_caption("Dodger")
@@ -133,6 +147,10 @@ while gameState:
                     player.move([-4, 0])
                 elif event.key == K_RIGHT:
                     player.move([4, 0])
+                elif event.key == K_x:
+                    player.move([0, 0])
+                elif event.key == K_z:
+                    changeDirection()
             elif event.type == KEYUP:
                 if event.key == K_UP:
                     player.move([0, 0])
@@ -142,6 +160,8 @@ while gameState:
                     player.move([0, 0])
                 elif event.key == K_RIGHT:
                     player.move([0, 0])
+                elif event.key == K_z:
+                    changeDirection()
                 elif event.key == K_ESCAPE:
                     pygame.quit()
                     sys.exit()
@@ -149,16 +169,17 @@ while gameState:
         window.fill(WHITE)
 
         if len(baddies) < STARTING_BADDIES:
-            createBaddie()
+            createBaddie(random.randint(0, WINDOWWIDTH - 20), 0)
 
         for b in baddies:
             b.move()
             b.draw(window)
             b.disappear(WINDOWHEIGHT)
-            if player.collide(b):
+            if b.collide(player):
                 endState = True
 
         player.draw(window)
+        showScore()
         pygame.display.flip()
         mainClock.tick(40)
 
